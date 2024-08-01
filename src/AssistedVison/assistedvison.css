@@ -13,7 +13,41 @@
     height: 120px;
     padding: 20px;
     transform: translate(10px,-70px);
+    border-radius: 3px;
 
+}
+
+.exitbutton .button{
+    background-color: rgba(255, 210, 12, 0.873);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    transform: translate(-500px ,-350px);
+width: 300px;
+    font-size: 20px;
+    border-radius: 2px;
+
+}
+
+.exitbutton .exit{
+    background-color: rgb(202, 46, 46);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    transform: translate(-150px ,-400px);
+width: 105px;
+    font-size: 17.5px;
+    border-radius: 2px;
+    border: 2px solid transparent;
+    
+    
+}
+
+.exitbutton .exit:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+   
 }
 
 .visioninterface .button{
@@ -21,10 +55,12 @@
     overflow-y: hidden !important;
     overflow-x: hidden !important;
     background-color: rgb(86, 219, 117);
-    width: 150px;
-    padding: 5px;
+    width: 72px;
+    padding: 7px;
     font-size: 12px;
-
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: 0.5 all ease-in-out;
   
 }
 
@@ -33,4 +69,5 @@
     background-color: transparent;
     border: 2px solid black;
     cursor: pointer;
+    transition: 0.5 all ease-in-out;
 }

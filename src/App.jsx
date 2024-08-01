@@ -8,7 +8,7 @@ import { useScroll, ScrollControls } from '@react-three/drei';
 import Loading from './Loading/Loading';
 
 const Experience = lazy(() => import('./Experience/Experience'));
-const Headset = lazy(() => import('./Headset/Headset'));
+
 const Interface = lazy(() => import('./Interface/Interface'));
 const AssistedVision  = lazy(() => import("./AssistedVison/AssistedVision"));
 

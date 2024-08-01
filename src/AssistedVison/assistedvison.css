@@ -1,0 +1,36 @@
+.visioninterface{
+    position: fixed !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+ 
+    width: 500px;
+    height: 500px;
+
+}
+
+.visioninterface .card {
+    background-color: white;
+    height: 120px;
+    padding: 20px;
+    transform: translate(10px,-70px);
+
+}
+
+.visioninterface .button{
+    position: fixed !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    background-color: rgb(86, 219, 117);
+    width: 150px;
+    padding: 5px;
+    font-size: 12px;
+
+  
+}
+
+
+.visioninterface .button:hover{
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}

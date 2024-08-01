@@ -1,0 +1,57 @@
+.interface {
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: hidden;
+
+   
+  }
+  
+  .interface.visible {
+   visibility: visible;
+   transition: 2s all ease-in-out;
+
+  }
+  
+  .interface .enterVision {
+    background-color: rgb(36, 36, 36);
+    padding: 15px;
+    color: white;
+    font-size: 100px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 200px;
+    overflow-x: hidden;
+    transform: scale(30);
+    overflow-y: hidden;
+    position: fixed !important;
+  }
+  
+  
+  .interface .enterVision .btnRow {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btnRow .ok {
+    background-color: rgb(76, 171, 55);
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btnRow .ok:hover {
+    background-color: rgb(76, 171, 55);
+    color: white;
+  }
+  
+  .btnRow .later {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  

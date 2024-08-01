@@ -1,0 +1,17 @@
+.vrScreen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.vrScreen iframe{
+    width: 1024px;
+    height: 670px;
+    transform: scale(0.05);
+    position: fixed !important;
+   
+    overflow: hidden;
+    border: none;
+
+}

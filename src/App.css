@@ -1,0 +1,40 @@
+.ui{
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+
+  
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.36);
+    overflow: hidden;
+}
+
+.ui .navbar{
+    display: flex;
+    color: White;
+    
+
+}
+
+.ui .navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    text-decoration: none;
+}
+
+.ui .navbar ul li{
+    list-style: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+
+}
+
+
+
+
+.ui .navbar ul li:hover{
+    color: rgb(255, 192, 18);
+    text-decoration: underline;
+}

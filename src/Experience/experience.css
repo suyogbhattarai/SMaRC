@@ -5,7 +5,41 @@
     overflow-y: hidden;
     visibility: hidden !important;
 
+
    
+  }
+
+  .backVision {
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: visible;
+
+
+   
+  }
+
+
+  
+  .backVision .btnRow .ok {
+
+    padding:20px 2px;
+    font-size: 30px;
+    
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 200px;
+    cursor: pointer;
+  }
+
+
+  .backVision .btnRow .ok:hover{
+background-color: rgb(76, 171, 55);
   }
   
   .interface.visible {
@@ -13,39 +47,47 @@
    transition: 2s all ease-in-out !important;
 
   }
-  
+
+
   .interface .enterVision {
     background-color: rgb(36, 36, 36);
     padding: 15px;
     color: white;
     font-size: 100px;
-    border: 5px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    height: 200px;
-    width: 200px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 240px;
+  
     overflow-x: hidden;
-    transform: scale(30);
+    transform: scale(20);
     overflow-y: hidden;
     position: fixed !important;
   }
   
   
   .interface .enterVision .btnRow {
-    display: flex;
-    gap: 20px;
+      display: flex;
+      gap: 20px;
   }
   
   .btnRow .ok {
     background-color: rgb(76, 171, 55);
     padding: 10px;
     font-size: 15px;
+    width: 80px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     color: white;
+    border: 2px solid transparent;
     cursor: pointer;
   }
   
   .btnRow .ok:hover {
-    background-color: rgb(76, 171, 55);
-    color: white;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    transition: 0.5s all ease-in-out;
   }
   
   .btnRow .later {

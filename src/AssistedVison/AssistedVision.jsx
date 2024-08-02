@@ -21,6 +21,13 @@ function AssistedVision() {
   const buttonRef=useRef()
   const [pointerLockActive, setPointerLockActive] = useState(false);
   const [lookAtPosition, setLookAtPosition] = useState(new THREE.Vector3());
+  const [viewState, setViewState] = useState({
+    forward: false,
+    left: false,
+    right: false,
+    up: false,
+    down: false,
+  });
   const goggleRef = useRef();
 
   const { scene } = useGLTF('/AssistedVision.glb')
@@ -41,7 +48,7 @@ function AssistedVision() {
 
   useEffect(() => {
     // Update camera position
-    const cameraSet = new THREE.Vector3(-35, 128, 25);
+    const cameraSet = new THREE.Vector3(-34, 129.7, 25);
     camera.position.copy(cameraSet);
 
     // Update camera rotation
@@ -68,7 +75,22 @@ function AssistedVision() {
     camera.getWorldDirection(direction);
     const lookAtPos = new THREE.Vector3().copy(camera.position).add(direction.multiplyScalar(10)); // Adjust the multiplier as needed
     setLookAtPosition(lookAtPos);
-    
+
+
+    if (Math.abs(direction.x) < 0.1 && direction.z < -0.9) {
+      setViewState({ forward: true, left: false, right: false, up: false, down: false });
+    } else if (Math.abs(direction.x) < 0.1 && direction.z > 0.9) {
+      setViewState({ forward: false, left: false, right: false, up: false, down: false });
+    } else if (direction.x < -0.9) {
+      setViewState({ forward: false, left: true, right: false, up: false, down: false });
+    } else if (direction.x > 0.9) {
+      setViewState({ forward: false, left: false, right: true, up: false, down: false });
+    } else if (direction.y > 0.9) {
+      setViewState({ forward: false, left: false, right: false, up: true, down: false });
+    } else if (direction.y < -0.9) {
+      setViewState({ forward: false, left: false, right: false, up: false, down: true });
+    }
+    console.log("direction",direction)
     if (goggleRef.current) {
       // Update the goggle model position and rotation to match the camera
       goggleRef.current.position.set(lookAtPosition.x,lookAtPosition.y,lookAtPosition.z);
@@ -117,7 +139,7 @@ function AssistedVision() {
   <div  className="button">
           Press ESC to reveal the cursor
         </div>
-        <div onClick={()=>{navigateTo(`/?scrollPosition=${localStorage.getItem('scrollPosition')}`)}}  className="exit">
+        <div onClick={()=>{navigateTo(`/?redirect=vision&scrollPosition=${localStorage.getItem('scrollPosition')}`)}}  className="exit">
          Click To Exit
         </div>
 

@@ -51,7 +51,8 @@ const buttonRef=useRef();
   const targetPositionAi={x:89.07268900969206,y:129.7321346997684,z:-3.2222408755114884}
   const targetPositionIot={x:102.97117829851327,y:131.26554782824022,z:-35.62859631688254}
   // Tolerance for position comparison
-  const tolerance = 40;
+  const tolerance = 10;
+  const tolerancehHigh=40
 
   const calculateDistance = (pos1, pos2) => {
     return Math.sqrt(
@@ -115,13 +116,13 @@ const buttonRef=useRef();
     setEnterVision(distance < tolerance);
 
     const distance2 = calculateDistanceRobotics(camera.position, targetPositionRobotics);
-    setEnterRobotics(distance2 < tolerance);
+    setEnterRobotics(distance2 < tolerancehHigh);
 
     const distance3 = calculateDistanceAi(camera.position, targetPositionAi);
-    setEnterAi(distance3 < tolerance);
+    setEnterAi(distance3 < tolerancehHigh);
 
     const distance4 = calculateDistanceIot(camera.position, targetPositionIot);
-    setEnterIot(distance4 < tolerance);
+    setEnterIot(distance4 < tolerancehHigh);
   });
 
 
@@ -273,8 +274,8 @@ scale={20}
          <Html
           distanceFactor={1.15}
           transform
-          position={[-45.728489170862275, 123.61325546061033, -0.4185308963159944]}
-          rotation={[0, THREE.MathUtils.degToRad(45), 0]}
+          position={[-60.728489170862275, 119.61325546061033, 28.185308963159944]}
+          rotation={[0, THREE.MathUtils.degToRad(80), 0]}
           wrapperClass={`interface ${enterVision ? 'visible' : ''}`}
         >
          

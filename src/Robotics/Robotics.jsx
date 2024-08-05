@@ -8,13 +8,13 @@ import { getProject, val } from "@theatre/core";
 import "./robotics.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import CameraAnimationRobotics from "./roboticsCamera.json"
 function Robotics() {
     const [sheet, setSheet] = useState(null);
 
 
     useEffect(() => {
-        const projectSheet = getProject("Robotics Camera").sheet("Scene");
+        const projectSheet = getProject("Robotics Camera",{state:CameraAnimationRobotics}).sheet("Scene");
         setSheet(projectSheet);
       }, []);
   return (

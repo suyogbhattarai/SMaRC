@@ -8,14 +8,14 @@ import { getProject, val } from "@theatre/core";
 import "./ai.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-import aiCameraAnimation from "./aiCamera.json"
+import aiCameraAnimation from "./aiCameraAnimation.json"
 
 function AI() {
     const [sheet, setSheet] = useState(null);
 
 
     useEffect(() => {
-        const projectSheet = getProject("AI Camera").sheet("Scene");
+        const projectSheet = getProject("AI Camera",{state:aiCameraAnimation}).sheet("Scene");
         setSheet(projectSheet);
       }, []); 
   return (

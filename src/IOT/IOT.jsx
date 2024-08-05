@@ -8,14 +8,14 @@ import { getProject, val } from "@theatre/core";
 import "./iot.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import cameraAnimation from "./cameraAnimationIot.json"
 
 function IOT() {
     const [sheet, setSheet] = useState(null);
 
 
     useEffect(() => {
-        const projectSheet = getProject("Iot Camera").sheet("Scene");
+        const projectSheet = getProject("Iot Camera",{state:cameraAnimation}).sheet("Scene");
         setSheet(projectSheet);
       }, []);
   return (

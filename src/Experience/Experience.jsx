@@ -8,7 +8,7 @@ import { getProject, val } from "@theatre/core";
 import "./experience.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-import experienceCamera from "./expCamera.json"
+import experienceCamera from "./camerAnimationExp.json"
 
 function Experience() {
   const [sheet, setSheet] = useState(null);
@@ -16,7 +16,7 @@ function Experience() {
   const scrollControlsRef = useRef();
 
   useEffect(() => {
-    const projectSheet = getProject("Fly Through",).sheet("Scene");
+    const projectSheet = getProject("Fly Through",{state:experienceCamera}).sheet("Scene");
     setSheet(projectSheet);
   }, []);
 

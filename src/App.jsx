@@ -9,6 +9,7 @@ import { useScroll, ScrollControls } from '@react-three/drei';
 import Loading from './Loading/Loading';
 import AI from './AI/AI';
 import IOT from './IOT/IOT';
+import Robotics from './Robotics/Robotics';
 
 
 
@@ -48,6 +49,7 @@ function App() {
   
    <Route path="/AI" element={<AI />} />
    <Route path="/IOT" element={<IOT/>} />
+   <Route path="/robotics" element={<Robotics/>} />
  </Routes>
          </Suspense>
       </Canvas>

@@ -203,7 +203,7 @@ scale={20}
           </div>
      
         </Html>
-{redirectFrom==="iot" || redirectFrom==="navbarIot" ? (<>
+{redirectFrom==="IOT" || redirectFrom==="navbarIot" ? (<>
   <Html
 scale={20}
 
@@ -320,7 +320,7 @@ scale={20}
             </div>
             <p>Explore our robotics project</p>
             <div className="entryBtn">
-            <div onClick={()=>navigateTo("./")} className="ok">
+            <div onClick={()=>navigateTo("./robotics")} className="ok">
             Enter
               </div>
             </div>

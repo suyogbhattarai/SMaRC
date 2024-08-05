@@ -1,0 +1,27 @@
+.projectInterfaceIot{
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: visible;   
+    width: 600px;
+}
+
+.projectInterfaceIot .card{
+
+    border: 2px solid white;
+    padding: 10px 20px;
+
+}
+
+.projectInterfaceIot .title{
+    color: #282727;
+}
+
+
+.projectInterfaceIot .description{
+    color: rgb(255, 255, 255);
+
+width: 200px;
+    font-size: 14px;
+}

@@ -5,17 +5,16 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { Html, OrbitControls, ScrollControls, TransformControls, useScroll } from '@react-three/drei';
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f';
 import { getProject, val } from "@theatre/core";
-import "./iot.css";
+import "./robotics.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
 
-
-function IOT() {
+function Robotics() {
     const [sheet, setSheet] = useState(null);
 
 
     useEffect(() => {
-        const projectSheet = getProject("Iot Camera").sheet("Scene");
+        const projectSheet = getProject("Robotics Camera").sheet("Scene");
         setSheet(projectSheet);
       }, []);
   return (
@@ -23,7 +22,7 @@ function IOT() {
         {sheet && (
         <ScrollControls pages={10} >
           <SheetProvider sheet={sheet}>
-            <SceneIOT  />
+            <SceneRobotics />
           </SheetProvider>
         </ScrollControls>
       )}
@@ -31,9 +30,9 @@ function IOT() {
   )
 }
 
-export default IOT
+export default Robotics
 
-function SceneIOT() {
+function SceneRobotics() {
     const sheet = useCurrentSheet();
     const scroll = useScroll();
     const [clearPath, setClearPath] = useState(false);
@@ -45,12 +44,12 @@ function SceneIOT() {
     const location = useLocation(); // Use useLocation to access query params
   const buttonRef=useRef();
     // Target position to check against
-    const targetPositionProject1 = { x: 127.28930715088883, y: 129.88183348706795, z: 54.79583968511831 };
-    const targetPositionProject2={x:128.08965972160553,y:129.24206322172034,z:12.305576409034899}
-    const targetPositionProject3={x:75.98940686041297,y:129.24203411440112,z:60.400791114849135}
-    const targetPositionproject4={x:71.4809374768083,y:129.24203411440112,z:17.094664522612867}
+    const targetPositionProject1 = { x: -26.04928884806038, y: 131.24272750605908, z: -64.14303079212448 };
+    const targetPositionProject2={x:-34.911027428431694,y:131.24272750605908,z:-79.22628269127733}
+    const targetPositionProject3={x:5.064127750514806,y:131.24272750605908,z:-79.67658238711239}
+    const targetPositionproject4={x:13.001978979641205,y:131.24272750605908,z:-64.354254479873}
     // Tolerance for position comparison
-    const tolerance = 25;
+    const tolerance = 10;
     const tolerancehHigh=40
     const navigateTo=useNavigate()
   
@@ -160,16 +159,16 @@ scale={30}
         distanceFactor={1.15}
         transform
        
-        position={[135.28930814201183, 132.88183348706795, 90.79583968511831]}
+        position={[-45.049306602159675,131.24272750605908, -25.14303079212448]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "projectInterfaceIot" }
+        wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2>Smart Home</h2>
+        <h2>Skill Kicks</h2>
        </div>   
        <div className="description">
-        <p>Smart Home  is a hoem filled up with modern technologies and automations.</p>
+        <p>Skill Kicks is a robot based game where we controls our moving robot with a controlller kick a ball.There is a arena for playing this with a goal post just like football.</p>
        </div>
         </div>
 
@@ -184,16 +183,16 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[135.08966065598565, 132.24206322172034,-10.305576409034906]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(360), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "projectInterfaceIot" }
+        position={[-65.14303079212448, 135.24272750605908,-98.22628269127733]}
+        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
+        wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2>Smart Dustbin</h2>
+        <h2>Murphy Robot</h2>
        </div>
        <div className="description">
-        <p>Smart dustbin is a smart device which opens automatically when we come near it.</p>
+        <p> Murphy robot is a voice commanded robot which follows the command .</p>
        </div>
         </div>
       </Html>
@@ -206,17 +205,17 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[52.06793009548741, 131.58200500575782,58.938208181840004]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "projectInterfaceIot" }
+        position={[20.064064073291057, 135.24272750605908,-110.67658238711239]}
+        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+        wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2>Iot project 3</h2>
+        <h2>Desk Robot </h2>
        </div>
        <div className="description">
         <p>
-This is an upcoming Iot project stay tuned for this one</p>
+        Desk Robot is a robot which follows our gestures and assists us in our desk hour.</p>
        </div>
         </div>
       </Html>
@@ -229,15 +228,15 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[74.64316493627175, 131.58200500575782, 2.36857004618043]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+        position={[20.64316493627175, 131.58200500575782, -30.36857004618043]}
+        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "aiInterface" }
       >
        
 
         
         <div style={{display:"flex",gap:"10"}} className="flex">
-       <h3 onClick={()=>navigateTo("/?redirect=IOT&scrollPosition=8.013384556516312")} >   Exit   </h3>
+       <h3 onClick={()=>navigateTo("/?redirect=robotics&scrollPosition=4.013384556516312")} >   Exit   </h3>
 
 
    
@@ -252,17 +251,17 @@ scale={30}
         distanceFactor={1.15}
         transform
        
-        position={[40.64316493627175, 131.58200500575782, 0.36857004618043]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "projectInterfaceIot" }
+        position={[60.64316493627175, 131.58200500575782, -40.36857004618043]}
+        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0)]}
+        wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2 style={{width:"160px"}}>Thank you For Visiting SkillVerse IOT</h2>
+        <h2 style={{width:"160px"}}>Thank you For Visiting SkillVerse Robotics</h2>
        </div>
        <div className="description">
         <p>
-        Our IOT department specializes in developing cutting-edge IOT solutions that drive innovation and efficiency across various industries. </p>
+        Our robotics department specializes in developing cutting-edge robotics  solutions that drive innovation and efficiency across various industries. </p>
        </div>
         </div>
       </Html>

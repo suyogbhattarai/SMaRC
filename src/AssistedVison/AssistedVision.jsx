@@ -167,7 +167,6 @@ function AssistedVision() {
 
       <PointerLockControls ref={controlsRef} />
 
-      <TransformControls object={buttonRef.current} />
       <group ref={buttonRef}>
         <Html
           rotation={[0, THREE.MathUtils.degToRad(-90), 0]}

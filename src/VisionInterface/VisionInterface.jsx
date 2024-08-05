@@ -47,11 +47,7 @@ function AssistedVision() {
     }
   };
 
-  useFrame(() => {
-    if (buttonRef.current) {
-      console.log("button position", buttonRef.current.position);
-    }
-  });
+
 
   return (
     <>
@@ -61,7 +57,7 @@ function AssistedVision() {
         <PointerLockControls ref={controlsRef} />
       )}
 
-      <TransformControls object={buttonRef.current} />
+
       <group ref={buttonRef}>
         {!pointerLockActive && (
           <Html

@@ -20,6 +20,48 @@
    
   }
 
+  .entryText {
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: visible;   
+    width: 600px;
+  }
+
+
+  .entryText .title h2{ 
+    color: white;
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+
+  .entryText p{
+    color: white;
+    padding: 0px;
+   
+  }
+
+  
+  .entryText .entryBtn{
+    background-color: rgb(76,171,55);
+    color: white;
+    width: 42px;
+    padding: 10px;
+    margin-top: 30px;
+    border: 2px solid rgba(255, 255, 255, 0);
+  }
+
+  .entryText .entryBtn:hover{
+    background-color: rgba(76, 171, 55, 0);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+ 
+  }
 
   
   .backVision .btnRow .ok {

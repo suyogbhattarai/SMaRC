@@ -12,6 +12,10 @@ import { Html, OrbitControls } from '@react-three/drei';
 import "./museum.css"
 import { Tv } from '../Tv/Tv';
 import { TvTable } from '../Interface/Tvtable/TvTable';
+import Floor from '../Floor/Floor';
+import GoCart from '../GoCart/GoCart';
+import { editable as e } from '@theatre/r3f';
+
 
 
 function Museum(props,{hovered}) {
@@ -20,10 +24,10 @@ function Museum(props,{hovered}) {
 
   return (
     <>
-      
+      {/* <OrbitControls makeDefault/> */}
   <Building1/>
 
-
+<Floor position={[10,57,80]} scale={0.5}  />
   
   <Table scale={0.5} onPointerOver={props.onPointerOver}
       onPointerOut={props.onPointerOut}   position={[ -25.197582617751709,  118.41265385835948,  36.76075189597355]}/>
@@ -35,15 +39,17 @@ function Museum(props,{hovered}) {
 
   <CharacterModel onPointerOver={props.onPointerOver3}
       onPointerOut={props.onPointerOut3} scale={8} position={[-35, 116.4, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
+{location.pathname==="/vision" ?(<>
 
 
+</>):(<>
+  <e.mesh theatreKey="gocart">
+<group>
+<GoCart scale={2} position={[0,117.64428088797158,230.64123462713843]} />
 
-
-
-
-
-
-
+</group>
+</e.mesh>
+  </>)}
 
 
 

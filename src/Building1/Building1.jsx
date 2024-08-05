@@ -781,9 +781,9 @@ export default function Building1(props) {
           rotation={[0, 0, 1.553]}
           scale={[14.434, 19.077, 29.88]}
         />
-         <Box scale={[1500,1500,2]}  position={[0,113,0]} rotation={[THREE.MathUtils.degToRad(90),0,0]} >
+         {/* <Box scale={[1500,1500,2]}  position={[0,113,0]} rotation={[THREE.MathUtils.degToRad(90),0,0]} >
           <meshStandardMaterial attach="material" color="#535760" />
-        </Box>
+        </Box> */}
       </group>
 
      

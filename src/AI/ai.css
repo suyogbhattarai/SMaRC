@@ -1,0 +1,63 @@
+.aiInterface{
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: visible;   
+    width: 600px;
+}
+
+.aiInterface .entrytext{
+    position: fixed !important; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.projectInterface{
+    position: fixed !important; 
+    z-index: 1000;  /* Bring it to the front */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    visibility: visible;   
+    width: 600px;
+   
+   
+}
+
+.projectInterface .card{
+    border: 2px solid white;
+    padding: 10px 20px;
+}
+
+.projectInterface .title{
+    color: #eec843;
+}
+
+
+.projectInterface .description{
+    color: White;
+
+width: 200px;
+    font-size: 14px;
+}
+
+
+.aiInterface .flex{
+    color: White;
+
+
+}
+
+.aiInterface .flex h3{
+    background-color: rgb(202, 46, 46);
+    padding: 6px 10px;
+    border: 2px solid transparent;
+}
+
+.aiInterface .flex h3:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}

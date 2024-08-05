@@ -1,26 +1,41 @@
+
+.container{
+    width: 800px;
+    margin: auto;
+}
 .ui{
     position: fixed !important;
     top: 0px;
     left: 0px;
-
-  
+    display: flex;
+    justify-content: space-between;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.36);
     overflow: hidden;
+    width: 100vw;
+    padding: 0px 100px;
 }
 
 .ui .navbar{
     display: flex;
+    
     color: White;
+    width: 1200px;
+
     
 
 }
 
+.ui .logo img{
+width: 100px;
+}
+
+
 .ui .navbar ul{
     display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
+    gap: 70px;
     text-decoration: none;
+  
 }
 
 .ui .navbar ul li{
@@ -28,8 +43,13 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
+    text-decoration: none !important;
 
 }
+.ui .navbar ul li a{
+    text-decoration: none !important;
+}
+
 
 
 

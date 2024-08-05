@@ -7,6 +7,8 @@ import { useScroll, ScrollControls } from '@react-three/drei';
 
 
 import Loading from './Loading/Loading';
+import AI from './AI/AI';
+import IOT from './IOT/IOT';
 
 
 
@@ -26,41 +28,48 @@ function App() {
       <Canvas  gl={{ preserveDrawingBuffer: true }}>
  
        
-        <TransformControls mode='translate' object={interfaceref}/>
+
         <group ref={interfaceref} >
         <Html scale={20} transform  >
 
         </Html>
 
-       
+        <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
         </group>
        
    
       <Suspense fallback={<Loading/>}>
-      <Sparkles count={2000} scale={2000} position={[0,1000,0]} size={120} speed={2}/>
+
          <Routes>
 
    <Route path='/' element={<Experience />} />
 
    <Route path="/vision" element={<AssistedVision />} />
   
-   
+   <Route path="/AI" element={<AI />} />
+   <Route path="/IOT" element={<IOT/>} />
  </Routes>
          </Suspense>
       </Canvas>
       {!isVisionPath && (<>
-        <div className="ui">
-
+      <div className="container">
+      <div className="ui">
+<div className="logo">
+  <a style={{textDecoration:"none"}} href="./"><img src="./butterfly.png" alt="" /></a>
+</div>
 <div className="navbar">
   <ul>
-  <a  href="/"><li>Home</li></a>
-  <a  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li> Assisted Vision</li></a>
-    <a href="/?redirect=navbarRobotics&scrollPosition=4.013384556516312"><li>Robotics</li></a>
-    <a href="/?redirect=navbarAi&scrollPosition=6.013384556516312"><li>Artificial Intelligence</li></a>
-    <a href="/?redirect=navbarIot&scrollPosition=7.013384556516312"><li>IOT</li></a>
+  <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
+  <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li> Assisted Vision</li></a>
+    <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=4.013384556516312"><li>Robotics</li></a>
+    <a style={{textDecoration:"none"}}  href="/?redirect=navbarAi&scrollPosition=6.013384556516312"><li>Artificial Intelligence</li></a>
+    <a style={{textDecoration:"none"}}  href="/?redirect=navbarIot&scrollPosition=8.013384556516312"><li>IOT</li></a>
   </ul>
 </div>
+
 </div>
+      </div>
+
         </>)}
   
 

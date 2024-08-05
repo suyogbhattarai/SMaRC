@@ -10,7 +10,7 @@ export function Tv(props) {
   const tvRef=useRef()
   return (
     <>
-       <TransformControls object={tvRef} />
+ 
     <group ref={tvRef} {...props} dispose={null}>
       <group
         position={[56.569, 133.835, 55.981]}

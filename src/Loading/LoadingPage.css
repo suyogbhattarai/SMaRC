@@ -5,15 +5,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #282c34;
-    color: #61dafb;
+
+
+    color: #eec843;
     font-family: 'Arial', sans-serif;
   }
   
   .spinner {
     border: 8px solid #f3f3f3;
-    border-top: 8px solid #61dafb;
+    border-top: 8px solid #eec843;
     border-radius: 50%;
     width: 60px;
     height: 60px;

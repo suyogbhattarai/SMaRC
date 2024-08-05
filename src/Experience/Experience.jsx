@@ -8,6 +8,7 @@ import { getProject, val } from "@theatre/core";
 import "./experience.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
+import experienceCamera from "./expCamera.json"
 
 function Experience() {
   const [sheet, setSheet] = useState(null);
@@ -15,7 +16,7 @@ function Experience() {
   const scrollControlsRef = useRef();
 
   useEffect(() => {
-    const projectSheet = getProject("Fly Through").sheet("Scene");
+    const projectSheet = getProject("Fly Through",).sheet("Scene");
     setSheet(projectSheet);
   }, []);
 
@@ -171,6 +172,37 @@ const buttonRef=useRef();
 
 
 {enterIot && (<>
+
+  <Html
+scale={20}
+
+          distanceFactor={1.15}
+          transform
+         
+          position={[135.50930043885768, 137.91828431299987, 1.63107917522322]}
+          rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
+          wrapperClass={ "entryText" }
+        >
+         
+          <div className="entryText">
+          
+            <div className="title">
+           
+         
+          <h2>   SkillVerse IOT</h2>
+              
+            </div>
+            <p>Explore our IOT project</p>
+            <div className="entryBtn">
+            <div onClick={()=>navigateTo("./IOT")} className="ok">
+            Enter
+              </div>
+            </div>
+     
+       
+          </div>
+     
+        </Html>
 {redirectFrom==="iot" || redirectFrom==="navbarIot" ? (<>
   <Html
 scale={20}
@@ -203,7 +235,38 @@ scale={20}
 
 
 {enterAi && (<>
-  {redirectFrom=="ai" || redirectFrom=="navbarAi" || redirectFrom=="navbarIot" ? (<>
+
+  <Html
+scale={20}
+
+          distanceFactor={1.15}
+          transform
+         
+          position={[50.50930043885768, 135.91828431299987, -42.63107917522322]}
+          rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+          wrapperClass={ "entryText" }
+        >
+         
+          <div className="entryText">
+          
+            <div className="title">
+           
+         
+          <h2>   SkillVerse AI</h2>
+              
+            </div>
+            <p>Explore our AI project</p>
+            <div className="entryBtn">
+            <div onClick={()=>navigateTo("./AI")} className="ok">
+            Enter
+              </div>
+            </div>
+     
+       
+          </div>
+     
+        </Html>
+  {redirectFrom=="AI" || redirectFrom=="navbarAi" || redirectFrom=="navbarIot" ? (<>
     <Html
 scale={20}
 
@@ -235,6 +298,38 @@ scale={20}
 </>)}
 
 {enterRobotics && (<>
+
+  <Html
+scale={20}
+
+          distanceFactor={1.15}
+          transform
+         
+          position={[-33.502383096244479, 136.67164729531294, -55.504615469855594]}
+          rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+          wrapperClass={`entryText ${enterVision ? 'visible' : ''}`}
+        >
+         
+          <div className="entryText">
+          
+            <div className="title">
+           
+         
+          <h2>   SkillVerse Robotics</h2>
+              
+            </div>
+            <p>Explore our robotics project</p>
+            <div className="entryBtn">
+            <div onClick={()=>navigateTo("./")} className="ok">
+            Enter
+              </div>
+            </div>
+     
+       
+          </div>
+     
+        </Html>
+
   {(redirectFrom=="robotics" || redirectFrom=="navbarRobotics") || redirectFrom=="navbarAi" ? (<>
 
 <Html

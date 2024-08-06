@@ -10,9 +10,15 @@ import circularMp3 from './circularTable.mp3';
 import tvMp3 from "./tv.mp3";
 import tvTableMp3 from "./tvTable.mp3";
 import "./assistedvison.css";
+import pagesTurning from "./pageTurning.mp3"
+import BookAudio from "./book.mp3"
+import ScriptAudio from "./script.mp3"
 
+
+
+import debounce from 'lodash/debounce';
 function AssistedVision() {
-  const { camera } = useThree();
+  const { camera } = useThree()
   const controlsRef = useRef();
   const navigateTo = useNavigate();
   const buttonRef = useRef();
@@ -22,12 +28,13 @@ function AssistedVision() {
   const [hovered, setHovered] = useState(false);
   const [tv, setTv] = useState(false);
   const [tvTable, setTvTable] = useState(false);
+  const [audioFinished, setAudioFinished] = useState(false);
 
-  const audioRefs = {
-    table: useRef(new Audio(circularMp3)),
-    tv: useRef(new Audio(tvMp3)),
-    tvTable: useRef(new Audio(tvTableMp3)),
-  };
+
+
+
+
+
 
   const { scene } = useGLTF('/AssistedVision.glb');
   const { cameraPosition, cameraRotation } = useControls('', {
@@ -43,6 +50,11 @@ function AssistedVision() {
     },
   });
 
+
+  const audioRef = useRef(null);
+  const bookAudioRef = useRef(null);
+  const tvAudioRef=useRef(null);
+  const tvTableAudioRef=useRef(null);
   useEffect(() => {
     if (goggleRef.current) {
       goggleRef.current.renderOrder = 9999;
@@ -68,30 +80,139 @@ function AssistedVision() {
     camera.rotation.copy(cameraRot);
   }, [cameraPosition, cameraRotation, camera]);
 
+
+
   useEffect(() => {
-    // Preload audio
-    Object.values(audioRefs).forEach(ref => {
-      ref.current.preload = 'auto';
-    });
+    // Handle pointer lock state change
+    if (pointerLockActive) {
+      const audio = new Audio(pagesTurning);
+      const bookAudio = new Audio(BookAudio);
+    
 
-    // Handle visibility changes
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        handleAudioPlayback();
+      audioRef.current = audio;
+      bookAudioRef.current = bookAudio;
+
+      audio.play().catch(error => {
+        console.error("Failed to play audio:", error);
+      });
+
+      setTimeout(() => {
+        bookAudio.play().catch(error => {
+          console.error("Failed to play book audio:", error);
+        });
+
+        bookAudio.addEventListener('ended', () => {
+          setAudioFinished(true);
+        });
+      }, 1000);
+
+      return () => {
+        if (audioRef.current) {
+          audioRef.current.pause();
+          audioRef.current.currentTime = 0;
+        }
+        if (bookAudioRef.current) {
+          bookAudioRef.current.pause();
+          bookAudioRef.current.currentTime = 0;
+        }
+      };
+    }
+  }, [pointerLockActive])
+
+  useEffect(() => {
+    // Handle hovered state change
+    if (hovered) {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
       }
-    };
+      if (bookAudioRef.current) {
+        bookAudioRef.current.pause();
+        bookAudioRef.current.currentTime = 0;
+      }
+    }
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
-
+   
+    
+  }, [hovered]);
   const handlePointerLock = () => {
+  
+
+
     controlsRef.current.lock();
     setPointerLockActive(true);
+
+
+
+
+
   };
+  useEffect(() => {
+    // Create an audio object for BookAudio
+
+    const scriptAudio=new Audio(ScriptAudio)
+    scriptAudio.volume=1
+    const tvAudio=new Audio(tvMp3)
+    tvAudio.volume=1
+    tvAudioRef.current = tvAudio;
+
+ 
+    if (hovered) {
+  
+   
+setAudioFinished(true)
+      scriptAudio.play().catch(error => {
+        console.error("Failed to play script audio:", error);
+      })
+
+
+    } else {
+      scriptAudio.pause();
+    
+    }
+
+    if(tv && audioFinished){
+      tvAudioRef.current.play().catch(error => {
+        console.error("Failed to play script audio:", error);
+      })
+
+    }
+    else{
+      tvAudioRef.current.pause()
+    }
+
+
+
+    return () => {
+      scriptAudio.pause();
+     
+      tvAudioRef.current.pause()
+
+    };
+  }, [hovered,tv]);
+
+useEffect(()=>{
+  const tvTableAudio=new Audio(tvTableMp3)
+  tvTableAudio.volume=1
+  tvTableAudioRef.current = tvTableAudio;
+  if(tvTable && audioFinished){
+    tvTableAudioRef.current.play().catch(error => {
+      console.error("Failed to play script audio:", error);
+    })
+
+  }
+  else{
+    tvTableAudioRef.current.pause()
+
+  }
+
+  return()=>{
+    tvTableAudioRef.current.pause()
+  }
+},[tvTable])
+
+
+ 
 
   useFrame(() => {
     const direction = new THREE.Vector3();
@@ -105,31 +226,13 @@ function AssistedVision() {
     }
   });
 
-  const handleAudioPlayback = () => {
-    // Stop all audio
-    Object.values(audioRefs).forEach(ref => {
-      ref.current.pause();
-      ref.current.currentTime = 0;
-    });
 
-    // Play the audio based on the current state
-    if (hovered) {
-      audioRefs.table.current.play().catch(error => console.log("Error playing table audio:", error));
-    } else if (tv) {
-      audioRefs.tv.current.play().catch(error => console.log("Error playing TV audio:", error));
-    } else if (tvTable) {
-      audioRefs.tvTable.current.play().catch(error => console.log("Error playing TV Table audio:", error));
-    }
-  };
-
-  useEffect(() => {
-    handleAudioPlayback();
-  }, [hovered, tv, tvTable]);
 
   return (
-    <>
+    <>  
       <Light />
-      <Museum
+   
+        <Museum
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
         onPointerOver2={() => setTv(true)}
@@ -137,6 +240,8 @@ function AssistedVision() {
         onPointerOver3={() => setTvTable(true)}
         onPointerOut3={() => setTvTable(false)}
       />
+
+     
 
       {hovered && (
         <Html wrapperClass='tableText' position={[80.197582617751709, 90 - 0.11265385835948, 45]}>

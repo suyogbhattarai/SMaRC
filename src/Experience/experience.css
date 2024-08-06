@@ -20,6 +20,10 @@
    
   }
 
+  .okText{
+    color: white;
+    text-align: center;
+  }
   .entryText {
     position: fixed !important; 
     z-index: 1000;  /* Bring it to the front */

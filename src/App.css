@@ -16,6 +16,26 @@
     padding: 0px 100px;
 }
 
+
+.scrollalert{
+    position: fixed !important;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(27, 29, 58, 0.459);
+    overflow: hidden;
+    width:12vw;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+
+.scrollalert .alert{
+    color: white;
+}
 .ui .navbar{
     display: flex;
     

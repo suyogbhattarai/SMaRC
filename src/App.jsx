@@ -13,6 +13,7 @@ import Robotics from './Robotics/Robotics';
 
 
 
+
 const Experience = lazy(() => import('./Experience/Experience'));
 
 const Interface = lazy(() => import('./Interface/Interface'));
@@ -40,18 +41,20 @@ function App() {
        
    
       <Suspense fallback={<Loading/>}>
+      <Routes>
 
-         <Routes>
+<Route path='/' element={<Experience />} />
 
-   <Route path='/' element={<Experience />} />
+<Route path="/vision" element={<AssistedVision />} />
 
-   <Route path="/vision" element={<AssistedVision />} />
-  
-   <Route path="/AI" element={<AI />} />
-   <Route path="/IOT" element={<IOT/>} />
-   <Route path="/robotics" element={<Robotics/>} />
- </Routes>
+<Route path="/AI" element={<AI />} />
+<Route path="/IOT" element={<IOT/>} />
+<Route path="/robotics" element={<Robotics/>} />
+</Routes>
+ 
+
          </Suspense>
+
       </Canvas>
       {!isVisionPath && (<>
       <div className="container">
@@ -69,6 +72,11 @@ function App() {
   </ul>
 </div>
 
+</div>
+<div className="scrollalert">
+  <div className="alert">
+  <i class="fas fa-mouse"></i>  Scroll   To Explore
+  </div>
 </div>
       </div>
 

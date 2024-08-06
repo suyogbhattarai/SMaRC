@@ -7,9 +7,7 @@ import { useGLTF, useAnimations, Html, TransformControls, PivotControls, Plane, 
 import { useFrame } from '@react-three/fiber'
 import { useControls } from 'leva'
 import "./building1.css"
-import { PlaneGeometry } from 'three'
-import { MeshStandardMaterial } from 'three'
-import { PlaneBufferGeometry } from 'three'
+
 import * as THREE from "three"
 import { useState } from 'react'
 import { useThree } from '@react-three/fiber'
@@ -791,9 +789,9 @@ export default function Building1(props) {
        
 
       
-      {/* <Html  transform scale={1}   rotation={[0.23,4.71,0.24]}   position={[57.42,131.26,30.08]} wrapperClass='screen'>
+  <Html  transform scale={1}   rotation={[0.23,4.71,0.24]}   position={[57.42,131.26,30.08]} wrapperClass='screen'>
   <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" />
-  </Html>  */}
+  </Html>  
     </group>
   )
 }

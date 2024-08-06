@@ -6,9 +6,11 @@ import { Html, OrbitControls, ScrollControls, TransformControls, useScroll } fro
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f';
 import { getProject, val } from "@theatre/core";
 import "./robotics.css";
+import "../Building1/building1.css"
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
 import CameraAnimationRobotics from "./roboticsCamera.json"
+import OnlyTv from '../OnlyTv/OnlyTv';
 function Robotics() {
     const [sheet, setSheet] = useState(null);
 
@@ -174,7 +176,14 @@ scale={30}
 
    
       </Html>
+
       </>)}
+      <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/>
+ {/* <Html  transform scale={1}   rotation={[0.23,4.71,0.24]}   position={[57.42,131.26,30.08]} wrapperClass='screen'>
+  <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" />
+  </Html>    */}
+      <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/>
+        <OnlyTv position={[30.049306602159675,131.24272750605908, -83.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90)]}/>
 
       {enterproject2 && (<>
         <Html
@@ -183,8 +192,8 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[-65.14303079212448, 135.24272750605908,-98.22628269127733]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
+        position={[-40.14303079212448, 132.24272750605908,-100.22628269127733]}
+        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
         <div className="card">
@@ -205,7 +214,7 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[20.064064073291057, 135.24272750605908,-110.67658238711239]}
+        position={[10.064064073291057, 132.24272750605908,-100.67658238711239]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >

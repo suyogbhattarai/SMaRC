@@ -15,6 +15,7 @@ import { TvTable } from '../Interface/Tvtable/TvTable';
 import Floor from '../Floor/Floor';
 import GoCart from '../GoCart/GoCart';
 import { editable as e } from '@theatre/r3f';
+import { Selection, Select, EffectComposer, Outline } from '@react-three/postprocessing'
 
 
 
@@ -28,9 +29,10 @@ function Museum(props,{hovered}) {
   <Building1/>
 
 <Floor position={[10,57,80]} scale={0.5}  />
-  
+<Select enabled={hovered}>
   <Table scale={0.5} onPointerOver={props.onPointerOver}
-      onPointerOut={props.onPointerOut}   position={[ -25.197582617751709,  118.41265385835948,  36.76075189597355]}/>
+      onPointerOut={props.onPointerOut}   position={[ -32.197582617751709,  118.41265385835948,  36.76075189597355]}/>
+        </Select>
   <Tv onPointerOver={props.onPointerOver2}
       onPointerOut={props.onPointerOut2} />
   <TvTable onPointerOver={props.onPointerOver3}

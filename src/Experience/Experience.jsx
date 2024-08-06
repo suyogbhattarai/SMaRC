@@ -210,8 +210,8 @@ scale={20}
           distanceFactor={1.15}
           transform
    
-          position={[82.50930043885768, 134.91828431299987, 1.63107917522322]}
-          rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
+          position={[85.50930043885768, 134.91828431299987, 1.63107917522322]}
+          rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
           wrapperClass={`backVision ${enterVision ? 'visible' : ''}`}
         >
          
@@ -223,7 +223,7 @@ scale={20}
               &lt;&lt; 
               </div>
           
-              
+              <p className='okText'>Go Back</p>
             </div>
      
        
@@ -285,7 +285,7 @@ scale={20}
               <div onClick={()=>navigateTo("./?redirect=navbarAi&scrollPosition=4.013384556516312")} className="ok">
               &lt;&lt; 
               </div>
-          
+              <p className='okText'>Go Back</p>
               
             </div>
      
@@ -350,7 +350,7 @@ scale={20}
               <div onClick={()=>navigateTo("./?redirect=navbarRobotics&scrollPosition=3.013384556516312")} className="ok">
               &lt;&lt; 
               </div>
-          
+            <p className='okText'>Go Back</p>
               
             </div>
      
@@ -410,7 +410,7 @@ scale={20}
               <div onClick={()=>navigateTo("./")} className="ok">
               &lt;&lt; 
               </div>
-          
+              <p className='okText'>Go Back</p>
               
             </div>
      

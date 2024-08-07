@@ -13,6 +13,8 @@ import "./assistedvison.css";
 import pagesTurning from "./pageTurning.mp3"
 import BookAudio from "./book.mp3"
 import ScriptAudio from "./script.mp3"
+import statueAudio from "./statue.mp3"
+import sofaAudio from "./sofa.mp3"
 
 
 
@@ -28,6 +30,8 @@ function AssistedVision() {
   const [hovered, setHovered] = useState(false);
   const [tv, setTv] = useState(false);
   const [tvTable, setTvTable] = useState(false);
+  const [sofa,setSofa]=useState(false)
+  const [statue,setStatue]=useState(false)
   const [audioFinished, setAudioFinished] = useState(false);
 
 
@@ -55,6 +59,9 @@ function AssistedVision() {
   const bookAudioRef = useRef(null);
   const tvAudioRef=useRef(null);
   const tvTableAudioRef=useRef(null);
+  const sofaAudioRef=useRef(null)
+  const statueAudioRef=useRef(null)
+
   useEffect(() => {
     if (goggleRef.current) {
       goggleRef.current.renderOrder = 9999;
@@ -211,8 +218,46 @@ useEffect(()=>{
   }
 },[tvTable])
 
+useEffect(()=>{
+  const sofaMp3=new Audio(sofaAudio)
+  sofaMp3.volume=1
+  sofaAudioRef.current = sofaMp3;
+  if(sofa && audioFinished){
+    sofaAudioRef.current.play().catch(error => {
+      console.error("Failed to play script audio:", error);
+    })
 
+  }
+  else{
+    sofaAudioRef.current.pause()
+
+  }
+
+  return()=>{
+    sofaAudioRef.current.pause()
+  }
+},[sofa])
  
+
+useEffect(()=>{
+  const statueMp3=new Audio(statueAudio)
+  statueMp3.volume=1
+  statueAudioRef.current = statueMp3;
+  if(statue && audioFinished){
+    statueAudioRef.current.play().catch(error => {
+      console.error("Failed to play script audio:", error);
+    })
+
+  }
+  else{
+    statueAudioRef.current.pause()
+
+  }
+
+  return()=>{
+    statueAudioRef.current.pause()
+  }
+},[statue])
 
   useFrame(() => {
     const direction = new THREE.Vector3();
@@ -239,6 +284,11 @@ useEffect(()=>{
         onPointerOut2={() => setTv(false)}
         onPointerOver3={() => setTvTable(true)}
         onPointerOut3={() => setTvTable(false)}
+        onPointerOver4={() => setSofa(true)}
+        onPointerOut4={() => setSofa(false)}
+        onPointerOver5={()=>setStatue(true)}
+        onPointerOut5={()=>setStatue(false)}
+
       />
 
      
@@ -250,8 +300,30 @@ useEffect(()=>{
       )}
 
       {tv && (
-        <Html wrapperClass='tableText' position={[100.197582617751709, 145.11265385835948, 32]}>
+        <Html wrapperClass='tableText' position={[120.197582617751709, 145.11265385835948,  32]}>
           <p>This is a Tv</p>
+        </Html>
+      )}
+
+{sofa && (
+  <>
+  
+  <Html wrapperClass='tableText' position={[80.197582617751709, 130.11265385835948, 182]}>
+          <p>This is a Sofa</p>
+        </Html>
+        <Html wrapperClass='tableText' position={[-18,130,0]} >
+          <p>This is a Sofa</p>
+        </Html>
+        
+        </>
+       
+
+        
+      )}
+
+{statue && (
+        <Html wrapperClass='tableText'  position={[-24,130,30]}>
+          <p>This is a Statue</p>
         </Html>
       )}
 

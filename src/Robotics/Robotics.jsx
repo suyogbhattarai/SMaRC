@@ -178,14 +178,19 @@ scale={30}
       </Html>
 
       </>)}
-      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
-      </Html>  
-      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
-      </Html>  
+      <Html transform scale={0.85} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(88), THREE.MathUtils.degToRad(0)]} position={[-50.549306602159675, 132.24272750605908, -50.14303079212448]} wrapperClass='screen'>
+                    <video height={1180} autoPlay loop muted  >
+                        <source src='./skillkicks.mp4' type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </Html>  
+      <Html  transform scale={1.7} width={1024} height={920}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,136.24272750605908, -71.54303079212448]} wrapperClass='screen'>
+      <video autoPlay loop muted  >
+                        <source src='./crab.mp4' type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>      </Html>  
       <Html  transform scale={0.85}  rotation={[0.23,4.71,0.24]}  position={[30.049306602159675,131.24272750605908, -83.14303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe?autoplay=1" allow='autoplay' className='videoFrame'/>
       </Html>   
       {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
       {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}

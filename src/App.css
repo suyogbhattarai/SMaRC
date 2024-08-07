@@ -25,16 +25,18 @@
     display: flex;
     justify-content: center;
     margin: auto;
-    background-color: rgba(27, 29, 58, 0.459);
+   
     overflow: hidden;
-    width:12vw;
-    padding: 10px 10px;
-    border-radius: 20px;
+    width:100%;
+   
 }
 
 
 .scrollalert .alert{
+    background-color: rgba(27, 29, 58, 0.459);
     color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
 }
 .ui .navbar{
     display: flex;

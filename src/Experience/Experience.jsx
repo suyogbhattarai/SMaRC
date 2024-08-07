@@ -23,7 +23,7 @@ function Experience() {
   return (
     <>
       {sheet && (
-        <ScrollControls pages={10} ref={scrollControlsRef}>
+        <ScrollControls pages={20} ref={scrollControlsRef}>
           <SheetProvider sheet={sheet}>
             <SceneExperience scrollControlsRef={scrollControlsRef} />
           </SheetProvider>
@@ -378,7 +378,7 @@ scale={20}
 
           distanceFactor={1.15}
           transform
-          position={[-45.81731037439364, 135.58773897952544, 40.908885908411563]}
+          position={[-47.81731037439364, 137.58773897952544, 38.908885908411563]}
           rotation={[THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(-90)]}
           wrapperClass={`backVision ${enterVision ? 'visible' : ''}`}
         >

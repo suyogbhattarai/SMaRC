@@ -159,7 +159,7 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[45.35053501784879, 132.571, -40.18442970534629]}
+        position={[55.35053501784879, 132.571, -40.18442970534629]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
@@ -267,15 +267,25 @@ scale={20}
       </Html>
       </>)}
 
-      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[30.549306602159675,134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
-      </Html>  
-      <Html  transform scale={0.85}  rotation={[-0,-0,0]}  position={[40.549306602159675,134.24272750605908, -110.54303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
-      </Html>  
-      <Html  transform scale={0.85}  rotation={[0,0,0]}  position={[133.14303079212448, 134.24272750605908,-100.22628269127733]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
-      </Html>   
+      <Html transform scale={0.55} rotation={[-0.23, -4.71, 0.24]} position={[30.549306602159675, 134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
+  <video controls autoPlay loop muted className='videoFrame'>
+    <source src="./iotVideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</Html>
+<Html transform scale={0.55} rotation={[0, 0, 0]} position={[50.549306602159675, 134.24272750605908, -110.54303079212448]} wrapperClass='screen'>
+  <video controls autoPlay loop muted className='videoFrame'>
+    <source src="./iotVideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</Html>
+<Html transform scale={0.45} rotation={[0, 0, 0]} position={[133.14303079212448, 134.24272750605908, -100.22628269127733]} wrapperClass='screen'>
+  <video controls autoPlay loop muted className='videoFrame'>
+    <source src="./iotVideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</Html>
+  
         </group>
       </>
     );

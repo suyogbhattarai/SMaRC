@@ -123,59 +123,43 @@ function SceneIOT() {
       
     
 
-      {enterProject1 && (<>
-        {/* <Html
-scale={80}
-
-        distanceFactor={1.15}
-        transform
-       
-        position={[5.50930043885768, 135,30.63107917522322]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "aiInterface" }
-      >
-       
-        <div className="entryText">
-        
-          <div className="title">
-         
-       <div style={{display:"flex",gap:"10"}} className="flex">
-       <h2 style={{fontSize:"24px"}}>   Scroll  &darr;  To Move    </h2>
-       </div>
-   
-       
-            
-          </div>
-
-   
-   
-     
-        </div>
- 
-   
-      </Html> */}
-        <Html
-scale={30}
-
-        distanceFactor={1.15}
-        transform
-       
-        position={[135.28930814201183, 132.88183348706795, 90.79583968511831]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "projectInterfaceIot" }
-      >
-        <div className="card">
-        <div className="title">
-        <h2>Smart Home</h2>
-       </div>   
-       <div className="description">
-        <p>Smart Home  is a hoem filled up with modern technologies and automations.</p>
-       </div>
-        </div>
-
-   
-      </Html>
-      </>)}
+        {enterProject1 && (
+        <>
+          <Html
+            scale={30}
+            distanceFactor={1.15}
+            transform
+            position={[135.28930814201183, 132.88183348706795, 90.79583968511831]}
+            rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
+            wrapperClass={"projectInterfaceIot"}
+          >
+            <div className="card">
+              <div className="title">
+                <h2>Smart Home</h2>
+              </div>
+              <div className="description">
+                <p>Smart Home is a home filled with modern technologies and automations.</p>
+              </div>
+            </div>
+          </Html>
+        </>
+      )}
+      
+          <Html 
+            scale={30}
+            distanceFactor={1.15}
+            transform
+            position={[155.28930814201183, 132.88183348706795, 56.79583968511831]}
+            rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0)]}
+            wrapperClass={"videoInterface"}
+          >
+          <div>
+              <video autoPlay controls loop muted>
+                <source src='/iotVideo.mp4' type='video/mp4' />
+                No video tag support
+              </video>
+            </div>
+          </Html>
 
       {enterproject2 && (<>
         <Html
@@ -198,6 +182,21 @@ scale={20}
         </div>
       </Html>
       </>)}
+      <Html 
+            scale={30}
+            distanceFactor={1.15}
+            transform
+            position={[155.28930814201183, 132.88183348706795, 17.79583968511831]}
+            rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0)]}
+            wrapperClass={"videoInterface"}
+          >
+          <div>
+              <video autoPlay controls loop muted>
+                <source src='/iotVideo2.mp4' type='video/mp4' />
+                No video tag support
+              </video>
+            </div>
+          </Html>
 
       {enterProject3 && (<>
         <Html

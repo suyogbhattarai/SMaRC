@@ -9,8 +9,6 @@ import { Html, OrbitControls } from '@react-three/drei';
 import "./museum.css"
 import { Tv } from '../Tv/Tv';
 import { TvTable } from '../Interface/Tvtable/TvTable';
-import Floor from '../Floor/Floor';
-import GoCart from '../GoCart/GoCart';
 import { editable as e } from '@theatre/r3f';
 import { Selection, Select, EffectComposer, Outline } from '@react-three/postprocessing'
 import Sofa from './Sofa';
@@ -18,7 +16,6 @@ import MiniTable from './MiniTable';
 import Statue from './Statue';
 import Book from './Book';
 import Carpet from './Carpet';
-
 
 function Museum(props,{hovered}) {
   const location = useLocation();
@@ -34,7 +31,6 @@ function Museum(props,{hovered}) {
       onPointerOut={props.onPointerOut5} position={[-13.5, 125 , -70]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
   <MiniTable  onPointerOver={props.onPointerOver5}
       onPointerOut={props.onPointerOut5} position={[42,122,-33]} scale={[3.5,3.5,3.5]} />
-<Floor position={[10,57,80]} scale={0.5}  />
 <Carpet position={[5,119,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
 <Book position={[-26.8,123,37.6]} scale={[-1.5,1.5,-1.5]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
 }/>

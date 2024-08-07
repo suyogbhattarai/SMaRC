@@ -248,7 +248,7 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[20.64316493627175, 131.58200500575782, -30.36857004618043]}
+        position={[23.64316493627175, 131.58200500575782, -48.36857004618043]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "aiInterface" }
       >
@@ -256,12 +256,7 @@ scale={20}
 
         
         <div style={{display:"flex",gap:"10"}} className="flex">
-       <h3 onClick={()=>navigateTo("/?redirect=robotics&scrollPosition=4.013384556516312")} >   Exit   </h3>
-
-
-   
-   
-     
+       <h3 onClick={()=>navigateTo("/?redirect=robotics&scrollPosition=4.013384556516312")} >   Exit   </h3>  
         </div>
    
       </Html>

@@ -13,7 +13,7 @@ import experienceCamera from "./camerAnimationExp.json"
 function Experience() {
   const [sheet, setSheet] = useState(null);
 
-  const scrollControlsRef = useRef();
+  // const scrollControlsRef = useRef();
 
   useEffect(() => {
     const projectSheet = getProject("Fly Through",{state:experienceCamera}).sheet("Scene");
@@ -23,9 +23,9 @@ function Experience() {
   return (
     <>
       {sheet && (
-        <ScrollControls pages={20} ref={scrollControlsRef}>
+        <ScrollControls pages={10} >
           <SheetProvider sheet={sheet}>
-            <SceneExperience scrollControlsRef={scrollControlsRef} />
+            <SceneExperience  />
           </SheetProvider>
         </ScrollControls>
       )}
@@ -35,7 +35,7 @@ function Experience() {
 
 export default Experience;
 
-function SceneExperience({ scrollControlsRef }) {
+function SceneExperience() {
   const sheet = useCurrentSheet();
   const scroll = useScroll();
   const [clearPath, setClearPath] = useState(false);
@@ -222,7 +222,7 @@ scale={20}
           distanceFactor={1.15}
           transform
          
-          position={[50.50930043885768, 135.91828431299987, -42.63107917522322]}
+          position={[62.50930043885768, 135.91828431299987, -42.63107917522322]}
           rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
           wrapperClass={ "entryText" }
         >
@@ -253,7 +253,7 @@ scale={20}
           distanceFactor={1.15}
           transform
    
-          position={[110.50930043885768, 135.91828431299987, -42.63107917522322]}
+          position={[113.50930043885768, 135.91828431299987, -42.63107917522322]}
           rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
           wrapperClass={`backVision ${enterVision ? 'visible' : ''}`}
         >
@@ -285,7 +285,7 @@ scale={20}
           distanceFactor={1.15}
           transform
          
-          position={[-33.502383096244479, 136.67164729531294, -55.504615469855594]}
+          position={[-23.502383096244479, 136.67164729531294, -55.504615469855594]}
           rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
           wrapperClass={`entryText ${enterVision ? 'visible' : ''}`}
         >
@@ -318,7 +318,7 @@ scale={20}
           distanceFactor={1.15}
           transform
          
-          position={[20.502383096244479, 134.67164729531294, -50.504615469855594]}
+          position={[31.502383096244479, 134.67164729531294, -50.504615469855594]}
           rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
           wrapperClass={`backVision ${enterVision ? 'visible' : ''}`}
         >

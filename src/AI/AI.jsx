@@ -266,6 +266,16 @@ scale={20}
         </div>
       </Html>
       </>)}
+
+      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[30.549306602159675,134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>  
+      <Html  transform scale={0.85}  rotation={[-0,-0,0]}  position={[40.549306602159675,134.24272750605908, -110.54303079212448]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>  
+      <Html  transform scale={0.85}  rotation={[0,0,0]}  position={[133.14303079212448, 134.24272750605908,-100.22628269127733]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>   
         </group>
       </>
     );

@@ -66,7 +66,7 @@ function App() {
 <div className="navbar">
   <ul>
   <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
-  <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li> Assisted Vision</li></a>
+  <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li>Assisted Vision</li></a>
     <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=4.013384556516312"><li>Robotics</li></a>
     <a style={{textDecoration:"none"}}  href="/?redirect=navbarAi&scrollPosition=6.013384556516312"><li>Artificial Intelligence</li></a>
     <a style={{textDecoration:"none"}}  href="/?redirect=navbarIot&scrollPosition=8.013384556516312"><li>IOT</li></a>

@@ -67,7 +67,7 @@ function AssistedVision() {
   }, []);
 
   useEffect(() => {
-    const cameraSet = new THREE.Vector3(-33.7, 129.8, 38);
+    const cameraSet = new THREE.Vector3(-33.6, 129.8, 38);
     camera.position.copy(cameraSet);
     camera.fov = 40;
     camera.updateProjectionMatrix();

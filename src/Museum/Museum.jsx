@@ -26,21 +26,23 @@ function Museum(props,{hovered}) {
 
   return (
     <>
+    <ambientLight intensity={0.5} />
   <Building1/>
   <Sofa />
-  <Statue position={[-32.5, 128, -80]} scale={[4, 4, -4]} rotation={[-0.1, -Math.PI / 2, 0]} />
-  <MiniTable position={[42,124,-33]} scale={[5,5,5]} />
+  <Statue position={[-13.5, 127, -70]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
+  <MiniTable position={[42,124,-33]} scale={[3.5,3.5,3.5]} />
 <Floor position={[10,57,80]} scale={0.5}  />
 <Carpet position={[5,119,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
-<Book position={[-25,126,37]} scale={[1.5,1.5,1.5]} rotation={[0,1,0]}/>
-<Table scale={0.7} onPointerOver={props.onPointerOver}
-      onPointerOut={props.onPointerOut}   position={[ -30.197582617751709,  118.41265385835948,  36.76075189597355]} />
+<Book position={[-26.8,123,37.6]} scale={[-1.5,1.5,-1.5]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
+}/>
+<Table scale={0.6} onPointerOver={props.onPointerOver}
+      onPointerOut={props.onPointerOut}   position={[ -31.197582617751709,  116.41265385835948,  36.76075189597355]} />
   <Tv onPointerOver={props.onPointerOver2}
       onPointerOut={props.onPointerOut2} />
   <TvTable onPointerOver={props.onPointerOver3}
       onPointerOut={props.onPointerOut3}   position={[0,76,0]}/>
   <CharacterModel onPointerOver={props.onPointerOver3}
-      onPointerOut={props.onPointerOut3} scale={8} position={[-35, 116.4, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
+      onPointerOut={props.onPointerOut3} scale={9} position={[-35, 116.4, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
 {location.pathname==="/vision" ?(<>
 </>):(<>
   {/* <e.mesh theatreKey="gocart">

@@ -102,7 +102,7 @@ function SceneRobotics() {
       setEnterproject2(distance2 < tolerance);
   
       const distance3 = calculateDistanceProject3(camera.position, targetPositionProject3);
-      setEnterProject3(distance3 < tolerance);
+      setEnterProject3(distance3 <20);
   
       const distance4 = calculateDistanceProject4(camera.position, targetPositionproject4);
       setEnterproject4(distance4 < tolerance);
@@ -170,7 +170,7 @@ scale={30}
         <h2>Skill Kicks</h2>
        </div>   
        <div className="description">
-        <p>Skill Kicks is a robot based game where we controls our moving robot with a controlller kick a ball.There is a arena for playing this with a goal post just like football.</p>
+        <p>Skill Kicks is a game arena where two teams of three Robots play ice-hockey/football.</p>
        </div>
         </div>
 
@@ -178,20 +178,18 @@ scale={30}
       </Html>
 
       </>)}
-      <Html transform scale={0.85} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(88), THREE.MathUtils.degToRad(0)]} position={[-50.549306602159675, 132.24272750605908, -50.14303079212448]} wrapperClass='screen'>
+      <Html transform scale={0.85} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]} position={[-50.549306602159675, 132.24272750605908, -50.14303079212448]} wrapperClass='screen'>
                     <video height={1180} autoPlay loop muted  >
                         <source src='./skillkicks.mp4' type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </Html>  
-      <Html  transform scale={1.7} width={1024} height={920}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,136.24272750605908, -71.54303079212448]} wrapperClass='screen'>
+      <Html  transform scale={1} width={1024} height={920}  rotation={[-0.23,-4.71,0.24]}  position={[50.549306602159675,135.24272750605908, -85.54303079212448]} wrapperClass='screen'>
       <video autoPlay loop muted  >
                         <source src='./crab.mp4' type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>      </Html>  
-      <Html  transform scale={0.85}  rotation={[0.23,4.71,0.24]}  position={[30.049306602159675,131.24272750605908, -83.14303079212448]} wrapperClass='screen'>
-      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe?autoplay=1" allow='autoplay' className='videoFrame'/>
-      </Html>   
+
       {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
       {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
       {/* <OnlyTv position={[30.049306602159675,131.24272750605908, -83.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90)]}/> */}
@@ -203,16 +201,16 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[-40.14303079212448, 132.24272750605908,-100.22628269127733]}
+        position={[-43.14303079212448, 132.24272750605908,-100.22628269127733]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2>Murphy Robot</h2>
+        <h2 style={{color:"rgb(180, 40, 40)"}}>Alert:</h2>
        </div>
        <div className="description">
-        <p> Murphy robot is a voice commanded robot which follows the command .</p>
+        <p> Please dont place your cursor over text ,images and videos.It prevents you from scrolling</p>
        </div>
         </div>
       </Html>
@@ -225,17 +223,17 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[10.064064073291057, 132.24272750605908,-100.67658238711239]}
+        position={[30.064064073291057, 136.24272750605908,-115.67658238711239]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
         <div className="card">
         <div className="title">
-        <h2>Desk Robot </h2>
+        <h2>Mr.Murphy</h2>
        </div>
        <div className="description">
         <p>
-        Desk Robot is a robot which follows our gestures and assists us in our desk hour.</p>
+        Mr. Murphy is a desk companion Robot. It is controlled manually to move around the desk. It responds to certain commands like “hello”, “dance”,”move”. It also displays emotions through its eyes.</p>
        </div>
         </div>
       </Html>
@@ -248,7 +246,7 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[23.64316493627175, 131.58200500575782, -48.36857004618043]}
+        position={[30.64316493627175, 131.58200500575782, -40.36857004618043]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "aiInterface" }
       >

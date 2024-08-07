@@ -23,7 +23,7 @@ function Experience() {
   return (
     <>
       {sheet && (
-        <ScrollControls pages={10} >
+        <ScrollControls pages={20} >
           <SheetProvider sheet={sheet}>
             <SceneExperience  />
           </SheetProvider>

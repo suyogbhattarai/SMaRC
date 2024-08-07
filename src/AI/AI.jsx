@@ -168,7 +168,7 @@ scale={20}
         <h2>Self Driving Car</h2>
        </div>
        <div className="description">
-        <p>Self-driving cars, also known as autonomous vehicles,  represent a transformative leap in  transportation technology.</p>
+        <p>Self Driving Car is an autonomous robot which detects and follows the lane. It also responds according to a few traffic signs such as stop signs, traffic lights, etc. The Car detects obstacles or other cars on the road and avoids collision.</p>
        </div>
         </div>
 
@@ -183,7 +183,7 @@ scale={20}
         distanceFactor={1.15}
         transform
        
-        position={[25.9232654588117, 132.571, -83.18442970534629]}
+        position={[25.9232654588117, 132.571, -95.18442970534629]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
@@ -267,21 +267,21 @@ scale={20}
       </Html>
       </>)}
 
-      <Html transform scale={0.55} rotation={[-0.23, -4.71, 0.24]} position={[30.549306602159675, 134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
-  <video controls autoPlay loop muted className='videoFrame'>
-    <source src="./iotVideo.mp4" type="video/mp4" />
+      <Html transform scale={1.5} rotation={[-0.23, -4.71, 0.24]} position={[30.549306602159675, 134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
+  <video  autoPlay loop muted className='videoFrame'>
+    <source src="./aicar.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </Html>
-<Html transform scale={0.55} rotation={[0, 0, 0]} position={[50.549306602159675, 134.24272750605908, -110.54303079212448]} wrapperClass='screen'>
-  <video controls autoPlay loop muted className='videoFrame'>
-    <source src="./iotVideo.mp4" type="video/mp4" />
+<Html transform scale={0.3} rotation={[0, 0, 0]} position={[50.549306602159675, 130.24272750605908, -100.54303079212448]} wrapperClass='screen'>
+  <video height={1500} controls autoPlay loop muted className='videoFrame'>
+    <source src="./math.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </Html>
-<Html transform scale={0.45} rotation={[0, 0, 0]} position={[133.14303079212448, 134.24272750605908, -100.22628269127733]} wrapperClass='screen'>
+<Html transform scale={1} rotation={[0, 0, 0]} position={[133.14303079212448, 134.24272750605908, -100.22628269127733]} wrapperClass='screen'>
   <video controls autoPlay loop muted className='videoFrame'>
-    <source src="./iotVideo.mp4" type="video/mp4" />
+    <source src="./safari3.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </Html>

@@ -178,12 +178,18 @@ scale={30}
       </Html>
 
       </>)}
-      <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/>
- {/* <Html  transform scale={1}   rotation={[0.23,4.71,0.24]}   position={[57.42,131.26,30.08]} wrapperClass='screen'>
-  <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" />
-  </Html>    */}
-      <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/>
-        <OnlyTv position={[30.049306602159675,131.24272750605908, -83.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90)]}/>
+      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>  
+      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>  
+      <Html  transform scale={0.85}  rotation={[-0.23,-4.71,0.24]}  position={[30.049306602159675,131.24272750605908, -83.14303079212448]} wrapperClass='screen'>
+      <iframe src="https://www.youtube.com/embed/ni5fmRGjxzs?si=sRQS3DNx1lCkiafe" className='videoFrame'/>
+      </Html>   
+      {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
+      {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
+      {/* <OnlyTv position={[30.049306602159675,131.24272750605908, -83.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90)]}/> */}
 
       {enterproject2 && (<>
         <Html

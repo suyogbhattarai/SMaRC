@@ -12,8 +12,6 @@ export default function OnlyTv(props) {
 
 
       <group
-       
-       
         scale={[9.198, 5.984, 7.771]}>
         <mesh
           castShadow

@@ -1,16 +1,13 @@
 .screen{
- 
     position: fixed !important; 
     z-index: -1;
     overflow-x: hidden;
     overflow-y: hidden;
 }
-.screen iframe{
-    width: 1024px;
-    height: 670px;
+.videoFrame iframe{
+    width: 1920px;
+    height: 1080px;
     border: 15px solid black;
     overflow-x: hidden;
     overflow-y: hidden;
-   
-   
 }

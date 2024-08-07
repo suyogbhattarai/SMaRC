@@ -72,7 +72,6 @@
 
     padding:20px 2px;
     font-size: 30px;
-    
     align-items: center;
     align-content: center;
     text-align: center;
@@ -83,7 +82,9 @@
     cursor: pointer;
   }
 
-
+  *{
+    border-radius: 10px;
+  }
   .backVision .btnRow .ok:hover{
 background-color: rgb(76, 171, 55);
   }

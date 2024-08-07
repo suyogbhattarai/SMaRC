@@ -37,6 +37,7 @@ function App() {
         </Html>
 
         <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
+        {/* <OrbitControls /> */}
         </group>
        
    

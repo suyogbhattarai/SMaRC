@@ -16,7 +16,7 @@ import ScriptAudio from "./script.mp3"
 
 
 
-import debounce from 'lodash/debounce';
+// import debounce from 'lodash/debounce';
 function AssistedVision() {
   const { camera } = useThree()
   const controlsRef = useRef();

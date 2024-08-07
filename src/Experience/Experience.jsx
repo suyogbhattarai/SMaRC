@@ -105,7 +105,6 @@ const buttonRef=useRef();
       scrollPosition = scroll.offset * sequenceLength;
     }
 
- 
 
     sheet.sequence.position = scrollPosition;
 
@@ -126,8 +125,6 @@ const buttonRef=useRef();
     setEnterIot(distance4 < tolerancehHigh);
   });
 
-
-
   const navigateTo = useNavigate();
 
   useEffect(() => {
@@ -146,30 +143,15 @@ const buttonRef=useRef();
     <>
       <Light />
       <Museum />
-
       <PerspectiveCamera
         theatreKey="Camera"
         makeDefault
         position={[0, 0, 0]}
       />
-    
-
-
 
 <group 
      >
-
 </group>
-
-{/* <OrbitControls makeDefault/> */}
-
-  
-
-
-
-
-  
-
 
 {enterIot && (<>
 
@@ -198,8 +180,6 @@ scale={20}
             Enter
               </div>
             </div>
-     
-       
           </div>
      
         </Html>
@@ -379,9 +359,9 @@ scale={20}
             <div className="btnRow">
            
               <div onClick={handleNavigation} className="ok">
-                Ok
+                Enter
               </div>
-              {/* <div onClick={()=>setEnterVision(false)} className="later">
+              {/* <div onClick={()=>setEnterVision(false)} c  lassName="later">
                 Later
                 
               </div> */}

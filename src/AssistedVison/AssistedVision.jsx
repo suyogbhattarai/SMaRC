@@ -245,19 +245,19 @@ useEffect(()=>{
 
       {hovered && (
         <Html wrapperClass='tableText' position={[80.197582617751709, 90 - 0.11265385835948, 45]}>
-          <p>This is a circular table</p>
+          <p>There is a circular table</p>
         </Html>
       )}
 
       {tv && (
         <Html wrapperClass='tableText' position={[100.197582617751709, 145.11265385835948, 32]}>
-          <p>This is a Tv</p>
+          <p>There is a Tv ahead of you</p>
         </Html>
       )}
 
       {tvTable && (
         <Html wrapperClass='tableText' position={[-20.197582617751709, 130.11265385835948, 38]}>
-          <p>This is a Tv table</p>
+          <p>There is a Tv table below the table</p>
         </Html>
       )}
 

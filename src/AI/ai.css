@@ -61,3 +61,17 @@ width: 200px;
     cursor: pointer;
     transition: 0.5s all ease-in-out;
 }
+
+.screen {
+    position: fixed !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .screen video {
+    height: 670px;
+    border: 15px solid black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  

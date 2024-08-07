@@ -89,7 +89,7 @@
   .backVision .btnRow .ok:hover{
 background-color: rgb(76, 171, 55);
   }
-  
+    
   .interface.visible {
    visibility: visible !important;
    transition: 2s all ease-in-out !important;

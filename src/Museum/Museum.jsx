@@ -9,7 +9,7 @@ import { Html, OrbitControls } from '@react-three/drei';
 import "./museum.css"
 import { Tv } from '../Tv/Tv';
 import { TvTable } from '../Interface/Tvtable/TvTable';
-import Floor from '../Floor/Floor';
+// import Floor from '../Floor/Floor';
 import GoCart from '../GoCart/GoCart';
 import { editable as e } from '@theatre/r3f';
 import { Selection, Select, EffectComposer, Outline } from '@react-three/postprocessing'
@@ -18,7 +18,7 @@ import MiniTable from './MiniTable';
 import Statue from './Statue';
 import Book from './Book';
 import Carpet from './Carpet';
-
+import Drone from './Drone';
 
 function Museum(props,{hovered}) {
   const location = useLocation();
@@ -26,12 +26,13 @@ function Museum(props,{hovered}) {
 
   return (
     <>
+    <Drone position={[0,140,200]} scale={[5,5,5]}/>
     <ambientLight intensity={0.5} />
   <Building1/>
   <Sofa />
   <Statue position={[-13.5, 127, -70]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
   <MiniTable position={[42,124,-33]} scale={[3.5,3.5,3.5]} />
-<Floor position={[10,57,80]} scale={0.5}  />
+{/* <Floor position={[10,57,80]} scale={0.5}  /> */}
 <Carpet position={[5,119,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
 <Book position={[-26.8,123,37.6]} scale={[-1.5,1.5,-1.5]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
 }/>

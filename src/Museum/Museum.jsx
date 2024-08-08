@@ -5,7 +5,7 @@ import CharacterModel from '../CharacterModel/CharacterModel';
 import * as THREE from "three"
 import Table from '../Table/Table';
 import { useFrame } from '@react-three/fiber';
-import { Html, OrbitControls } from '@react-three/drei';
+import { Float, Html, OrbitControls, Text,Text3D } from '@react-three/drei';
 import "./museum.css"
 import { Tv } from '../Tv/Tv';
 import { TvTable } from '../Interface/Tvtable/TvTable';
@@ -16,6 +16,9 @@ import MiniTable from './MiniTable';
 import Statue from './Statue';
 import Book from './Book';
 import Carpet from './Carpet';
+import Butterfly from '../Butterfly/Butterfly';
+import poppinsFont from './Poppins-Bold.ttf'; 
+
 
 function Museum(props,{hovered}) {
   const location = useLocation();
@@ -23,8 +26,13 @@ function Museum(props,{hovered}) {
 
   return (
     <>
+
     <ambientLight intensity={0.5} />
   <Building1/>
+
+  <Butterfly scale={18} position={[5,180,65]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(183),THREE.MathUtils.degToRad(-10)]}/>
+  <Text font={poppinsFont} color={"yellow"}  scale={7} position={[-10,179,65]}>Skill</Text>
+  <Text  font={poppinsFont} color={"yellow"} scale={7} position={[28,179,65]}>Museum</Text>
   <Sofa  onPointerOver={props.onPointerOver4}
       onPointerOut={props.onPointerOut4}/>
   <Statue  onPointerOver={props.onPointerOver5}

@@ -1,0 +1,16 @@
+.screen{
+ 
+    position: fixed !important; 
+ 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.screen video{
+    
+   
+    border: 15px solid black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+   
+}

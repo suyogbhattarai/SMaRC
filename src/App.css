@@ -16,6 +16,15 @@
     padding: 0px 100px;
 }
 
+.hologram{
+    position: fixed !important;
+    
+}
+
+
+.hologram iframe{
+    border: none;
+}
 
 .scrollalert{
     position: fixed !important;

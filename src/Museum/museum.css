@@ -1,0 +1,10 @@
+
+
+.groundImage{
+    position: fixed !important;
+}
+.groundImage img{
+    position: fixed !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

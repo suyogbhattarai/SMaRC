@@ -9,6 +9,7 @@ import "./ai.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
 import aiCameraAnimation from "./aiCameraAnimation.json"
+import SelfDriving from '../SelfDriving/SelfDriving';
 
 function AI() {
     const [sheet, setSheet] = useState(null);
@@ -95,7 +96,7 @@ function SceneAI() {
       const scrollPosition = scroll.offset * sequenceLength;
       sheet.sequence.position = scrollPosition;
       const distance = calculateDistanceProject1(camera.position, targetPositionProject1);
-      setEnterProject1(distance < tolerance);
+      setEnterProject1(distance < 30);
   
       const distance2 = calculateDistanceProject2(camera.position, targetPositionProject2);
       setEnterproject2(distance2 < tolerance);
@@ -151,7 +152,9 @@ scale={50}
    
       </Html>
     
-
+<SelfDriving  
+scale={2} rotation={[0,THREE.MathUtils.degToRad(45),0]}
+        position={[45.35053501784879, 120.571, -46.18442970534629]} />
       {enterProject1 && (<>
         <Html
 scale={20}
@@ -178,12 +181,12 @@ scale={20}
 
       {enterproject2 && (<>
         <Html
-scale={20}
+scale={30}
 
         distanceFactor={1.15}
         transform
        
-        position={[35.9232654588117, 132.571, -120.18442970534629]}
+        position={[40.9232654588117, 132.571, -120.18442970534629]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
@@ -269,7 +272,7 @@ scale={20}
 
       <Html transform scale={1.65} rotation={[-0.23, -4.71, 0.24]} position={[30.549306602159675, 133.94272750605908, -56.14303079212448]} wrapperClass='screen'>
   <video  autoPlay loop muted className='videoFrame'>
-    <source src="./aicar.mp4" type="video/mp4" />
+    <source src="./self.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </Html>

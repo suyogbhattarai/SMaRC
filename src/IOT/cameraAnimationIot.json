@@ -14,7 +14,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 10,
+        "length": 4,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Camera": {
@@ -900,6 +900,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "-cHLnkJpOKuJF6gV",
     "MWGK-l7SwV7Zt636",
     "dYyTcnjCArVeBiM2",
     "EfqhuYHyqDQgyUBV"

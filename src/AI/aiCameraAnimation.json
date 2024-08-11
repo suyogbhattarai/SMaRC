@@ -10,7 +10,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 10,
+        "length": 4.08,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Camera": {
@@ -173,7 +173,7 @@
                       0.5,
                       0
                     ],
-                    "value": -68.18539262600854
+                    "value": -73.30539262600855
                   },
                   {
                     "id": "x4cTsoY6L_",
@@ -305,7 +305,7 @@
                       0.5,
                       0
                     ],
-                    "value": 8.694775214391761
+                    "value": 8.834775214391758
                   },
                   {
                     "id": "8XhV879Ztz",
@@ -884,6 +884,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "ZBU4t4Og68vB5eDG",
     "DrCGORtAEIBCQWWy",
     "crl9YbIM0gK-h3Ev",
     "8uuZuuT0ATQQA3r6"

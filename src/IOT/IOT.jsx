@@ -9,6 +9,7 @@ import "./iot.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
 import cameraAnimation from "./cameraAnimationIot.json"
+import SmartDustbin from '../SmartDustbin/SmartDustbin';
 
 function IOT() {
     const [sheet, setSheet] = useState(null);
@@ -121,7 +122,6 @@ function SceneIOT() {
   
 
       
-    
 
         {enterProject1 && (
         <>
@@ -186,14 +186,15 @@ scale={20}
             scale={30}
             distanceFactor={1.15}
             transform
-            position={[155.28930814201183, 132.88183348706795, 17.79583968511831]}
+            position={[155.28930814201183, 132.88183348706795, 22.79583968511831]}
             rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(-90), THREE.MathUtils.degToRad(0)]}
             wrapperClass={"videoInterface"}
           >
+            
           <div>
               <video autoPlay controls loop muted>
                 <source src='/iotVideo2.mp4' type='video/mp4' />
-                No video tag support
+                No video tag support  
               </video>
             </div>
           </Html>
@@ -236,7 +237,7 @@ scale={20}
 
         
         <div style={{display:"flex",gap:"10"}} className="flex">
-       <h3 onClick={()=>navigateTo("/?redirect=IOT&scrollPosition=8.013384556516312")} >   Exit   </h3>
+       <h3 onClick={()=>navigateTo("/?redirect=IOT&scrollPosition=7.013384556516312")} >   Exit   </h3>
 
 
    

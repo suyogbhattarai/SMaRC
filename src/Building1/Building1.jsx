@@ -9,10 +9,10 @@ import { useFrame, useThree } from '@react-three/fiber'
 
 export default function Building1(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/Room (13).glb')
+  const { nodes, materials, animations } = useGLTF('/Room (17).glb')
   const { actions } = useAnimations(animations, group)
 
-  
+    
   const [enterDoor, setEnterDoor] = useState(false);
   const { camera, gl } = useThree();
 
@@ -113,66 +113,6 @@ export default function Building1(props) {
         <group name="9b5a98f812a744608e589083ffc73b43fbx" rotation={[Math.PI / 2, 0, 0]}>
           <group name="RootNode003" />
         </group>
-        <mesh
-          name="Cylinder003"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder003.geometry}
-          material={materials['Material.008']}
-          position={[146.235, 175.393, 228.195]}
-          rotation={[Math.PI, -0.072, 0]}
-          scale={[-0.222, -3.338, -0.222]}
-        />
-        <mesh
-          name="Cylinder002"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder002.geometry}
-          material={materials['Material.008']}
-          position={[143.488, 175.393, 201.198]}
-          rotation={[Math.PI, -0.072, 0]}
-          scale={[-0.222, -3.338, -0.222]}
-        />
-        <mesh
-          name="Cylinder001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder001.geometry}
-          material={materials['Material.008']}
-          position={[144.856, 179.104, 214.533]}
-          rotation={[Math.PI / 2, 0, 3.07]}
-          scale={[1.213, 16.09, 1.213]}
-        />
-        <mesh
-          name="Cylinder"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder.geometry}
-          material={materials['Material.008']}
-          position={[144.865, 141.919, 215.658]}
-          rotation={[0, 0.072, 0]}
-          scale={[0.857, 36.792, 0.857]}
-        />
-        <mesh
-          name="Icosphere004"
-          castShadow
-          receiveShadow
-          geometry={nodes.Icosphere004.geometry}
-          material={materials['Material.022']}
-          position={[143.594, 170.418, 200.965]}
-          rotation={[0, -0.378, 0]}
-          scale={2.859}
-        />
-        <mesh
-          name="Icosphere005"
-          castShadow
-          receiveShadow
-          geometry={nodes.Icosphere005.geometry}
-          material={materials['Material.029']}
-          position={[145.669, 171.012, 228.035]}
-          rotation={[0, -0.378, 0]}
-          scale={2.859}
-        />
         <group
           name="Sketchfab_model003"
           position={[-148.902, 116.72, 4.139]}
@@ -238,9 +178,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Cube007.geometry}
           material={materials['Material.035']}
-          position={[-35.499, 164.841, 29.518]}
+          position={[-53.027, 176.643, -11.036]}
           rotation={[0.24, 0.108, -2.944]}
-          scale={[1.524, 13.864, 1.114]}
+          scale={[2.764, 29.431, 2.426]}
         />
         <mesh
           name="Cube008"
@@ -248,9 +188,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Cube008.geometry}
           material={materials['Material.035']}
-          position={[43.417, 162.923, 2.867]}
+          position={[82.385, 173.849, -66.713]}
           rotation={[-0.312, 0.155, 2.826]}
-          scale={[1.378, 13.471, 1.216]}
+          scale={[2.618, 30.371, 2.721]}
         />
         <mesh
           name="Cube009"
@@ -258,9 +198,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Cube009.geometry}
           material={materials['Material.035']}
-          position={[43.177, 163.558, 30.453]}
+          position={[82.59, 179.832, -9.084]}
           rotation={[0.385, -0.104, 2.891]}
-          scale={[1.459, 13.089, 1.201]}
+          scale={[2.687, 29.64, 2.726]}
         />
         <mesh
           name="Plane005"
@@ -268,19 +208,19 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane005.geometry}
           material={materials['GlassBalcony.001']}
-          position={[-37.294, 173.304, 18.952]}
+          position={[-56.155, 187.934, -33.109]}
           rotation={[-0.05, 0, 1.749]}
-          scale={[15.643, 22.878, 32.932]}
+          scale={[33.811, 40.98, 68.926]}
         />
         <mesh
           name="Plane006"
           castShadow
           receiveShadow
           geometry={nodes.Plane006.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[2.997, 168.602, 55.541]}
+          material={materials.GlassBalcony}
+          position={[14.045, 185.029, 43.329]}
           rotation={[-1.571, -1.553, -0.394]}
-          scale={[7.193, 14.357, 21.36]}
+          scale={[15.7, 32.467, 37.226]}
         />
         <mesh
           name="Plane007"
@@ -288,9 +228,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane007.geometry}
           material={materials['GlassBalcony.001']}
-          position={[43.513, 166.13, 19.501]}
+          position={[84.638, 189.17, -31.963]}
           rotation={[Math.PI, 0, -1.215]}
-          scale={[14.756, 22.476, 31.324]}
+          scale={[31.081, 42.785, 65.439]}
         />
         <mesh
           name="Cube012"
@@ -298,9 +238,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Cube012.geometry}
           material={materials['Material.035']}
-          position={[2.562, 168.661, -20.638]}
+          position={[13.289, 185.146, -115.816]}
           rotation={[-0.204, 0, -3.128]}
-          scale={[1.135, 7.451, 0.833]}
+          scale={[1.977, 15.173, 1.786]}
         />
         <mesh
           name="Plane008"
@@ -308,9 +248,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane008.geometry}
           material={materials['GlassBalcony.001']}
-          position={[2.571, 168.705, -20.852]}
+          position={[13.304, 185.233, -116.265]}
           rotation={[1.368, -1.557, -3.14]}
-          scale={[7.773, 15.522, 21.32]}
+          scale={[15.832, 33.282, 37.153]}
         />
         <mesh
           name="Plane010"
@@ -322,24 +262,14 @@ export default function Building1(props) {
           scale={[98.973, 19, 88.532]}
         />
         <mesh
-          name="Plane011"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane011.geometry}
-          material={materials['Material.036']}
-          position={[5.383, 153.996, 21.151]}
-          rotation={[0, 0, -Math.PI]}
-          scale={[37.029, 14.072, 29.143]}
-        />
-        <mesh
           name="Cube014"
           castShadow
           receiveShadow
           geometry={nodes.Cube014.geometry}
           material={materials['Material.035']}
-          position={[-36.6, 165.697, 6.794]}
+          position={[-54.946, 175.744, -58.508]}
           rotation={[-0.427, -0.098, -2.931]}
-          scale={[1.341, 14.511, 0.997]}
+          scale={[2.436, 33.038, 2.288]}
         />
         <mesh
           name="Plane009"
@@ -387,9 +317,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane015.geometry}
           material={materials['Material.037']}
-          position={[21.72, 176.129, -7.922]}
+          position={[70.78, 201.157, -75.774]}
           rotation={[0, 0, 3.124]}
-          scale={[1.807, 0.276, 2.891]}
+          scale={[4.298, 0.656, 6.879]}
         />
         <mesh
           name="Plane016"
@@ -397,9 +327,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane016.geometry}
           material={materials['Material.037']}
-          position={[-28.655, 175.672, -5.385]}
+          position={[-49.079, 200.537, -82.027]}
           rotation={[0, 0, 3.124]}
-          scale={[1.807, 0.276, 2.891]}
+          scale={[4.298, 0.656, 6.879]}
         />
         <mesh
           name="Plane017"
@@ -407,19 +337,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane017.geometry}
           material={materials['Material.037']}
-          position={[-30.491, 176.248, 38.615]}
+          position={[-53.446, 193.544, 22.663]}
           rotation={[0, 0, 3.124]}
-          scale={[1.502, 0.276, 2.403]}
-        />
-        <mesh
-          name="Plane018"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane018.geometry}
-          material={materials['Material.037']}
-          position={[16.039, 176.086, 42.438]}
-          rotation={[0, 0, 3.124]}
-          scale={[1.502, 0.276, 2.403]}
+          scale={[3.573, 0.656, 5.718]}
         />
         <mesh
           name="Cube010"
@@ -427,89 +347,9 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Cube010.geometry}
           material={materials['Material.035']}
-          position={[3.496, 167.764, 57.533]}
+          position={[14.915, 183.379, 47.49]}
           rotation={[0.418, 0.352, 3.113]}
-          scale={[0.889, 6.631, 0.878]}
-        />
-        <mesh
-          name="Plane020"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane020.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.217, 160.416, 2.618]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane021"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane021.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.248, 160.416, 26.245]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane022"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane022.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.164, 160.416, 49.929]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane023"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane023.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[153.542, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
-          name="Plane025"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane025.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[49.48, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane026"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane026.geometry}
-          material={materials.GlassBalcony}
-          position={[22.841, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane027"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane027.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-3.916, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane028"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane028.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, 62.959]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.638]}
+          scale={[1.716, 14.558, 2.096]}
         />
         <mesh
           name="Plane030"
@@ -532,43 +372,13 @@ export default function Building1(props) {
           scale={[0.846, 14.515, 1.227]}
         />
         <mesh
-          name="Plane019"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.217, 160.416, -20.948]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane033"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane033.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[169.749, 160.416, 67.425]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 6.031]}
-        />
-        <mesh
-          name="Plane034"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane034.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[120.561, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
           name="Cube001"
           castShadow
           receiveShadow
           geometry={nodes.Cube001.geometry}
           material={materials['upperbody.001']}
-          position={[3.964, 168.475, 18.461]}
-          scale={[52.96, 18.807, 45.708]}
+          position={[15.73, 184.78, -34.136]}
+          scale={[92.273, 37.027, 95.49]}
         />
         <mesh
           name="Plane036"
@@ -716,7 +526,7 @@ export default function Building1(props) {
           receiveShadow
           geometry={nodes.Plane054.geometry}
           material={materials['Material.037']}
-          position={[139.12, 146.484, -11.769]}
+          position={[139.12, 146.977, -11.769]}
           rotation={[0, 0, 3.124]}
           scale={[1.502, 0.276, 2.403]}
         />
@@ -831,166 +641,6 @@ export default function Building1(props) {
           scale={[0.048, 0.047, 0.054]}
         />
         <mesh
-          name="Plane038"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane038.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-36.187, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 19.448]}
-        />
-        <mesh
-          name="Plane068"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane068.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, 39.829]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane069"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane069.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, 17.086]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane078"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane078.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, -5.427]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane080"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane080.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[86.33, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
-          name="Plane079"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane079.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[53.74, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
-          name="Plane081"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane081.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.217, 160.416, -43.925]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane082"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane082.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.217, 160.416, -67.422]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane083"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane083.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[170.217, 160.416, -90.85]}
-          rotation={[Math.PI, 0, -1.553]}
-          scale={[6.355, 7.238, 11.788]}
-        />
-        <mesh
-          name="Plane024"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane024.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[20.366, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
-          name="Plane029"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane029.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-13.441, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 16.864]}
-        />
-        <mesh
-          name="Plane084"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane084.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-42.914, 160.416, -102.839]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.376, 5.627, 13.324]}
-        />
-        <mesh
-          name="Plane085"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane085.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, -27.713]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane086"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane086.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, -50.17]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane087"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane087.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, -72.912]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 11.341]}
-        />
-        <mesh
-          name="Plane088"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane088.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[-55.665, 160.416, -92.804]}
-          rotation={[0, 0, 1.588]}
-          scale={[6.354, 6.371, 8.877]}
-        />
-        <mesh
           name="Plane035"
           castShadow
           receiveShadow
@@ -1025,7 +675,7 @@ export default function Building1(props) {
           castShadow
           receiveShadow
           geometry={nodes.Plane041.geometry}
-          material={materials['right.001']}
+          material={materials.GlassBalcony}
           position={[102.291, 132.614, -0.83]}
           rotation={[Math.PI / 2, 1.571, 0]}
           scale={[16.071, 7.647, 43.972]}
@@ -1045,7 +695,7 @@ export default function Building1(props) {
           castShadow
           receiveShadow
           geometry={nodes.Plane040.geometry}
-          material={materials['RightBack.001']}
+          material={materials.GlassBalcony}
           position={[93.002, 133.064, -40.765]}
           rotation={[Math.PI / 2, 1.571, 0]}
           scale={[14.724, 7.647, 51.301]}
@@ -1065,7 +715,7 @@ export default function Building1(props) {
           castShadow
           receiveShadow
           geometry={nodes.Plane004.geometry}
-          material={materials['leftBack.001']}
+          material={materials.GlassBalcony}
           position={[-4.179, 132.871, -40.489]}
           rotation={[Math.PI / 2, 1.571, 0]}
           scale={[15.238, 8.817, 46.256]}
@@ -1188,46 +838,6 @@ export default function Building1(props) {
           />
         </mesh>
         <mesh
-          name="Plane090"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane090.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[76.768, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane091"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane091.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[103.669, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane092"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane092.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[130.4, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
-          name="Plane093"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane093.geometry}
-          material={materials['GlassBalcony.001']}
-          position={[156.604, 160.416, 73.483]}
-          rotation={[-1.588, -Math.PI / 2, 0]}
-          scale={[6.354, 6.371, 13.393]}
-        />
-        <mesh
           name="Icosphere006"
           castShadow
           receiveShadow
@@ -1248,39 +858,521 @@ export default function Building1(props) {
           scale={[0.048, 0.047, 0.054]}
         />
         <group
-          name="Cube002"
-          position={[145.279, 135.411, 215.24]}
-          rotation={[0, -1.472, 0]}
-          scale={[11.476, 20.085, 2.5]}>
+          name="Plane098"
+          position={[31.073, 132.837, -96.245]}
+          rotation={[Math.PI / 2, -Math.PI / 2, 0]}
+          scale={[1.394, 1.5, 3.287]}>
           <mesh
-            name="Cube_1"
+            name="Plane003_1"
             castShadow
             receiveShadow
-            geometry={nodes.Cube_1.geometry}
-            material={materials['Material.002']}
+            geometry={nodes.Plane003_1.geometry}
+            material={materials.CzTcyZGBTOTEuIC}
           />
           <mesh
-            name="Cube_2"
+            name="Plane003_2"
             castShadow
             receiveShadow
-            geometry={nodes.Cube_2.geometry}
-            material={materials['Material.003']}
-          />
-          <mesh
-            name="Cube_3"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube_3.geometry}
-            material={materials['Material.004']}
-          />
-          <mesh
-            name="Cube_4"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube_4.geometry}
-            material={materials['Material.005']}
+            geometry={nodes.Plane003_2.geometry}
+            material={materials.Screen}
           />
         </group>
+        <group
+          name="leg3001"
+          position={[24.048, 130.283, -96.569]}
+          rotation={[0, -1.246, 0]}
+          scale={[0.605, 0.067, 0.514]}>
+          <mesh
+            name="Cube108"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube108.geometry}
+            material={materials.Body}
+          />
+          <mesh
+            name="Cube108_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube108_1.geometry}
+            material={materials.Joints}
+          />
+        </group>
+        <group
+          name="leg2001"
+          position={[23.888, 130.238, -96.289]}
+          rotation={[0.056, -0.863, -0.021]}
+          scale={[0.599, 0.067, 0.521]}>
+          <mesh
+            name="Cube154"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube154.geometry}
+            material={materials.Body}
+          />
+          <mesh
+            name="Cube154_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube154_1.geometry}
+            material={materials.Joints}
+          />
+        </group>
+        <group
+          name="leg1001"
+          position={[23.742, 130.283, -96.465]}
+          rotation={[0, -1.495, 0]}
+          scale={[0.596, 0.067, 0.525]}>
+          <mesh
+            name="Cube017_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube017_1.geometry}
+            material={materials.Body}
+          />
+          <mesh
+            name="Cube017_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube017_2.geometry}
+            material={materials.Joints}
+          />
+        </group>
+        <mesh
+          name="Cylinder010"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder010.geometry}
+          material={materials.Eyes}
+          position={[24.309, 130.52, -95.943]}
+          rotation={[1.571, 0, -0.43]}
+          scale={[0.023, 0.006, 0.034]}
+        />
+        <mesh
+          name="Cylinder011"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder011.geometry}
+          material={materials.Eyes}
+          position={[24.193, 130.52, -95.89]}
+          rotation={[1.571, 0, -0.43]}
+          scale={[0.023, 0.006, 0.034]}
+        />
+        <mesh
+          name="Cylinder012"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder012.geometry}
+          material={nodes.Cylinder012.material}
+          position={[23.899, 130.371, -95.924]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.022, 0.086, 0.019]}
+        />
+        <mesh
+          name="Cylinder013"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder013.geometry}
+          material={nodes.Cylinder013.material}
+          position={[24.44, 130.371, -96.172]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.022, 0.086, 0.019]}
+        />
+        <mesh
+          name="Cylinder014"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder014.geometry}
+          material={nodes.Cylinder014.material}
+          position={[24.066, 130.371, -96.988]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.022, 0.086, 0.019]}
+        />
+        <mesh
+          name="Cylinder015"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder015.geometry}
+          material={nodes.Cylinder015.material}
+          position={[23.483, 130.371, -96.721]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.022, 0.086, 0.019]}
+        />
+        <mesh
+          name="Cube022"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube022.geometry}
+          material={materials.Joints}
+          position={[24.242, 130.519, -95.928]}
+          rotation={[Math.PI / 2, 0, -0.43]}
+          scale={[0.12, 0.01, 0.037]}
+        />
+        <mesh
+          name="Cube023"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube023.geometry}
+          material={materials['Material.016']}
+          position={[23.829, 130.31, -96.832]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.049, 0.021, 0.309]}
+        />
+        <group
+          name="Cube024"
+          position={[23.977, 130.385, -96.457]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.606, 0.067, 0.513]}>
+          <mesh
+            name="Cube190_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube190_1.geometry}
+            material={materials.Body}
+          />
+          <mesh
+            name="Cube190_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube190_2.geometry}
+            material={nodes.Cube190_2.material}
+          />
+        </group>
+        <group
+          name="Cube025"
+          position={[24.095, 130.283, -96.591]}
+          rotation={[0, -0.847, 0]}
+          scale={[0.599, 0.067, 0.521]}>
+          <mesh
+            name="Cube062"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube062.geometry}
+            material={materials.Body}
+          />
+          <mesh
+            name="Cube062_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube062_1.geometry}
+            material={materials.Joints}
+          />
+        </group>
+        <mesh
+          name="Cube029"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube029.geometry}
+          material={materials.TableBody}
+          position={[37.461, 125.749, -95.848]}
+          rotation={[0, -Math.PI / 2, 0]}
+          scale={[5.153, 3.649, 3.42]}>
+          <mesh
+            name="Plane058"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane058.geometry}
+            material={materials['Material.001']}
+            position={[1.031, 0.489, 4.602]}
+            rotation={[0, 0, -Math.PI / 2]}
+            scale={[0.035, 0.102, 0.13]}
+          />
+          <mesh
+            name="Plane094"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane094.geometry}
+            material={materials.TableBody}
+            position={[1.007, 0.539, 4.626]}
+            rotation={[0, 0, -Math.PI / 2]}
+            scale={[0.175, 0.177, 0.95]}
+          />
+          <mesh
+            name="Plane095"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane095.geometry}
+            material={materials['Material.021']}
+            position={[1.031, 0.489, -0.022]}
+            rotation={[0, 0, -Math.PI / 2]}
+            scale={[0.035, 0.102, 0.13]}
+          />
+          <mesh
+            name="Plane096"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane096.geometry}
+            material={materials.TableBody}
+            position={[1.007, 0.539, 0.002]}
+            rotation={[0, 0, -Math.PI / 2]}
+            scale={[0.175, 0.177, 0.95]}
+          />
+          <mesh
+            name="Plane097"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane097.geometry}
+            material={materials['Material.020']}
+            position={[0.175, 1, 2.307]}
+            scale={[1.128, 1.434, 3.475]}
+          />
+        </mesh>
+        <mesh
+          name="Cube030"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube030.geometry}
+          material={materials.Body}
+          position={[23.99, 130.283, -96.463]}
+          rotation={[0, -1.141, 0]}
+          scale={[0.606, 0.067, 0.513]}
+        />
+        <mesh
+          name="Cube031"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube031.geometry}
+          material={materials.CzTcyZGBTOTEuIC}
+          position={[31.777, 129.822, -96.238]}
+          rotation={[Math.PI / 2, 0, 2.126]}
+          scale={[0.095, 0.901, 0.035]}
+        />
+        <mesh
+          name="Cube032"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube032.geometry}
+          material={materials.CzTcyZGBTOTEuIC}
+          position={[31.06, 131.215, -96.617]}
+          rotation={[0, -Math.PI / 2, 0]}
+          scale={[0.126, 1.446, 0.214]}
+        />
+        <mesh
+          name="Cube026"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube026.geometry}
+          material={materials['Material.008']}
+          position={[144.521, 133.842, -40.757]}
+          scale={[0.458, 15.31, 0.458]}
+        />
+        <mesh
+          name="Cube027"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube027.geometry}
+          material={materials['Material.008']}
+          position={[42.323, 133.842, -40.757]}
+          scale={[0.458, 15.31, 0.458]}
+        />
+        <mesh
+          name="Cylinder018"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder018.geometry}
+          material={materials['Material.008']}
+          position={[-50.967, 161.796, 87.743]}
+          scale={[0.884, 8.838, 0.884]}
+        />
+        <mesh
+          name="Cylinder016"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder016.geometry}
+          material={materials['Material.008']}
+          position={[170.934, 160.933, 140.506]}
+          rotation={[0, Math.PI / 2, 0]}
+          scale={[0.884, 8.838, 0.884]}
+        />
+        <mesh
+          name="Cylinder017"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder017.geometry}
+          material={materials['Material.008']}
+          position={[59.068, 166.128, 88.057]}
+          rotation={[0, -0.014, -Math.PI / 2]}
+          scale={[0.989, 109.524, 1.31]}
+        />
+        <mesh
+          name="Cylinder019"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder019.geometry}
+          material={materials['Material.008']}
+          position={[-50.323, 166.128, 62.921]}
+          rotation={[0, 1.557, -1.571]}
+          scale={[0.989, 23.672, 1.31]}
+        />
+        <mesh
+          name="Cylinder020"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder020.geometry}
+          material={materials['Material.008']}
+          position={[171.383, 166.128, -4.247]}
+          rotation={[0, 1.557, -1.571]}
+          scale={[0.989, 93.553, 1.313]}
+        />
+        <mesh
+          name="Cylinder021"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder021.geometry}
+          material={nodes.Cylinder021.material}
+          position={[137.92, 153.613, -96.418]}
+          scale={0.884}
+        />
+        <mesh
+          name="Cylinder022"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cylinder022.geometry}
+          material={materials['Material.008']}
+          position={[131.375, 166.128, -98.267]}
+          rotation={[-Math.PI, 0.014, Math.PI / 2]}
+          scale={[0.989, 40.497, 1.313]}
+        />
+        <mesh
+          name="Plane011"
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane011.geometry}
+          material={materials['Material.037']}
+          position={[70.78, 201.157, 15.64]}
+          rotation={[0, 0, 3.124]}
+          scale={[4.298, 0.656, 6.879]}
+        />
+        <mesh
+          name="Cube002"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube002.geometry}
+          material={materials['Material.008']}
+          position={[-50.719, 133.842, -40.757]}
+          scale={[0.458, 15.31, 0.458]}
+        />
+        <mesh
+          name="Cube028"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube028.geometry}
+          material={materials['Material.008']}
+          position={[22.818, 129.551, -40.757]}
+          scale={[0.458, 10.565, 0.458]}
+        />
+        <mesh
+          name="Cube033"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube033.geometry}
+          material={materials['Material.008']}
+          position={[4.636, 129.551, -40.757]}
+          scale={[0.458, 10.565, 0.458]}
+        />
+        <mesh
+          name="Cube034"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube034.geometry}
+          material={materials['Material.008']}
+          position={[13.816, 140.138, -40.757]}
+          rotation={[0, 0, -Math.PI / 2]}
+          scale={[0.458, 9.795, 0.458]}
+        />
+        <mesh
+          name="Cube035"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube035.geometry}
+          material={materials['Material.008']}
+          position={[106.704, 131.632, -40.757]}
+          scale={[0.569, 11.76, 0.458]}
+        />
+        <mesh
+          name="Cube036"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube036.geometry}
+          material={materials['Material.008']}
+          position={[83.481, 131.632, -40.757]}
+          scale={[0.569, 11.76, 0.458]}
+        />
+        <mesh
+          name="Cube037"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube037.geometry}
+          material={materials['Material.008']}
+          position={[95.276, 143.174, -40.757]}
+          rotation={[0, 0, -Math.PI / 2]}
+          scale={[0.51, 12.177, 0.458]}
+        />
+        <mesh
+          name="Plane018"
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane018.geometry}
+          material={materials['Material.037']}
+          position={[153.504, 146.977, -65.608]}
+          rotation={[0, 0, 3.124]}
+          scale={[1.502, 0.276, 2.403]}
+        />
+        <mesh
+          name="Plane019"
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane019.geometry}
+          material={materials['Material.037']}
+          position={[153.504, 146.977, 49.16]}
+          rotation={[0, 0, 3.124]}
+          scale={[1.502, 0.276, 2.403]}
+        />
+        <mesh
+          name="Cube038"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube038.geometry}
+          material={materials['Material.008']}
+          position={[114.373, 131.683, -0.134]}
+          scale={[0.549, 12.383, 0.442]}
+        />
+        <mesh
+          name="Cube039"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube039.geometry}
+          material={materials['Material.008']}
+          position={[93.124, 131.683, -0.134]}
+          scale={[0.549, 12.383, 0.442]}
+        />
+        <mesh
+          name="Cube040"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube040.geometry}
+          material={materials['Material.008']}
+          position={[103.835, 144.004, -0.134]}
+          rotation={[0, 0, -Math.PI / 2]}
+          scale={[0.492, 10.925, 0.442]}
+        />
+        <mesh
+          name="Cube041"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube041.geometry}
+          material={materials['Material.008']}
+          position={[146.346, 133.842, -1.219]}
+          scale={[0.458, 15.31, 0.458]}
+        />
+        <mesh
+          name="Cube042"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube042.geometry}
+          material={materials['Material.008']}
+          position={[57.754, 133.842, -1.219]}
+          scale={[0.458, 15.31, 0.458]}
+        />
         <mesh
           name="Cylinder004"
           castShadow
@@ -1367,17 +1459,17 @@ export default function Building1(props) {
           rotation={[0, -1.277, 0]}
           scale={[0.458, 0.06, 0.458]}>
           <mesh
-            name="Cube032"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube032.geometry}
-            material={materials['Body.001']}
-          />
-          <mesh
             name="Cube032_1"
             castShadow
             receiveShadow
             geometry={nodes.Cube032_1.geometry}
+            material={materials['Body.001']}
+          />
+          <mesh
+            name="Cube032_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube032_2.geometry}
             material={materials['Joints.001']}
           />
         </group>
@@ -1387,17 +1479,17 @@ export default function Building1(props) {
           rotation={[Math.PI, -1.466, Math.PI]}
           scale={[0.458, 0.06, 0.458]}>
           <mesh
-            name="Cube033"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube033.geometry}
-            material={materials['Body.001']}
-          />
-          <mesh
             name="Cube033_1"
             castShadow
             receiveShadow
             geometry={nodes.Cube033_1.geometry}
+            material={materials['Body.001']}
+          />
+          <mesh
+            name="Cube033_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube033_2.geometry}
             material={materials['Joints.001']}
           />
         </group>
@@ -1407,17 +1499,17 @@ export default function Building1(props) {
           rotation={[0.132, -1.291, 0.064]}
           scale={[0.458, 0.06, 0.458]}>
           <mesh
-            name="Cube034"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube034.geometry}
-            material={materials['Body.001']}
-          />
-          <mesh
             name="Cube034_1"
             castShadow
             receiveShadow
             geometry={nodes.Cube034_1.geometry}
+            material={materials['Body.001']}
+          />
+          <mesh
+            name="Cube034_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube034_2.geometry}
             material={materials['Joints.001']}
           />
         </group>
@@ -1437,17 +1529,17 @@ export default function Building1(props) {
           rotation={[Math.PI, -1.216, Math.PI]}
           scale={[0.458, 0.06, 0.458]}>
           <mesh
-            name="Cube031"
-            castShadow
-            receiveShadow
-            geometry={nodes.Cube031.geometry}
-            material={materials['Body.001']}
-          />
-          <mesh
             name="Cube031_1"
             castShadow
             receiveShadow
             geometry={nodes.Cube031_1.geometry}
+            material={materials['Body.001']}
+          />
+          <mesh
+            name="Cube031_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube031_2.geometry}
             material={materials['Joints.001']}
           />
         </group>
@@ -1585,4 +1677,4 @@ export default function Building1(props) {
   )
 }
 
-useGLTF.preload('/Room (13).glb')
+useGLTF.preload('/Room (17).glb')

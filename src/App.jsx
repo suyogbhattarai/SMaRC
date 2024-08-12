@@ -13,6 +13,7 @@
   import Drone from './Museum/Drone';
   import { useEnvironment } from '@react-three/drei';
   import * as THREE from "three"
+import Passage from './Passage/Passage';
 
 
 
@@ -48,10 +49,10 @@
         
     
         <Suspense fallback={<Loading/>}>
-        <Environment  background 
+        {/* <Environment  background 
           // files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]}
      files={"./newhdr.hdr"} 
-          />
+          /> */}
             <Float scale={1} floatIntensity={100} speed={2}>
     <Drone scale={10} position={[100, 250, 80]}/>
     <MovingSpot  color="white" position={[100, 250, 80]} />
@@ -71,7 +72,7 @@
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
-  <fog attach="fog" args={['#000000', 100, 1170]} />
+  <fog attach="fog" args={['#000000', 500, 1170]} />
   
         <Routes>
 
@@ -82,6 +83,7 @@
   <Route path="/AI" element={<AI />} />
   <Route path="/IOT" element={<IOT/>} />
   <Route path="/robotics" element={<Robotics/>} />
+  <Route path="/projects" element={<Passage/>}/>
   </Routes>
   
 

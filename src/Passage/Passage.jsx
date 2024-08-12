@@ -1,31 +1,34 @@
+
+import Projects from '../Projects/Projects';
 import React, { useEffect, useRef, useState } from 'react';
-import Museum from '../Museum/Museum';
+
 import Light from '../Light/Light';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Html, OrbitControls, ScrollControls, TransformControls, useScroll } from '@react-three/drei';
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f';
 import { getProject, val } from "@theatre/core";
-import "./robotics.css";
-import "../Building1/building1.css"
+
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-import CameraAnimationRobotics from "./roboticsCamera.json"
+
 import OnlyTv from '../OnlyTv/OnlyTv';
 import { SpotLight } from '@react-three/drei';
-function Robotics() {
+import Floor from '../Floor/Floor';
+function Passage() {
+
     const [sheet, setSheet] = useState(null);
-
-
     useEffect(() => {
-        const projectSheet = getProject("Robotics Camera",{state:CameraAnimationRobotics}).sheet("Scene");
+        const projectSheet = getProject("Passage Camera").sheet("Scene");
         setSheet(projectSheet);
       }, []);
   return (
-    <>
-        {sheet && (
-        <ScrollControls pages={10} >
+
+    <>  
+    {/* <OrbitControls makeDefault/> */}
+                {sheet && (
+        <ScrollControls pages={10} damping={0.25} >
           <SheetProvider sheet={sheet}>
-            <SceneRobotics />
+            <ScenePassage />
           </SheetProvider>
         </ScrollControls>
       )}
@@ -33,9 +36,9 @@ function Robotics() {
   )
 }
 
-export default Robotics
+export default Passage
 
-function SceneRobotics() {
+function ScenePassage() {
     const sheet = useCurrentSheet();
     const scroll = useScroll();
     const [clearPath, setClearPath] = useState(false);
@@ -53,7 +56,7 @@ function SceneRobotics() {
     const targetPositionproject4={x:13.001978979641205,y:131.24272750605908,z:-64.354254479873}
     // Tolerance for position comparison
     const tolerance = 10;
-    const tolerancehHigh=40
+    const tolerancehHigh=4
     const navigateTo=useNavigate()
   
     const calculateDistanceProject1 = (pos1, pos2) => {
@@ -111,51 +114,25 @@ function SceneRobotics() {
 
     return (
       <>
-        <Light />
-        <Museum />
+
+        <ambientLight intensity={0.3}/> 
+ <directionalLight castShadow position={[110,700,100]} intensity={0.4}/>
+        
+        <Projects  position={[0,-18,0]}/>
+        <Floor />
         <PerspectiveCamera
           theatreKey="Camera"
           makeDefault
           position={[0, 0, 0]}
         />
-
-        <group>
+        {/* <group>
   
 
       
     
 
       {enterProject1 && (<>
-        {/* <Html
-scale={80}
-
-        distanceFactor={1.15}
-        transform
-       
-        position={[5.50930043885768, 135,30.63107917522322]}
-        rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]}
-        wrapperClass={ "aiInterface" }
-      >
-       
-        <div className="entryText">
-        
-          <div className="title">
-         
-       <div style={{display:"flex",gap:"10"}} className="flex">
-       <h2 style={{fontSize:"24px"}}>   Scroll  &darr;  To Move    </h2>
-       </div>
-   
-       
-            
-          </div>
-
-   
-   
-     
-        </div>
- 
-   
-      </Html> */}
+    
         <Html
 scale={20}
 
@@ -204,9 +181,7 @@ scale={20}
                         Your browser does not support the video tag.
                     </video>      </Html>  
 
-      {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -56.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
-      {/* <OnlyTv scale={1.3}  position={[-50.549306602159675,134.24272750605908, -81.54303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90)]}/> */}
-      {/* <OnlyTv position={[30.049306602159675,131.24272750605908, -83.14303079212448]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90)]}/> */}
+
 
       {enterproject2 && (<>
         <Html
@@ -293,7 +268,7 @@ scale={30}
         </div>
       </Html>
       </>)}
-        </group>
+        </group> */}
       </>
     );
   }

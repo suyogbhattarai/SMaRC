@@ -33,7 +33,7 @@ import Passage from './Passage/Passage';
     return (
       <>
             
-        <Canvas position={[0,-100,0]}gl={{ preserveDrawingBuffer: true }}>
+        <Canvas shadows position={[0,-100,0]}gl={{ preserveDrawingBuffer: true }}>
           {/* <OrbitControls/> */}
    
 

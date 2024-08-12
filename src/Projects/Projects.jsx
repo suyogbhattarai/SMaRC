@@ -6,70 +6,78 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Projects(props) {
-  const { nodes, materials } = useGLTF('/Passage.glb')
+  const { nodes, materials } = useGLTF('/Passage (1) (1).glb')
   return (
     <group {...props} dispose={null}>
       <mesh
-        castShadow  
+        castShadow
         receiveShadow
         geometry={nodes.Plane003.geometry}
         material={materials['Material.002']}
-        position={[529.047, 21.63, -106.472]}
+        position={[247.625, 142.8, -23.042]}
         rotation={[Math.PI / 2, 0, 0]}
-        scale={[6.867, 9.297, 2.609]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube027.geometry}
-        material={materials['Material.005']}
-        position={[629.419, 24.096, -103.549]}
-        scale={[2.147, 0.085, 9.715]}
+        scale={[50.335, 95.424, 19.993]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Plane004.geometry}
         material={nodes.Plane004.material}
-        position={[522.212, 21.483, -102.952]}
+        position={[107.383, 141.675, 13.083]}
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={[4.574, 2.874, 2.684]}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Plane020.geometry}
-        material={nodes.Plane020.material}
-        position={[629.358, 21.104, -102.952]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={[4.574, 2.874, 2.681]}
+        scale={[46.95, 21.069, 22.374]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube033.geometry}
         material={materials['Material.004']}
-        position={[548.416, 19.219, -111.546]}
-        scale={[0.833, 0.238, 0.05]}
+        position={[389.596, 125.552, -72.137]}
+        scale={[6.107, 1.94, 3.462]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube005.geometry}
         material={materials['Material.004']}
-        position={[550.038, 21.127, -111.805]}
-        scale={[3.644, 2.18, 0.22]}
+        position={[401.484, 141.108, -81.086]}
+        scale={[26.713, 17.782, 9.226]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cube001.geometry}
         material={materials['Material.004']}
-        position={[503.19, 21.127, -111.805]}
-        scale={[3.644, 2.18, 0.22]}
+        position={[58.097, 141.108, -75.023]}
+        scale={[26.713, 17.782, 2.993]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube.geometry}
+        material={materials['Material.006']}
+        position={[610.588, 167.717, -37.05]}
+        scale={[761.993, 0.607, 150.281]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube003.geometry}
+        material={nodes.Cube003.material}
+        position={[130.801, 162.997, 28.712]}
+        scale={[15.435, 0.796, 228.975]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane001.geometry}
+        material={nodes.Plane001.material}
+        position={[1358.375, 141.675, 23.429]}
+        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        scale={[46.95, 21.069, 22.374]}
       />
     </group>
   )
 }
 
-useGLTF.preload('/Passage.glb')
+useGLTF.preload('/Passage (1) (1).glb')

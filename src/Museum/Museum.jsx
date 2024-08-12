@@ -62,7 +62,7 @@ function Museum(props,{hovered}) {
 
   <TvTable onPointerOver={props.onPointerOver3}
       onPointerOut={props.onPointerOut3}   position={[0,76,0]}/>        
-  <CharacterModel onPointerOver={props.onPointerOver3}
+  <CharacterModel  onPointerOver={props.onPointerOver3}
       onPointerOut={props.onPointerOut3} scale={9} position={[-35, 116.4, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
 {location.pathname==="/vision" ?(<>
 </>):(<>

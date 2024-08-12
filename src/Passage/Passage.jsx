@@ -230,7 +230,7 @@ useFrame((state, delta) => mixer.update(delta));
       </Text3D> */}
 
       <Text3D
-      position={[165, 127, -23]}
+      position={[155, 127, -22]}
      size={6}
      bevelSize={0.001}
      bevelOffset={0.001}
@@ -240,20 +240,20 @@ useFrame((state, delta) => mixer.update(delta));
        
       >
 01/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
       </Text3D>
 
       <Text3D
-      position={[165, 115, -21]}
+      position={[155, 115, -22]}
      size={10}
-        font="./fonts/Bebas Neue_Regular.json"
+               font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
 Mr.Murphy
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
       </Text3D>
 
       <Plane scale={[80,38,1]}    position={[245, 125, -83]}>
@@ -268,14 +268,17 @@ Mr.Murphy
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[431.4,108,-244]} object={kicksFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[349,108,166.5]} object={kicksFrame}/>
 
-<primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[531.4,-508,304]} object={deskFrame}/>
+<primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[551,106.5,-332.8]} object={deskFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[510,106.5,255.4]} object={deskFrame}/>
-  <OrbitControls/>
+
+<primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[774,106.5,-436]} object={mathsFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[692,106.5,358.6]} object={mathsFrame}/>
+    {/* <OrbitControls makeDefault/> */}
 
 <MovingSpot rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(90)]}  color="#0c8cbf"       position={[247, 117, -26]} />
 
       <Text3D
-            position={[280, 127, -21]}    
+            position={[280, 127, -22]}    
      size={6}
      bevelSize={0.001}
      bevelOffset={0.001}
@@ -285,21 +288,21 @@ Mr.Murphy
        
       >
 02/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#fad016"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#008f4f"/>
       </Text3D>
 
       <Text3D
       zIndexRange={[3, 0]}
-      position={[280, 115, -21]}
+      position={[280, 115, -22]}
      size={10}
-        font="./fonts/Bebas Neue_Regular.json"
+      font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
 Skill Kicks
-<meshStandardMaterial metalness={0.001} roughness={0} color="#fad016"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#008f4f"/>
       </Text3D>
 {/* <Html prepend   zIndexRange={[1, 0]} scale={3.5} transform   position={[365, 139, -81.9]} wrapperClass='screenfixed'>
 <video  ref={videoRef} autoPlay loop muted  >
@@ -318,8 +321,8 @@ Skill Kicks
 <primitive scale={7} position={[370,105,-40]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} object={arena }/>
 
       <Text3D
-     position={[442, 132, -19]}
-     size={5}
+     position={[442, 132, -23]}
+     size={4.5}
      bevelSize={0.001}
      bevelOffset={0.001}
      bevelThickness={0.4}
@@ -327,32 +330,32 @@ Skill Kicks
      font="./fonts/Bebas Neue_Regular.json"
       >
 03/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#c949a8"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
       </Text3D>
 
       <Text3D
-      position={[442, 122, -19]}
-     size={7.5}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[442.3, 122, -23]}
+     size={6.5}
+      font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
-        bevelThickness={0.2}
+        bevelThickness={0.4}
         bevelEnabled={true} 
       >
 Desk Companion 
-<meshStandardMaterial metalness={0.001} roughness={0} color="#c949a8"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
       </Text3D>
       <Text3D
-   position={[442, 112, -19]}
-     size={7.5}
-        font="./fonts/Bebas Neue_Regular.json"
+   position={[442.3, 112, -23]}
+     size={7}
+         font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
-        bevelThickness={0.2}
+        bevelThickness={0.4}
         bevelEnabled={true} 
       >
 Robot
-<meshStandardMaterial metalness={0.001} roughness={0} color="#c949a8"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
       </Text3D>
 
       <primitive scale={0.6} position={[517, 119, -60]} object={DeskComp}/>
@@ -361,12 +364,12 @@ Robot
       {/* articial */}
 
       <Text3D
-       position={[557, 125, -17]}
+       position={[557, 125, -22]}
      size={8}
         font="./fonts/Bebas Neue_Regular.json"
         bevelSize={0.00001}
         bevelOffset={0.001}
-        bevelThickness={0.7}
+        bevelThickness={0.5}
         bevelEnabled={true} 
       scale={[1,1,0.7]}
         
@@ -378,12 +381,12 @@ Robot
 <meshStandardMaterial metalness={0.001} roughness={0} color="#3b3939"/>
       </Text3D>
       <Text3D
-       position={[569, 112, -17]}
+       position={[569, 112, -22]}
      size={8}
         font="./fonts/Bebas Neue_Regular.json"
         bevelSize={0.00001}
         bevelOffset={0.001}
-        bevelThickness={0.7}
+        bevelThickness={0.5}
         bevelEnabled={true} 
       scale={[1,1,0.7]}
         
@@ -396,8 +399,8 @@ Intelligence
       </Text3D>
 
       <Text3D
-     position={[640, 133, -19]}
-     size={5}
+     position={[640, 133, -23]}
+     size={4.5}
      bevelSize={0.001}
      bevelOffset={0.001}
      bevelThickness={0.4}
@@ -405,42 +408,42 @@ Intelligence
      font="./fonts/Bebas Neue_Regular.json"
       >
 04/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#b87a34"/>
       </Text3D>
 
       <Text3D
-      position={[640, 122, -19]}
-     size={8.4}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[640, 122, -23]}
+     size={8}
+         font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
 AI Math 
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#b87a34"/>
       </Text3D>
       <Text3D
-      position={[640, 112, -19]}
-     size={8.4}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[640, 112, -23]}
+     size={8}
+        font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
-Solver
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+Assistant
+<meshStandardMaterial metalness={0.001} roughness={0} color="#b87a34"/>
       </Text3D>
 
  
   
       <Text3D
-     position={[785, 128, -19]}
+     position={[785, 128, -23]}
      size={6}
      bevelSize={0.001}
      bevelOffset={0.001}
-     bevelThickness={0.4}
+     bevelThickness={0.2}
      bevelEnabled={true} 
      font="./fonts/Bebas Neue_Regular.json"
       >
@@ -448,7 +451,7 @@ Solver
 <meshStandardMaterial metalness={0.001} roughness={0} color="#c0a51c"/>
       </Text3D>
       <Text3D
-      position={[785, 116, -19]}
+      position={[785, 116, -23]}
      size={10}
         font="./fonts/Bebas Neue_Regular.json"
         bevelSize={0.001}

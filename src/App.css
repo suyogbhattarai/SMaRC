@@ -3,6 +3,8 @@
     width: 800px;
     margin: auto;
 }
+
+
 .ui{
     position: fixed !important;
     top: 0px;
@@ -86,4 +88,42 @@ width: 100px;
 .ui .navbar ul li:hover{
     color: rgb(255, 192, 18);
     text-decoration: underline;
+}
+
+.crabDescription{
+background-color: white;
+position: fixed !important;
+top: 50%;
+left: 50%;
+border-radius: 5px;
+padding: 10px 20px ;
+transform: translate(-50%,-50%);
+text-align: justify;
+}
+
+.crabDescription .card{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    width: 70vw;
+    height: 30vw;
+
+}
+
+.crabDescription .card .description .btn button{
+    background-color: rgb(234, 51, 51);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid transparent;
+}
+
+.crabDescription .card .description .btn button:hover{
+cursor: pointer;
+background-color: transparent;
+border: 2px solid rgb(0, 0, 0);
+color: black;
+transition: 0.5s all ease-in-out;
+
 }

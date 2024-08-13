@@ -20,6 +20,8 @@ import Sofa from '../Museum/Sofa';
 import VideoPlane from '../VideoPlane/VideoPlane';
 import { Vector3 } from 'three';
 import CharacterModel from '../CharacterModel/CharacterModel';
+import Podium from '../Podium/Podium';
+import Interface from '../Interface/Interface';
 
 
 
@@ -27,7 +29,7 @@ import CharacterModel from '../CharacterModel/CharacterModel';
 
 
 
-function Passage() {
+function Passage({clickedCrab,setClickedCrab,clickedDesk,setClickedDesk}) {
 
     const [sheet, setSheet] = useState(null);
     useEffect(() => {
@@ -67,6 +69,14 @@ function ScenePassage() {
     const [enterproject2, setEnterproject2] = useState(false);
     const [enterProject3, setEnterProject3] = useState(false);
     const [enterProject4, setEnterproject4] = useState(false);
+    const [hovered, setHovered] = useState(false);
+const [clickedCrab, setClickedCrab] = useState(false);
+const [clickedKicks, setClickedKicks] = useState(false);
+const [clickedDesk, setClickedDesk] = useState(false);
+const [clickedMaths, setClickedMaths] = useState(false);
+const [clickedSelf, setClickedSelf] = useState(false);
+const [clickedSafari, setClickedSafari] = useState(false);
+const [clickedVision, setClickedVision] = useState(false);
     const { camera } = useThree();
     const location = useLocation(); // Use useLocation to access query params
   const buttonRef=useRef();
@@ -163,6 +173,8 @@ const occlude=useRef()
 
 const { actions, mixer } = useAnimations(animations, podium);
 
+
+
 useEffect(() => {
   if (actions) {
     // Play the animation at index 1 (adjust index as needed)
@@ -230,7 +242,7 @@ useFrame((state, delta) => mixer.update(delta));
       </Text3D> */}
 
       <Text3D
-      position={[155, 127, -22]}
+      position={[155, 127, -23]}
      size={6}
      bevelSize={0.001}
      bevelOffset={0.001}
@@ -240,11 +252,10 @@ useFrame((state, delta) => mixer.update(delta));
        
       >
 01/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#433c52"/>
       </Text3D>
-
       <Text3D
-      position={[155, 115, -22]}
+      position={[155, 115, -23]}
      size={10}
                font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
@@ -252,7 +263,19 @@ useFrame((state, delta) => mixer.update(delta));
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
-Mr.Murphy
+Mr.
+<meshStandardMaterial metalness={0.001} roughness={0} color="#433c52"/>
+      </Text3D>
+      <Text3D
+      position={[175, 115, -23]}
+     size={10}
+               font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+Murphy
 <meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
       </Text3D>
 
@@ -262,23 +285,45 @@ Mr.Murphy
   </Suspense>
 </Plane>
 <primitive position={[0,-19,10]}  object={podium}  />
+
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[267,108,-89.5]} object={murphyFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[225.5,108,12]} object={murphyFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[226.4,108,-19]} object={murphyFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[267.2,108,-120.5]} object={murphyFrame}/>
 
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[431.4,108,-244]} object={kicksFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[349,108,166.5]} object={kicksFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[349.4,108,136.5]} object={kicksFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[431.4,108,-274]} object={kicksFrame}/>
 
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[551,106.5,-332.8]} object={deskFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[510,106.5,255.4]} object={deskFrame}/>
+<Clone  scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[551,106.5,-362.8]} object={deskFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[510.4,106.5,223.4]} object={deskFrame}/>
 
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[774,106.5,-436]} object={mathsFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[692,106.5,358.6]} object={mathsFrame}/>
-    {/* <OrbitControls makeDefault/> */}
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[692,106.5,327.6]} object={mathsFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[774,106.5,-466]} object={mathsFrame}/>
 
-<MovingSpot rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(90)]}  color="#0c8cbf"       position={[247, 117, -26]} />
+<primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[962.5,106.5,-520.6]} object={selfFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[879,106.5,443.1]} object={selfFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} position={[377,106.5,-20.4]} object={selfFrame}/>
+<Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[879.9,106.5,412.1]} object={selfFrame}/>
+<Clone scale={50}  rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[962.5,106.5,-547.9]}  object={selfFrame}/>
+
+
+<primitive scale={100} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} position={[948.5,120.5,-10]} object={safariFrame}/>
+
+
+
+
+{/* <OrbitControls/> */}
+
+<MovingSpot rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(90)]}  color="#62499f"       position={[247, 117, -26]} />
 
       <Text3D
-            position={[280, 127, -22]}    
+            position={[280, 127, -23]}    
      size={6}
      bevelSize={0.001}
      bevelOffset={0.001}
@@ -288,12 +333,11 @@ Mr.Murphy
        
       >
 02/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#008f4f"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#14380b"/>
       </Text3D>
-
       <Text3D
       zIndexRange={[3, 0]}
-      position={[280, 115, -22]}
+      position={[280, 115, -23]}
      size={10}
       font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
@@ -301,8 +345,22 @@ Mr.Murphy
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
-Skill Kicks
-<meshStandardMaterial metalness={0.001} roughness={0} color="#008f4f"/>
+Skill 
+<meshStandardMaterial metalness={0.001} roughness={0} color="#17400d"/>
+      </Text3D>
+      <Text3D
+      zIndexRange={[3, 0]}
+      position={[310, 115, -23]}
+     size={10}
+      font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+        castShadow receiveShadow
+      >
+ Kicks
+<meshStandardMaterial metalness={0.001} roughness={0} color="#189052"/>
       </Text3D>
 {/* <Html prepend   zIndexRange={[1, 0]} scale={3.5} transform   position={[365, 139, -81.9]} wrapperClass='screenfixed'>
 <video  ref={videoRef} autoPlay loop muted  >
@@ -321,31 +379,43 @@ Skill Kicks
 <primitive scale={7} position={[370,105,-40]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} object={arena }/>
 
       <Text3D
-     position={[442, 132, -23]}
+     position={[441, 134, -23]}
      size={4.5}
      bevelSize={0.001}
      bevelOffset={0.001}
-     bevelThickness={0.4}
+     bevelThickness={0.2}
      bevelEnabled={true} 
      font="./fonts/Bebas Neue_Regular.json"
       >
 03/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#0f3745"/>
       </Text3D>
 
       <Text3D
-      position={[442.3, 122, -23]}
-     size={6.5}
+      position={[441, 123 , -23]}
+     size={8.5}
       font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
-        bevelThickness={0.4}
+        bevelThickness={0.2}
         bevelEnabled={true} 
       >
-Desk Companion 
-<meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
+Desk 
+<meshStandardMaterial metalness={0.001} roughness={0} color="#0f3745"/>
       </Text3D>
       <Text3D
+      position={[450, 112, -23]}
+     size={8.5}
+      font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+Companion
+<meshStandardMaterial metalness={0.001} roughness={0} color="#0093b6"/>
+      </Text3D>
+      {/* <Text3D
    position={[442.3, 112, -23]}
      size={7}
          font="./fonts/Evil Empire_Regular.json"
@@ -356,7 +426,7 @@ Desk Companion
       >
 Robot
 <meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
-      </Text3D>
+      </Text3D> */}
 
       <primitive scale={0.6} position={[517, 119, -60]} object={DeskComp}/>
       {/* robotics  */}
@@ -364,8 +434,8 @@ Robot
       {/* articial */}
 
       <Text3D
-       position={[557, 125, -22]}
-     size={8}
+       position={[557, 135, -23]}
+     size={5}
         font="./fonts/Bebas Neue_Regular.json"
         bevelSize={0.00001}
         bevelOffset={0.001}
@@ -381,8 +451,8 @@ Robot
 <meshStandardMaterial metalness={0.001} roughness={0} color="#3b3939"/>
       </Text3D>
       <Text3D
-       position={[569, 112, -22]}
-     size={8}
+       position={[565, 129, -23]}
+     size={5}
         font="./fonts/Bebas Neue_Regular.json"
         bevelSize={0.00001}
         bevelOffset={0.001}
@@ -403,12 +473,12 @@ Intelligence
      size={4.5}
      bevelSize={0.001}
      bevelOffset={0.001}
-     bevelThickness={0.4}
+     bevelThickness={0.3}
      bevelEnabled={true} 
      font="./fonts/Bebas Neue_Regular.json"
       >
 04/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#b87a34"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#4a2b07"/>
       </Text3D>
 
       <Text3D
@@ -421,7 +491,7 @@ Intelligence
         bevelEnabled={true} 
       >
 AI Math 
-<meshStandardMaterial metalness={0.001} roughness={0} color="#b87a34"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#4a2b07"/>
       </Text3D>
       <Text3D
       position={[640, 112, -23]}
@@ -448,51 +518,80 @@ Assistant
      font="./fonts/Bebas Neue_Regular.json"
       >
 05/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#c0a51c"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#524714"/>
       </Text3D>
       <Text3D
-      position={[785, 116, -23]}
-     size={10}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[785, 115, -23]}
+     size={9}
+         font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+The 
+<meshStandardMaterial metalness={0.001} roughness={0} color="#524714"/>
+      </Text3D>
+      <Text3D
+      position={[803.5, 115, -23]}
+     size={9}
+         font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
 Bender
-<meshStandardMaterial metalness={0.001} roughness={0} color="#c0a51c"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#c9c426"/>
       </Text3D>
- 
 
       
       <Text3D
-     position={[975, 128, -19]}
-     size={6}
+     position={[967, 137, -23]}
+     size={5}
      bevelSize={0.001}
      bevelOffset={0.001}
-     bevelThickness={0.4}
+     bevelThickness={0.2}
      bevelEnabled={true} 
      font="./fonts/Bebas Neue_Regular.json"
       >
 06/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#e3df7b"/>
       </Text3D>
-
+{/* 
       <Text3D
-      position={[974, 116, -19]}
-     size={10}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[990, 116, -23]}
+     size={8}
+       font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
-AI Safari
+AI 
 <meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
-      </Text3D>
-
+      </Text3D> */}
+      {/* <Text3D
+      position={[1001, 116, -23]}
+     size={8}
+       font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+Safari
+<meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
+      </Text3D> */}
+      <primitive scale={47.5}   position={[866.9, 108.5, -20.5]} object={safariFrame} />
+      {/* <OrbitControls/> */}
+      <Plane scale={[65,38,1]}  position={[1024.2, 125.1, -23]}>
+<Suspense fallback={<meshStandardMaterial wireframe={true} />}>
+          <VideoPlane src={"./safari3.mp4"} />
+  </Suspense>
+</Plane>
       <Text3D
-     position={[1074, 132, -19]}
+     position={[1074, 132, -23]}
      size={5}
      bevelSize={0.001}
      bevelOffset={0.001}
@@ -501,25 +600,25 @@ AI Safari
      font="./fonts/Bebas Neue_Regular.json"
       >
 07/7
-<meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#522150"/>
       </Text3D>
 
       <Text3D
-      position={[1074, 120, -19]}
-     size={8.5}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[1074, 122, -23]}
+     size={7}
+     font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
         bevelEnabled={true} 
       >
 Assisted Vision 
-<meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
+<meshStandardMaterial metalness={0.001} roughness={0} color="#522150"/>
       </Text3D>
       <Text3D
-      position={[1074, 109, -19]}
-     size={8.5}
-        font="./fonts/Bebas Neue_Regular.json"
+      position={[1074, 112, -23]}
+     size={7.5}
+     font="./fonts/Evil Empire_Regular.json"
         bevelSize={0.001}
         bevelOffset={0.001}
         bevelThickness={0.2}
@@ -527,11 +626,14 @@ Assisted Vision
       >
 Goggles
 <meshStandardMaterial metalness={0.001} roughness={0} color="#9a207d"/>
+
+
+
       </Text3D>
 
       <CharacterModel   position={[1160, 103, -25]} scale={12} />
-
-
+      <Clone scale={9.8}  position={[1143.5, 106, -25]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} object={pot2 }/>
+      <Clone scale={9.8}  position={[1180.5, 106, -25]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} object={pot2 }/>
 
     <primitive   
      position={[914.5, 97, 1.5]}
@@ -546,6 +648,13 @@ Goggles
      rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(50),THREE.MathUtils.degToRad(0)]}
      scale={3.3}
       object={aiCar}/>
+
+<Clone  
+     position={[565.5, 106.5, -17.5]}
+     rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(180),THREE.MathUtils.degToRad(0)]}
+     scale={2}
+      object={aiCar}/>
+   
  <primitive   
      position={[955.5, 106, -65.5]}
      rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(50),THREE.MathUtils.degToRad(0)]}
@@ -562,11 +671,7 @@ Goggles
           <VideoPlane src={"./math.mp4"} />
   </Suspense>
 </Plane>
-<Plane scale={[45,25,1]}  position={[1043.2, 125, -23]}>
-<Suspense fallback={<meshStandardMaterial wireframe={true} />}>
-          <VideoPlane src={"./safari3.mp4"} />
-  </Suspense>
-</Plane>
+
         <PerspectiveCamera
           theatreKey="Camera"
           makeDefault

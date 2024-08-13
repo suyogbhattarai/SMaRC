@@ -1,7 +1,7 @@
   import React, { useState, useEffect, Suspense,lazy, useRef } from 'react';
   import './App.css';
   import { Canvas, useFrame, useThree } from '@react-three/fiber';
-  import { OrbitControls,Text,Image, PointerLockControls, Html, TransformControls, Sparkles, SpotLight, Float, Environment,useHelper, useGLTF} from '@react-three/drei';
+  import { OrbitControls,Text,Image, PointerLockControls, Html, TransformControls, Sparkles, SpotLight, Float, Environment,useHelper, useGLTF, View, Sky, Text3D, Plane, PresentationControls} from '@react-three/drei';
   import { Routes, Route, useLocation, Link } from 'react-router-dom';
   import { useScroll, ScrollControls } from '@react-three/drei';
   import { useDepthBuffer } from '@react-three/drei';
@@ -14,6 +14,8 @@
   import { useEnvironment } from '@react-three/drei';
   import * as THREE from "three"
 import Passage from './Passage/Passage';
+import SmallCanvas from './SmallCanvas/SmallCanvas';
+import CharacterModel from './CharacterModel/CharacterModel';
 
 
 
@@ -28,7 +30,15 @@ import Passage from './Passage/Passage';
     const interfaceref=useRef()
     const location=useLocation()
     const isVisionPath = location.pathname === '/vision';
-
+const {scene:crab}=useGLTF("./CrabFinal.glb")
+const [hovered, setHovered] = useState(false);
+const [clickedCrab, setClickedCrab] = useState(false);
+const [clickedKicks, setClickedKicks] = useState(false);
+const [clickedDesk, setClickedDesk] = useState(false);
+const [clickedMaths, setClickedMaths] = useState(false);
+const [clickedSelf, setClickedSelf] = useState(false);
+const [clickedSafari, setClickedSafari] = useState(false);
+const [clickedVision, setClickedVision] = useState(false);
 
     return (
       <>
@@ -68,7 +78,44 @@ import Passage from './Passage/Passage';
 </Float> */}
   
 
+  <group position={[-2.9,-19,7.8]} >
+      {/* Background Plane */}
+      <mesh        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> {/* Position the plane slightly behind the text */}
+    <planeGeometry  onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)} args={[13, 5]} /> {/* Adjust the size to cover the text */}
+    <meshStandardMaterial  color={hovered ? 'black' : '#6141a3'} /> {/* White background */}
+  </mesh>
 
+      {/* Button Text */}
+      <mesh
+        position={[0, 0, 0.01]}  // Slightly offset the text in front of the background
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+        onClick={() => {
+          setClickedCrab(true);
+    
+        }}
+        onPointerUp={() => setClickedCrab(false)}
+      >
+            <Text3D
+             onPointerOver={() => setHovered(true)}
+             onPointerOut={() => setHovered(false)}
+             onClick={() => {
+              setClickedCrab(true);
+        
+            }}
+            position={[244.3, 126.5, -30]}    
+     size={1.5}
+
+        font="./fonts/Poppins_Bold.json"
+       
+      >
+View More
+<meshStandardMaterial metalness={0.001} roughness={0}   color={hovered ? 'yellow' : '#ffffff'} />
+      </Text3D>
+      </mesh>
+    </group>
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
@@ -83,7 +130,7 @@ import Passage from './Passage/Passage';
   <Route path="/AI" element={<AI />} />
   <Route path="/IOT" element={<IOT/>} />
   <Route path="/robotics" element={<Robotics/>} />
-  <Route path="/projects" element={<Passage/>}/>
+  <Route path="/projects" element={<Passage clickedCrab={clickedCrab} setClickedCrab={setClickedCrab} clickedKicks={clickedKicks} setHovered={setHovered} hovered={hovered}/>}/>
   </Routes>
   
 
@@ -112,6 +159,38 @@ import Passage from './Passage/Passage';
     <i class="fas fa-mouse"></i>  Scroll   To Explore
     </div>
   </div>
+
+
+
+  {clickedCrab && (<>
+    <div className="crabDescription">
+    <div className="card">
+      <div className="description">
+        <h2>Mr.Murphy</h2>
+        <p>Mr.Murphy is a desk companion Robot. It is controlled manually to move around the desk. 
+           It responds to certain commands like “hello”,“dance”,”move”. It also displays emotions through its eyes.</p>
+        <div className="btn">
+          <button onClick={()=>setClickedCrab(false)}>Close</button>
+          
+        </div>
+      </div>
+      <div className="model">
+      <Canvas style={{ width: '600px', height: '430px' }} camera={[0,0,1]}>
+<PresentationControls/>
+        <ambientLight intensity={0.5} />
+        <Suspense fallback={null}>
+           <primitive scale={20} object={crab}/>
+        </Suspense>
+        <Sky/>
+      </Canvas>
+      </div>
+    </div>
+  </div>
+  </>)
+    
+  }
+
+
         </div>
 
           </>)}

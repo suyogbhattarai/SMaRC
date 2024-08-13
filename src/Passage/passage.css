@@ -13,3 +13,11 @@
     overflow-x: hidden !important;
     overflow-y: hidden !important;
 }
+
+.interfaceDescription{
+    position: fixed !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    top: 0px;
+    left: 0px;
+}

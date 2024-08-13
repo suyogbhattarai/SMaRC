@@ -48,7 +48,7 @@ function SceneExperience() {
 const buttonRef=useRef();
   // Target position to check against
   const targetPosition = { x: -6.8909193386595025, y: 125.11158211723959, z: 18.299 };
-  const targetPositionRobotics={x:10.854554444195728,y:130.86158211723972,z:-7.595253679922288}
+  const targetPositionRobotics={x:132.85061426981324,y:142.7544582450314,z:-77.12834148150412}
   const targetPositionAi={x:89.07268900969206,y:129.7321346997684,z:-3.2222408755114884}
   const targetPositionIot={x:102.97117829851327,y:131.26554782824022,z:-35.62859631688254}
   // Tolerance for position comparison
@@ -116,7 +116,7 @@ const buttonRef=useRef();
     setEnterVision(distance < tolerance);
 
     const distance2 = calculateDistanceRobotics(camera.position, targetPositionRobotics);
-    setEnterRobotics(distance2 < tolerancehHigh);
+    setEnterRobotics(distance2 < 7);
 
     const distance3 = calculateDistanceAi(camera.position, targetPositionAi);
     setEnterAi(distance3 < tolerancehHigh);
@@ -281,12 +281,12 @@ scale={20}
 {enterRobotics && (<>
 
   <Html
-scale={20}
+scale={65}
 
           distanceFactor={1.15}
           transform
          
-          position={[-23.502383096244479, 136.67164729531294, -55.504615469855594]}
+          position={[23.502383096244479, 155.67164729531294, -180.504615469855594]}
           rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(0)]}
           wrapperClass={`entryText ${enterVision ? 'visible' : ''}`}
         >
@@ -296,13 +296,13 @@ scale={20}
             <div className="title">
            
          
-          <h2>   SkillVerse Robotics</h2>
+          <h2>   Welcome to Skill Museum </h2>
               
             </div>
-            <p>Explore our robotics project</p>
+            <p>Explore Our Other projects</p>
             <div className="entryBtn">
-            <div onClick={()=>navigateTo("./robotics")} className="ok">
-            Enter
+            <div style={{width:"300px"}} onClick={()=>navigateTo("./projects")} className="ok">
+            Explore More
               </div>
             </div>
      

@@ -587,7 +587,7 @@ Safari
       {/* <OrbitControls/> */}
       <Plane scale={[65,38,1]}  position={[1024.2, 125.1, -23]}>
 <Suspense fallback={<meshStandardMaterial wireframe={true} />}>
-          <VideoPlane src={"./safari3.mp4"} />
+          <VideoPlane src={"./safari3 .mp4"} />
   </Suspense>
 </Plane>
       <Text3D

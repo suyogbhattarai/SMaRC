@@ -64,7 +64,7 @@ width: 100px;
 
 .ui .navbar ul{
     display: flex;
-    gap: 70px;
+    gap: 120px;
     text-decoration: none;
   
 }
@@ -110,6 +110,15 @@ text-align: justify;
 
 }
 
+.crabDescription .card .description h2{
+    font-size: 60px;
+    color:#351d77
+}
+
+.crabDescription .card .description .model{
+
+}
+
 .crabDescription .card .description .btn button{
     background-color: rgb(234, 51, 51);
     border: none;
@@ -117,6 +126,8 @@ text-align: justify;
     font-size: 20px;
     padding: 10px;
     border: 2px solid transparent;
+    margin-top: 30px;
+    border-radius: 5px;
 }
 
 .crabDescription .card .description .btn button:hover{

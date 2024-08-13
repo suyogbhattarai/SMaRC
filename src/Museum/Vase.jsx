@@ -9,8 +9,8 @@ const Vase = () => {
       <primitive
       object={scene}
         />  
-    <Clone object={scene.scene} position={[50,120,18]} scale={[12,12,12]} />
-    <Clone object={scene.scene} position={[50,120,60]} scale={[12,12,12]} />
+    <Clone object={scene.scene} position={[50,126.5,18]} scale={[12,12,12]} />
+    <Clone object={scene.scene} position={[50,126.5,60]} scale={[12,12,12]} />
     </>
   )
 }

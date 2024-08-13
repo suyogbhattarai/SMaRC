@@ -5,7 +5,7 @@ import CharacterModel from '../CharacterModel/CharacterModel';
 import * as THREE from "three"
 import Table from '../Table/Table';
 import { useFrame } from '@react-three/fiber';
-import { Float, Html, OrbitControls, Text,Text3D } from '@react-three/drei';
+import { Clone, Float, Html, OrbitControls, Text,Text3D, useGLTF } from '@react-three/drei';
 import "./museum.css"
 import { Tv } from '../Tv/Tv';
 import { TvTable } from '../Interface/Tvtable/TvTable';
@@ -31,39 +31,111 @@ function Museum(props,{hovered}) {
   const location = useLocation();
   const [circulartable,setCircularTable]=useState(false)
 
+  const {scene}=useGLTF("./SkillRobotTest.glb")
+const { scene: crab } = useGLTF("./CrabFinal.glb");
+const { scene: SkillBlue } = useGLTF("./SKillKicksBlue.glb");
+const { scene: SkillRed } = useGLTF("./SKillKicksRed.glb");
+const {scene:murphyFrame}=useGLTF("./Mr.murphy.glb")
   return (
     <>
 
     <ambientLight intensity={0.5} />
+    <Text3D
+      position={[-45  , 150, -141]}
+     size={6}
+        font="./fonts/Bebas Neue_Regular.json"
+        bevelSize={0.00001}
+        bevelOffset={0.001}
+        bevelThickness={0.7}
+        bevelEnabled={true} 
+      scale={[1,1,0.7]}
+        
+      >
+
+ |Robotics
+
+
+<meshStandardMaterial metalness={0.001} roughness={0} color="black"/>
+      </Text3D>
+
+      <primitive scale={2}      position={[-34  , 127.5, -133]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-80),THREE.MathUtils.degToRad(0)]} object={scene}/>
+      <primitive scale={7.8}      position={[-56  , 111, -111]}  rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} object={crab }/>
+
+      <primitive scale={1}  position={[-31  , 125, -132]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(30),THREE.MathUtils.degToRad(0)]} object={SkillBlue }/>
+   <primitive scale={1}  position={[-30  , 125, -130]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(30),THREE.MathUtils.degToRad(0)]} object={SkillRed }/>
+
+
+   <Text3D
+         position={[-10  , 148, -140]}
+     size={6}
+     bevelSize={0.001}
+     bevelOffset={0.001}
+     bevelThickness={0.4}
+     bevelEnabled={true} 
+        font="./fonts/Bebas Neue_Regular.json"
+       
+      >
+01/7
+<meshStandardMaterial metalness={0.001} roughness={0} color="#2a2533"/>
+      </Text3D>
+      <Text3D
+         position={[-9  , 135, -140]}
+     size={10}
+               font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+Mr.
+<meshStandardMaterial metalness={0.001} roughness={0} color="#2a2533"/>
+      </Text3D>
+      <Text3D
+          position={[11  , 135, -140]}
+     size={10}
+               font="./fonts/Evil Empire_Regular.json"
+        bevelSize={0.001}
+        bevelOffset={0.001}
+        bevelThickness={0.2}
+        bevelEnabled={true} 
+      >
+Murphy
+<meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
+      </Text3D>
+      <primitive scale={48} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[121  , 126, -205]} object={murphyFrame}/>
+<Clone scale={55} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}  position={[76.8  , 120, -103]} object={murphyFrame}/>
+{/* <Clone scale={48} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[122  , 126, -235.5]}object={murphyFrame}/> */}
+<Clone scale={60} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} position={[38  , 116, -180.5]}object={murphyFrame}/>
   <Building1/>
 {/* <IngLogo position={[0,170,-600]} scale={15} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}/> */}
   {/* <OrbitControls makeDefault/> */}
 <SkillDrone position={[100, 154.5, 65]} scale={[10, 10, 10]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-30),THREE.MathUtils.degToRad(0)]}/>
-  <Telescope position={[157, 148, 60]} scale={[10, 10, 10]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-60),THREE.MathUtils.degToRad(0)]}/>
-  <Vase />
-<Floor position={[0,100,0]}/>
-  <Butterfly scale={23} position={[5,180,65]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(183),THREE.MathUtils.degToRad(-10)]}/>
+  <Telescope position={[157, 178, 60]} scale={[10, 10, 10]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-60),THREE.MathUtils.degToRad(0)]}/>
+  <Vase position={[0,80,0]} />
+{/* <Floor position={[0,100,0]}/> */}
+  <Butterfly scale={30} position={[25,233 ,58.5]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(183),THREE.MathUtils.degToRad(-10)]}/>
   {/* <Text font={poppinsFont} color={"yellow"}  scale={7} position={[-13,179,65]}>Skill</Text>
   <Text  font={poppinsFont} color={"yellow"} scale={7} position={[30,179,65]}>Museum</Text> */}
-  <Sofa  onPointerOver={props.onPointerOver4}
+  <Sofa position={[0,5.8,0]}  onPointerOver={props.onPointerOver4}
       onPointerOut={props.onPointerOut4}/>
-  <Statue  onPointerOver={props.onPointerOver5}
-      onPointerOut={props.onPointerOut5} position={[-13.5, 125 , -70]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
+  {/* <Statue  onPointerOver={props.onPointerOver5}
+      onPointerOut={props.onPointerOut5} position={[-13.5, 133 , -143]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
   <MiniTable  onPointerOver={props.onPointerOver5}
-      onPointerOut={props.onPointerOut5} position={[42,122,-33]} scale={[3.5,3.5,3.5]} />
-<Carpet position={[5,119,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
-<Book position={[-26.5,124,38.7]} scale={[-1,1,-1]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
+      onPointerOut={props.onPointerOut5} position={[42,130,-107]} scale={[3.5,3.5,3.5]} /> */}
+      {/* <OrbitControls/> */}
+<Carpet position={[5,125.5,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
+<Book position={[-26.5,129,38.7]} scale={[-1,1,-1]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
 }/>
 <Table scale={2} onPointerOver={props.onPointerOver}
-      onPointerOut={props.onPointerOut} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}   position={[ -25.197582617751709,  122.41265385835948,  38.76075189597355]} />
+      onPointerOut={props.onPointerOut} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}   position={[ -25.197582617751709,  127.41265385835948,  38.76075189597355]} />
   <Tv onPointerOver={props.onPointerOver2}
-      onPointerOut={props.onPointerOut2} />
+      onPointerOut={props.onPointerOut2} position={[0,10,0]} />
           <SmartDustbin  scale={2.5}  position={[137.28930814201183, 120.88183348706795, 5.79583968511831]}/>
 
   <TvTable onPointerOver={props.onPointerOver3}
-      onPointerOut={props.onPointerOut3}   position={[0,76,0]}/>        
+      onPointerOut={props.onPointerOut3}   position={[0,83,0]}/>        
   <CharacterModel  onPointerOver={props.onPointerOver3}
-      onPointerOut={props.onPointerOut3} scale={9} position={[-35, 116.4, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
+      onPointerOut={props.onPointerOut3} scale={7} position={[-35, 123, 38]} rotation={[0,THREE.MathUtils.degToRad(90),0]}        />
 {location.pathname==="/vision" ?(<>
 </>):(<>
   {/* <e.mesh theatreKey="gocart">

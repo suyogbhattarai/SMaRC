@@ -147,9 +147,9 @@ View More
     <ul>
     <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
     <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li>Assisted Vision</li></a>
-      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=4.013384556516312"><li>Robotics</li></a>
-      <a style={{textDecoration:"none"}}  href="/?redirect=navbarAi&scrollPosition=6.013384556516312"><li>Artificial Intelligence</li></a>
-      <a style={{textDecoration:"none"}}  href="/?redirect=navbarIot&scrollPosition=7.013384556516312"><li>Internet of Things</li></a>
+      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=5.013384556516312"><li>Robotics</li></a>
+
+      <a style={{textDecoration:"none"}}  href="/projects"><li>Projects</li></a>
     </ul>
   </div>
 
@@ -175,14 +175,32 @@ View More
         </div>
       </div>
       <div className="model">
-      <Canvas style={{ width: '600px', height: '430px' }} camera={[0,0,1]}>
-<PresentationControls/>
+      <Canvas style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
+{/* <OrbitControls/> */}
         <ambientLight intensity={0.5} />
         <Suspense fallback={null}>
-           <primitive scale={20} object={crab}/>
+          <group>
+            <PresentationControls
+       // Rotation limits as [x, y]
+            // Limit zoom level
+            zoom={1} // Minimum zoom
+            maxZoom={5} // Maximum zoom
+            // Other optional settings
+            speed={2} // Speed of interaction
+            damping={0.5} // Damping effect
+            >
+
+
+            <primitive position={[-250,-490,200]} scale={200} object={crab}/>
+
+            </PresentationControls>
+
+          </group>
         </Suspense>
+        <PresentationControls />
         <Sky/>
       </Canvas>
+    <h4 style={{textAlign:"center"}}> Drag To Explore The Model</h4>  
       </div>
     </div>
   </div>

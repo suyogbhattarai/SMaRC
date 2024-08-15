@@ -109,9 +109,10 @@ Murphy
   <Building1/>
 {/* <IngLogo position={[0,170,-600]} scale={15} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}/> */}
   {/* <OrbitControls makeDefault/> */}
-<SkillDrone position={[100, 154.5, 65]} scale={[10, 10, 10]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-30),THREE.MathUtils.degToRad(0)]}/>
+<SkillDrone position={[110, 180.5, 65]} scale={[15, 15, 15]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-30),THREE.MathUtils.degToRad(0)]}/>
   <Telescope position={[157, 178, 60]} scale={[10, 10, 10]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-60),THREE.MathUtils.degToRad(0)]}/>
   <Vase position={[0,80,0]} />
+  <IngLogo scale={[1,1.5,1.5]} position={[57, 153.7, 10]}/>
 {/* <Floor position={[0,100,0]}/> */}
   <Butterfly scale={30} position={[25,233 ,58.5]} rotation={[THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(183),THREE.MathUtils.degToRad(-10)]}/>
   {/* <Text font={poppinsFont} color={"yellow"}  scale={7} position={[-13,179,65]}>Skill</Text>
@@ -119,15 +120,15 @@ Murphy
   <Sofa position={[0,5.8,0]}  onPointerOver={props.onPointerOver4}
       onPointerOut={props.onPointerOut4}/>
   {/* <Statue  onPointerOver={props.onPointerOver5}
-      onPointerOut={props.onPointerOut5} position={[-13.5, 133 , -143]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} />
-  <MiniTable  onPointerOver={props.onPointerOver5}
-      onPointerOut={props.onPointerOut5} position={[42,130,-107]} scale={[3.5,3.5,3.5]} /> */}
+      onPointerOut={props.onPointerOut5} position={[-13.5, 133 , -143]} scale={[3, 3, -3]} rotation={[-0.1, -Math.PI / 2, 0]} /> */}
+  <MiniTable scale={[2,4,2]} onPointerOver={props.onPointerOver}
+    onPointerOut={props.onPointerOut}rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}   position={[ -25.197582617751709,  127.41265385835948,  38.76075189597355]}  /> 
       {/* <OrbitControls/> */}
 <Carpet position={[5,125.5,25]} scale={[20,20,20]} rotation={[0,1.55,0]}/>
-<Book position={[-26.5,129,38.7]} scale={[-1,1,-1]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
+<Book position={[-25.8,128,39]} scale={[-1,1,-1]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]
 }/>
-<Table scale={2} onPointerOver={props.onPointerOver}
-      onPointerOut={props.onPointerOut} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}   position={[ -25.197582617751709,  127.41265385835948,  38.76075189597355]} />
+{/* <Table scale={2} 
+      onPointerOut={props.onPointerOut} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}   position={[ -25.197582617751709,  127.41265385835948,  38.76075189597355]} /> */}
   <Tv onPointerOver={props.onPointerOver2}
       onPointerOut={props.onPointerOut2} position={[0,10,0]} />
           <SmartDustbin  scale={2.5}  position={[137.28930814201183, 120.88183348706795, 5.79583968511831]}/>

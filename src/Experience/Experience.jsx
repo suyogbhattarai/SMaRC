@@ -8,7 +8,7 @@ import { getProject, val } from "@theatre/core";
 import "./experience.css";
 import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
-import experienceCamera from "./camerAnimationExp.json"
+import experienceCamera from "./cameraAnimationExp.json"
 
 function Experience() {
   const [sheet, setSheet] = useState(null);

@@ -22,7 +22,7 @@ import { Vector3 } from 'three';
 import CharacterModel from '../CharacterModel/CharacterModel';
 import Podium from '../Podium/Podium';
 import Interface from '../Interface/Interface';
-
+import passageCamera from "./passage.json"
 
 
 
@@ -33,7 +33,7 @@ function Passage({clickedCrab,setClickedCrab,clickedDesk,setClickedDesk}) {
 
     const [sheet, setSheet] = useState(null);
     useEffect(() => {
-        const projectSheet = getProject("Passage Camera").sheet("Scene");
+        const projectSheet = getProject("Passage Camera",{state:passageCamera}).sheet("Scene");
         setSheet(projectSheet);
       }, []);
   return (

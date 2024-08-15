@@ -17,10 +17,10 @@ export default function Building1(props) {
   const { camera, gl } = useThree();
 
   // Target position to check against
-  const targetPosition = { x: 13.520559577486459, y: 130.29954007264053, z: 114.12155235058987 };
+  const targetPosition = { x: 55.98433815038574, y: 174.63943588581157, z: 76.15660479917116};
 
   // Tolerance for position comparison
-  const tolerance = 80;
+  const tolerance = 130;
 
   const calculateDistance = (pos1, pos2) => {
     return Math.sqrt(
@@ -46,11 +46,14 @@ export default function Building1(props) {
   })
 
   useEffect(()=>{
-    const doorOpen=actions[animations[0].name]
-    const tv=actions[animations[1].name]
+    const doorOpen=actions[animations[4].name]
+    const tv=actions[animations[4].name]
+
     
     if(doorOpen &&enterDoor){
         doorOpen.play()
+        
+      doorOpen.timeScale = 2
         tv.play()
     }
     else{

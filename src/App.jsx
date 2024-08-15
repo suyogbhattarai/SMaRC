@@ -59,13 +59,13 @@ const [clickedVision, setClickedVision] = useState(false);
         
     
         <Suspense fallback={<Loading/>}>
-        {/* <Environment  background 
+        <Environment  background 
           // files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]}
      files={"./newhdr.hdr"} 
-          /> */}
+          />
             <Float scale={1} floatIntensity={100} speed={2}>
-    <Drone scale={10} position={[100, 250, 80]}/>
-    <MovingSpot  color="white" position={[100, 250, 80]} />
+    <Drone scale={10} position={[150, 300, 80]}/>
+    <MovingSpot  color="white" position={[150, 300, 80]} />
 
 
   </Float>
@@ -119,7 +119,7 @@ View More
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
-  <fog attach="fog" args={['#000000', 500, 1170]} />
+  <fog attach="fog" args={['#000000', 600, 1170]} />
   
         <Routes>
 
@@ -147,7 +147,7 @@ View More
     <ul>
     <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
     <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li>Assisted Vision</li></a>
-      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=5.013384556516312"><li>Robotics</li></a>
+      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Robotics</li></a>
 
       <a style={{textDecoration:"none"}}  href="/projects"><li>Projects</li></a>
     </ul>

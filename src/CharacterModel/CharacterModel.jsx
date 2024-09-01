@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 
 export default function CharacterModel(props) {
   const group = useRef()
-  const {scene, animations } = useGLTF('/human (3).glb')
+  const {scene, animations } = useGLTF('/models/human (3).glb')
   const { actions } = useAnimations(animations, group)
 
   
@@ -42,4 +42,4 @@ export default function CharacterModel(props) {
   )
 }
 
-useGLTF.preload('/human (3).glb')
+useGLTF.preload('/models/human (3).glb')

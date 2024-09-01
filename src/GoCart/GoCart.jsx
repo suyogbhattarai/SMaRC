@@ -3,7 +3,7 @@ import { TransformControls, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 
 function GoCart(props) {
-    const {scene}=useGLTF("./NewGoCart.glb")
+    const {scene}=useGLTF("/models/NewGoCart.glb")
     const goCart=useRef();
 
 

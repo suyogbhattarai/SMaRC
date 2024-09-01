@@ -9,7 +9,7 @@ import { useFrame } from '@react-three/fiber'
 
 export  default function Butterfly(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/NewButtfly.glb')
+  const { nodes, materials, animations } = useGLTF('/models/NewButtfly.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -129,4 +129,4 @@ export  default function Butterfly(props) {
   )
 }
 
-useGLTF.preload('/NewButtfly.glb')
+useGLTF.preload('/models/NewButtfly.glb')

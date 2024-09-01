@@ -2,7 +2,7 @@ import { useGLTF, Clone } from '@react-three/drei';
 import React, {useRef} from 'react'
 
 const Sofa = (props) => {
-    const scene=useGLTF('./sofa.glb')
+    const scene=useGLTF('/models/sofa.glb')
   return (
     <>
     <group {...props}>

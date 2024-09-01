@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function OnlyTv(props) {
-  const { nodes, materials } = useGLTF('/Tv.glb')
+  const { nodes, materials } = useGLTF('/models/Tv.glb')
   return (
     <group {...props}  dispose={null}>
 
@@ -30,4 +30,4 @@ export default function OnlyTv(props) {
   )
 }
 
-useGLTF.preload('/Tv.glb')
+useGLTF.preload('/models/Tv.glb')

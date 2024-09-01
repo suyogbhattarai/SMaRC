@@ -11,6 +11,7 @@ import * as THREE from "three";
 import { useLocation, useNavigate } from 'react-router-dom';
 import CameraAnimationRobotics from "./roboticsCamera.json"
 import OnlyTv from '../OnlyTv/OnlyTv';
+import { SpotLight } from '@react-three/drei';
 function Robotics() {
     const [sheet, setSheet] = useState(null);
 
@@ -156,12 +157,12 @@ scale={80}
    
       </Html> */}
         <Html
-scale={30}
+scale={20}
 
         distanceFactor={1.15}
         transform
        
-        position={[-45.049306602159675,131.24272750605908, -25.14303079212448]}
+        position={[-39.049306602159675,136.24272750605908, -25.14303079212448]}
         rotation={[THREE.MathUtils.degToRad(0), THREE.MathUtils.degToRad(180), THREE.MathUtils.degToRad(0)]}
         wrapperClass={ "projectInterface" }
       >
@@ -176,7 +177,20 @@ scale={30}
 
    
       </Html>
+      <SpotLight
 
+          color="yellow"
+          position={[-45.049306602159675,151.24272750605908, -25.14303079212448]}
+          distance={200} // Reduced distance to better focus the light
+          angle={40} // Reduced angle for a narrower spotlight
+          intensity={1} // Increased intensity for a sharper focus
+          attenuation={2}
+          penumbra={10}
+          anglePower={1}
+          decay={12}
+          scale={1}
+ 
+        />
       </>)}
       <Html transform scale={0.85} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90), THREE.MathUtils.degToRad(0)]} position={[-50.549306602159675, 132.24272750605908, -50.14303079212448]} wrapperClass='screen'>
                     <video height={1180} autoPlay loop muted  >

@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Carpet(props) {
-  const { nodes, materials } = useGLTF('/carpet (1).glb')
+  const { nodes, materials } = useGLTF('/models/carpet (1).glb')
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -20,4 +20,4 @@ export default function Carpet(props) {
   )
 }
 
-useGLTF.preload('/carpet (1).glb')
+useGLTF.preload('/models/carpet (1).glb')

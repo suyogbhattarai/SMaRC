@@ -10,7 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Statue(props) {
-  const { nodes, materials } = useGLTF('/statue1.glb')
+  const { nodes, materials } = useGLTF('/models/statue1.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[14.624, -0.935, 19.294]} rotation={[0, -0.214, -Math.PI / 2]} scale={0.176}>
@@ -87,4 +87,4 @@ export default function Statue(props) {
   )
 }
 
-useGLTF.preload('/statue1.glb')
+useGLTF.preload('/models/statue1.glb')

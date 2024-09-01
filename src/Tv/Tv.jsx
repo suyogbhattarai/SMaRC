@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { TransformControls, useGLTF } from '@react-three/drei'
 
 export function Tv(props) {
-  const { nodes, materials } = useGLTF('/Tv.glb')
+  const { nodes, materials } = useGLTF('/models/Tv.glb')
   const tvRef=useRef()
   return (
     <>
@@ -69,4 +69,4 @@ export function Tv(props) {
   )
 }
 
-useGLTF.preload('/Tv.glb')
+useGLTF.preload('/models/Tv.glb')

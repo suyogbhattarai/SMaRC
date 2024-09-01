@@ -1,0 +1,23 @@
+.screenfixed{
+    position: fixed !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    top: 0;
+    left: 0;
+}
+
+.screenfixed video{
+ 
+    position: fixed !important;
+
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.interfaceDescription{
+    position: fixed !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    top: 0px;
+    left: 0px;
+}

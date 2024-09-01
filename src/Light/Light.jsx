@@ -1,10 +1,12 @@
+import { SpotLight } from '@react-three/drei'
 import React from 'react'
 
 function Light() {
   return (
     <>
-        <ambientLight intensity={0}/>
-        <directionalLight castShadow position={[110,700,100]} intensity={4}/>
+        <ambientLight intensity={0.6}/> 
+ <directionalLight castShadow position={[110,700,100]} intensity={1}/>
+  
     </>
   )
 }

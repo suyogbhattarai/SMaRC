@@ -7,16 +7,12 @@ function Interface({enterVision,setEnterVision}) {
     <>
     
 <div className="interface">
-  <h2>k cha bro</h2>
-<div className="navbar">
-  <ul>
-    <li>Home</li>
-    <li>Assisted Vision</li>
-    <li>Robotics</li>
-    <li>Articial Intelligence</li>
-  </ul>
+ 
+<div className="card">
+  hello
 </div>
 </div>
+
 
  
 

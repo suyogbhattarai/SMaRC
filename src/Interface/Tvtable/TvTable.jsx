@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function TvTable(props) {
-  const { nodes, materials } = useGLTF('/TvTable.glb')
+  const { nodes, materials } = useGLTF('/models/TvTable.glb')
   return (
     <group {...props} dispose={null}>
       <group
@@ -44,4 +44,4 @@ export function TvTable(props) {
   )
 }
 
-useGLTF.preload('/TvTable.glb')
+useGLTF.preload('/modles/TvTable.glb')

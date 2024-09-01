@@ -40,7 +40,7 @@ function AssistedVision() {
 
 
 
-  const { scene } = useGLTF('/AssistedVision.glb');
+  const { scene } = useGLTF('/models/AssistedVision.glb');
   const { cameraPosition, cameraRotation } = useControls('', {
     cameraPosition: {
       value: { x: 0, y: 0, z: 0 },
@@ -74,7 +74,7 @@ function AssistedVision() {
   }, []);
 
   useEffect(() => {
-    const cameraSet = new THREE.Vector3(-33.6, 129.8, 38);
+    const cameraSet = new THREE.Vector3(-33, 133.8, 38);
     camera.position.copy(cameraSet);
     camera.fov = 40;
     camera.updateProjectionMatrix();
@@ -323,7 +323,7 @@ useEffect(()=>{
       )}
 
       {tvTable && (
-        <Html wrapperClass='tableText' position={[-20.197582617751709, 130.11265385835948, 37]}>
+        <Html wrapperClass='tableText' position={[-20.197582617751709, 133.11265385835948, 37]}>
           <p>This is a Tv table</p>
         </Html>
       )}

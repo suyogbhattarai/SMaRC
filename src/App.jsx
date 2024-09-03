@@ -17,10 +17,6 @@ import Passage from './Passage/Passage';
 import SmallCanvas from './SmallCanvas/SmallCanvas';
 import CharacterModel from './CharacterModel/CharacterModel';
 
-
-
-
-
   const Experience = lazy(() => import('./Experience/Experience'));
 
   const Interface = lazy(() => import('./Interface/Interface'));
@@ -59,10 +55,10 @@ const [clickedVision, setClickedVision] = useState(false);
         
     
         <Suspense fallback={<Loading/>}>
-        <Environment  background 
-          // files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]}
+        {/* <Environment  background 
      files={"./newhdr.hdr"} 
-          />
+     /> */}
+     {/* files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]} */}
             <Float scale={1} floatIntensity={100} speed={2}>
     <Drone scale={10} position={[150, 300, 80]}/>
     <MovingSpot  color="white" position={[150, 300, 80]} />

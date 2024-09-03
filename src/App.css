@@ -1,6 +1,6 @@
 
 .container{
-    width: 800px;
+    width: 700px;
     margin: auto;
 }
 
@@ -11,10 +11,12 @@
     left: 0px;
     display: flex;
     justify-content: space-between;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.36);
+    margin-left: 20%;
+    margin-top: 1%;
+    background-color: #f0f0f0;
+    border-radius: 30px;
     overflow: hidden;
-    width: 100vw;
+    width: 50vw;
     padding: 0px 100px;
 }
 
@@ -36,7 +38,6 @@
     display: flex;
     justify-content: center;
     margin: auto;
-   
     overflow: hidden;
     width:100%;
    
@@ -53,26 +54,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: White;
-    width: 1200px;
+    color: rgb(0, 0, 0);
+
 }
 
 .ui .logo img{
 width: 100px;
+margin-top: 10px;
 }
 
 
 .ui .navbar ul{
     display: flex;
-    gap: 110px;
-    text-decoration: none;
+    gap: 60px;
+    text-decoration: none;  
   
 }
 
 .ui .navbar ul li{
     list-style: none;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-decoration: none !important;
 

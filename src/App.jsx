@@ -16,7 +16,7 @@
 import Passage from './Passage/Passage';
 import SmallCanvas from './SmallCanvas/SmallCanvas';
 import CharacterModel from './CharacterModel/CharacterModel';
-
+import { editable as e } from '@theatre/r3f';
 
 
 
@@ -54,15 +54,18 @@ const [clickedVision, setClickedVision] = useState(false);
           </Html>
 
           <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
-      
+          <Sky
+        sunPosition={[10, 0, -10]} // Position the sun lower in the sky
+       // Controls the distance of the sky dome
+      />
           </group>
         
     
         <Suspense fallback={<Loading/>}>
-        <Environment  background 
+        {/* <Environment  background 
           // files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]}
      files={"./newhdr.hdr"} 
-          />
+          /> */}
             <Float scale={1} floatIntensity={100} speed={2}>
     <Drone scale={10} position={[150, 300, 80]}/>
     <MovingSpot  color="white" position={[150, 300, 80]} />
@@ -78,7 +81,7 @@ const [clickedVision, setClickedVision] = useState(false);
 </Float> */}
   
 
-  <group position={[-2.9,-19,7.8]} >
+  <group position={[-21,-19,7]} >
       {/* Background Plane */}
       <mesh        onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> {/* Position the plane slightly behind the text */}
@@ -98,7 +101,8 @@ const [clickedVision, setClickedVision] = useState(false);
         }}
         onPointerUp={() => setClickedCrab(false)}
       >
-            <Text3D
+
+        <Text3D
              onPointerOver={() => setHovered(true)}
              onPointerOut={() => setHovered(false)}
              onClick={() => {
@@ -114,6 +118,8 @@ const [clickedVision, setClickedVision] = useState(false);
 View More
 <meshStandardMaterial metalness={0.001} roughness={0}   color={hovered ? 'yellow' : '#ffffff'} />
       </Text3D>
+  
+       
       </mesh>
     </group>
 
@@ -141,7 +147,7 @@ View More
         <div className="container">
         <div className="ui">
   <div className="logo">
-    <a style={{textDecoration:"none"}} href="./"><img src="./butterfly.png" alt="" /></a>
+    <a style={{textDecoration:"none"}} href="./"><img src="./museum.png" alt="" /></a>
   </div>
   <div className="navbar">
     <ul>

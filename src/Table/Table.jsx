@@ -22,6 +22,7 @@ export default function Table(props) {
           geometry={nodes.Cube_2.geometry}
           material={materials.Material}
         />
+        
       </group>
       <mesh
         castShadow

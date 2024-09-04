@@ -17,6 +17,7 @@ import Passage from './Passage/Passage';
 import SmallCanvas from './SmallCanvas/SmallCanvas';
 import CharacterModel from './CharacterModel/CharacterModel';
 import { editable as e } from '@theatre/r3f';
+import Home from './Home/Home';
 
 
 
@@ -52,12 +53,9 @@ const [clickedVision, setClickedVision] = useState(false);
           <Html scale={20} transform  >
 
           </Html>
-
+          <Sky distance={1400000} sunPosition={[0, 1000000, 1000]} inclination={0} azimuth={5}  />
           <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
-          <Sky
-        sunPosition={[10, 0, -10]} // Position the sun lower in the sky
-       // Controls the distance of the sky dome
-      />
+    
           </group>
         
     
@@ -67,8 +65,8 @@ const [clickedVision, setClickedVision] = useState(false);
      files={"./newhdr.hdr"} 
           /> */}
             <Float scale={1} floatIntensity={100} speed={2}>
-    <Drone scale={10} position={[150, 300, 80]}/>
-    <MovingSpot  color="white" position={[150, 300, 80]} />
+    <Drone scale={10} position={[70, 260, 130]}/>
+    <MovingSpot  color="#0e701d" position={[70, 262, 130]} />
 
 
   </Float>
@@ -81,18 +79,17 @@ const [clickedVision, setClickedVision] = useState(false);
 </Float> */}
   
 
-  <group position={[-21,-19,7]} >
-      {/* Background Plane */}
+  {/* <group position={[-21,-19,7]} >
+    
       <mesh        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> {/* Position the plane slightly behind the text */}
+        onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> 
     <planeGeometry  onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)} args={[13, 5]} /> {/* Adjust the size to cover the text */}
-    <meshStandardMaterial  color={hovered ? 'black' : '#6141a3'} /> {/* White background */}
+        onPointerOut={() => setHovered(false)} args={[13, 5]} /> 
+    <meshStandardMaterial  color={hovered ? 'black' : '#6141a3'} /> 
   </mesh>
 
-      {/* Button Text */}
       <mesh
-        position={[0, 0, 0.01]}  // Slightly offset the text in front of the background
+        position={[0, 0, 0.01]}  
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
         onClick={() => {
@@ -121,7 +118,7 @@ View More
   
        
       </mesh>
-    </group>
+    </group> */}
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
@@ -129,7 +126,7 @@ View More
   
         <Routes>
 
-  <Route path='/' element={<Experience />} />
+  <Route path='/' element={<Home />} />
 
   <Route path="/vision" element={<AssistedVision />} />
 

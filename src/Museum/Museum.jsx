@@ -16,7 +16,7 @@ import MiniTable from './MiniTable';
 import Statue from './Statue';
 import Book from './Book';
 import Carpet from './Carpet';
-import Butterfly from '../Butterfly/Butterfly';
+import Butterfly from '../Butterfly(1)/Butterfly';
 import poppinsFont from './Poppins-Bold.ttf'; 
 import Floor from '../Floor/Floor';
 import Vase from './Vase'

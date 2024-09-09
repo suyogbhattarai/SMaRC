@@ -1,0 +1,110 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element width/height */
+}
+
+/* Overall container styling */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    color: #000000;
+}
+
+/* Logo styling */
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Navbar links styling */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll alert styling */
+.scrollalert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.alert i {
+    margin-right: 8px;
+}
+
+/* Body container styling */
+.body-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Text styling */
+.text {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Ensure it doesn't exceed a certain width */
+    backdrop-filter: blur(10px);
+    /* background-color: antiquewhite; */
+}
+
+.text h1 {
+    font-size: 100px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    margin: 20px 0 0;
+    /* Adjust margins to align properly */
+    padding-top: 5px;
+}
+
+.text h4 {
+    font-size: 24px;
+    color: #d5c1c1;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Left text (navigate) */
+.navigate {
+    font-size: 16px;
+    color: #ffffff;
+    /* background-color: aqua; */
+}
+
+.navigate:hover,
+.projects:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

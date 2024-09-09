@@ -318,7 +318,7 @@ useEffect(()=>{
 
       {tvTable && (
         <Html wrapperClass='tableText' position={[-20.197582617751709, 133.11265385835948, 37]}>
-          <p>This is a Tv table</p>
+          {/* <p>This is a Tv table</p> */}
         </Html>
       )}
 

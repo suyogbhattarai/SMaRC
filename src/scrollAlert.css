@@ -1,0 +1,32 @@
+/* src/components/ScrollAlert.css */
+
+/* Scroll alert styling */
+.scrollalert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    padding: 10px 15px; /* Adjust padding to reduce width */
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    z-index: 9999;
+    /* Ensure it is above other elements */
+    display: flex;
+    /* Enable flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    max-width: 250px; /* Set a maximum width */
+    /* Adjust this value as needed */
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+}
+
+.alert i {
+    margin-right: 8px;
+}

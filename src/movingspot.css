@@ -1,0 +1,33 @@
+/* Container for the moving spot effect or related UI */
+.movingSpotContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for the light effect or related elements */
+.movingSpotEffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    /* Light overlay effect, adjust as needed */
+    pointer-events: none;
+    /* Ensure it doesn't interfere with other interactions */
+}
+
+/* Additional styles for specific elements related to the spot light or its effect */
+.movingSpotLabel {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}

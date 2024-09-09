@@ -6,19 +6,19 @@ import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { Html, PointerLockControls, TransformControls, useGLTF } from '@react-three/drei';
 import { useNavigate } from 'react-router-dom';
-import circularMp3 from './circularTable.mp3';
-import tvMp3 from "./tv.mp3";
-import tvTableMp3 from "./tvTable.mp3";
+// import circularMp3 from './circularTable.mp3';
+import tvMp3 from "./tv1.mp3";
+import tvTableMp3 from "./tvTable1.mp3";
 import "./assistedvison.css";
 import pagesTurning from "./pageTurning.mp3"
-import BookAudio from "./book.mp3"
-import ScriptAudio from "./script.mp3"
+import BookAudio from "./intro1.mp3"
+import ScriptAudio from "./bookScript.mp3"
 import statueAudio from "./statue.mp3"
-import sofaAudio from "./sofa.mp3"
+import sofaAudio from "./sofa1.mp3"
 
 
 
-// import debounce from 'lodash/debounce';
+// import debounce from 'lodash/debounce';  
 function AssistedVision() {
   const { camera } = useThree()
   const controlsRef = useRef();
@@ -33,12 +33,6 @@ function AssistedVision() {
   const [sofa,setSofa]=useState(false)
   const [statue,setStatue]=useState(false)
   const [audioFinished, setAudioFinished] = useState(false);
-
-
-
-
-
-
 
   const { scene } = useGLTF('/models/AssistedVision.glb');
   const { cameraPosition, cameraRotation } = useControls('', {
@@ -74,7 +68,7 @@ function AssistedVision() {
   }, []);
 
   useEffect(() => {
-    const cameraSet = new THREE.Vector3(-33, 133.8, 38);
+    const cameraSet = new THREE.Vector3(-33, 135.8, 38);
     camera.position.copy(cameraSet);
     camera.fov = 40;
     camera.updateProjectionMatrix();
@@ -324,7 +318,7 @@ useEffect(()=>{
 
       {tvTable && (
         <Html wrapperClass='tableText' position={[-20.197582617751709, 133.11265385835948, 37]}>
-          <p>This is a Tv table</p>
+          {/* <p>This is a Tv table</p> */}
         </Html>
       )}
 

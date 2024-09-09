@@ -1,32 +1,40 @@
 /* LoadingPage.css */
 
 .loading-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 50px;
+  /* align-items: center; */
+  color: #eec843;
+  margin-left: -40px; /* Adjust as needed */
 
+  font-family: 'Arial', sans-serif;
+}
 
-    color: #eec843;
-    font-family: 'Arial', sans-serif;
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #eec843;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  /* Shift spinner to the left */
+  /* Alternatively, use transform for more precise positioning */
+  /* transform: translateX(-20px); */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #eec843;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  h2 {
-    margin-top: 20px;
-    font-size: 24px;
-  }
-  
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}

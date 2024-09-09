@@ -1,0 +1,44 @@
+/* src/Home/navbar.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Evil Empire'; */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    pointer-events: all;
+    margin-right: 85px;
+    margin-left: 85px;
+    color: #000000;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}

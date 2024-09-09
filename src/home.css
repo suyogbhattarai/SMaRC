@@ -15,32 +15,70 @@
     color: #000000;
 }
 
+/* Navbar card styling */
+.navbar-card {
+    position: absolute;
+    top: 25px;
+    /* Reduced distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    /* White background for card-like appearance */
+    border-radius: 20px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for a floating effect */
+    padding: 10px 30px;
+    /* Reduced padding inside the card */
+    width: 60%;
+    /* Adjust width for your design */
+    z-index: 100;
+    /* Ensure it stays on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Logo styling */
 .logo img {
-    height: 100px;
+    height: 50px;
+    /* Adjusted logo height */
     width: auto;
 }
 
-/* Navbar links styling */
+/* Navbar list styling */
 .navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 30px;
+    /* Adjusted gap between items */
 }
 
+/* Navbar list item styling */
 .navbar li {
-    margin: 0 15px;
+    list-style: none;
+    cursor: pointer;
 }
 
+/* Navbar anchor (link) styling */
 .navbar a {
-    color: #ffffff;
+    color: #000000;
+    /* Updated to match your new design */
     text-decoration: none;
     font-size: 16px;
+    /* Slightly smaller font size */
+    font-weight: bold;
+    padding: 8px 15px;
+    /* Reduced padding for links */
 }
 
+/* Hover effect */
 .navbar a:hover {
     text-decoration: underline;
+    color: rgb(255, 192, 18);
+    /* Optional hover color */
 }
 
 /* Scroll alert styling */
@@ -72,7 +110,7 @@
 
 /* Text styling */
 .text {
-    padding-bottom: 20px;
+    padding-bottom: 10px; /* Reduced space below the text */
     margin: 0 auto;
     max-width: 1200px;
     /* Ensure it doesn't exceed a certain width */
@@ -84,7 +122,7 @@
     font-size: 100px;
     color: #ffffff;
     letter-spacing: 4px;
-    margin: 20px 0 0;
+    margin: 40px 0 0; /* Increased space above the text */
     /* Adjust margins to align properly */
     padding-top: 5px;
 }
@@ -107,4 +145,25 @@
 .projects:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .navbar-card {
+        width: 80%;
+        /* Narrow the card for smaller screens */
+        padding: 10px 20px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        /* Stack items vertically on small screens */
+    }
+
+    .logo img {
+        height: 40px;
+        /* Adjust logo size for smaller screens */
+    }
 }

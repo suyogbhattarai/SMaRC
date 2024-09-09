@@ -7,14 +7,14 @@ import * as THREE from 'three';
 import { Html, PointerLockControls, TransformControls, useGLTF } from '@react-three/drei';
 import { useNavigate } from 'react-router-dom';
 // import circularMp3 from './circularTable.mp3';
-import tvMp3 from "./tv1.mp3";
-import tvTableMp3 from "./tvTable1.mp3";
+import tvMp3 from "../assets/tv1.mp3";
+import tvTableMp3 from "../assets/tvTable1.mp3";
 import "./assistedvison.css";
-import pagesTurning from "./pageTurning.mp3"
-import BookAudio from "./intro1.mp3"
-import ScriptAudio from "./bookScript.mp3"
-import statueAudio from "./statue.mp3"
-import sofaAudio from "./sofa1.mp3"
+import pagesTurning from "../assets/pageTurning.mp3"
+import BookAudio from "../assets/intro1.mp3"
+import ScriptAudio from "../assets/bookScript.mp3"
+import statueAudio from "../assets/statue.mp3"
+import sofaAudio from "../assets/sofa1.mp3"
 
 
 

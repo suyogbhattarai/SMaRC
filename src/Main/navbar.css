@@ -1,44 +1,78 @@
 /* src/Home/navbar.css */
 
+/* Reset padding and margins */
 * {
     padding: 0;
     margin: 0;
     /* font-family: 'Evil Empire'; */
 }
 
-.navbar-container {
+/* Centering the navbar and giving it a card-like appearance */
+.navbar-card {
+    position: absolute;
+    top: 25px; /* Reduced distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white; /* White background for card-like appearance */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a floating effect */
+    padding: 10px 30px; /* Reduced padding inside the card */
+    width: 60%; /* Adjust width for your design */
+    z-index: 100; /* Ensure it stays on top */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
-    pointer-events: all;
-    margin-right: 85px;
-    margin-left: 85px;
-    color: #000000;
 }
 
+/* Logo styling */
 .logo img {
-    height: 80px;
+    height: 50px; /* Slightly smaller logo height */
     width: auto;
 }
 
+/* Navbar list styling */
 .navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 30px; /* Adjusted gap between items */
 }
 
+/* Navbar list item styling */
 .navbar li {
-    margin: 0 15px;
+    list-style: none;
+    cursor: pointer;
 }
 
+/* Navbar anchor (link) styling */
 .navbar a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; /* Slightly smaller font size */
+    font-weight: bold;
+    padding: 8px 15px; /* Reduced padding for links */
 }
 
+/* Hover effect */
 .navbar a:hover {
     text-decoration: underline;
+    color: rgb(255, 192, 18); /* Optional hover color */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .navbar-card {
+        width: 80%; /* Narrow the card for smaller screens */
+        padding: 10px 20px; /* Reduced padding for smaller screens */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px; /* Stack items vertically on small screens */
+    }
+
+    .logo img {
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
 }

@@ -27,8 +27,9 @@ function Home() {
         <div className="navbar">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/?redirect=navbar&scrollPosition=3.013384556516312">AssistedVision</a></li>
-            <li><a href="/?redirect=navbarRobotics&scrollPosition=6.113384556516312">Projects</a></li>
+            {/* <li><a href="/?redirect=navbar&scrollPosition=3.013384556516312">AssistedVision</a></li> */}
+            <li><a>Products</a></li>
+            <li><a href="/?redirect=navbarRobotics&scrollPosition=6.113384556516312">Skill Museum</a></li>
           </ul>
         </div>
       </div>

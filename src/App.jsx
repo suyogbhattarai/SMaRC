@@ -19,6 +19,10 @@ import CharacterModel from './CharacterModel/CharacterModel';
 import { editable as e } from '@theatre/r3f';
 import Home from './Home/Home';
 
+import Base from './Base/Base';
+import Building1 from './Building1/Building1';
+
+
 
 
 
@@ -53,8 +57,8 @@ const [clickedVision, setClickedVision] = useState(false);
           <Html scale={20} transform  >
 
           </Html>
-          <Sky distance={1400000} sunPosition={[0, 1000000, 1000]} inclination={0} azimuth={5}  />
-          <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
+          {/* <Sky distance={1400000} sunPosition={[0, 1000000, 1000]} inclination={0} azimuth={5}  /> */}
+          {/* <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/> */}
     
           </group>
         
@@ -65,8 +69,8 @@ const [clickedVision, setClickedVision] = useState(false);
      files={"./newhdr.hdr"} 
           /> */}
             <Float scale={1} floatIntensity={100} speed={2}>
-    <Drone scale={10} position={[70, 260, 130]}/>
-    <MovingSpot  color="#0e701d" position={[70, 262, 130]} />
+    {/* <Drone scale={10} position={[70, 260, 130]}/>
+    <MovingSpot  color="#0e701d" position={[70, 262, 130]} /> */}
 
 
   </Float>
@@ -122,11 +126,11 @@ View More
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
-  <fog attach="fog" args={['#000000', 600, 1170]} />
+  {/* <fog attach="fog" args={['#000000', 600, 1170]} /> */}
   
-        <Routes>
+  <Routes>
 
-  <Route path='/' element={<Home />} />
+  <Route path='/' element={<Home/>} />
 
   <Route path="/vision" element={<AssistedVision />} />
 
@@ -143,18 +147,28 @@ View More
         {!isVisionPath && (<>
         <div className="container">
         <div className="ui">
-  <div className="logo">
+          <div className="flex">
+          <div className="logo">
     <a style={{textDecoration:"none"}} href="./"><img src="./museum.png" alt="" /></a>
   </div>
-  <div className="navbar">
-    <ul>
-    <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
-    <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li>Assisted Vision</li></a>
-      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Robotics</li></a>
 
-      <a style={{textDecoration:"none"}}  href="/projects"><li>Projects</li></a>
+ 
+    <ul>
+    <Link style={{textDecoration:"none"}}  to="/"><li>Home</li></Link>
+
+      <Link  style={{textDecoration:"none"}} to="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Products</li></Link>
+
+      <Link style={{textDecoration:"none"}}  to="/projects"><li>Projects</li></Link>
+      
+      <Link style={{textDecoration:"none"}}  to="/projects"><li>About Us</li></Link>
     </ul>
-  </div>
+
+    <div className="vr">
+      VR MODE
+    </div>
+          </div>
+ 
+
 
   </div>
   <div className="scrollalert">
@@ -178,9 +192,10 @@ View More
         </div>
       </div>
       <div className="model">
-      <Canvas style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
+      <Canvas   style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
 {/* <OrbitControls/> */}
         <ambientLight intensity={0.5} />
+        <fog attach="fog" args={["#041830", 5, 10]} />
         <Suspense fallback={null}>
           <group>
             <PresentationControls
@@ -201,7 +216,7 @@ View More
           </group>
         </Suspense>
         <PresentationControls />
-        <Sky/>
+    
       </Canvas>
     <h4 style={{textAlign:"center"}}> Drag To Explore The Model</h4>  
       </div>

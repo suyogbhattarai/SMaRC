@@ -1,0 +1,9 @@
+.navbar{
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+    
+}

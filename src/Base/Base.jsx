@@ -38,7 +38,7 @@ export default function Base(props) {
                 mixStrength={1} // Strength of reflection
                 depthScale={100} // Effect of depth on reflection
                 debug={0}
-                position={[276.132, -535.451, -202.065]}
+                position={[276.132, -535.451-460, -202.065]}
                 rotation={[Math.PI / 2, 0, 0]}
               >
  {(Material) => (
@@ -95,7 +95,7 @@ export default function Base(props) {
                 mixStrength={0.5} // Strength of reflection
                 depthScale={100} // Effect of depth on reflection
                 debug={0}
-                position={[-223.598, -530.146, 1044.883]}
+                position={[-223.598, -530.146-460, 1044.883]}
                 rotation={[Math.PI / 2, 0, Math.PI / 2]}
                 scale={[1.212, 1, 1]}
               >
@@ -168,7 +168,7 @@ export default function Base(props) {
                 mixStrength={1} // Strength of reflection
                 depthScale={100} // Effect of depth on reflection
                 debug={0}
-                position={[244.287, -2000.546, 1295.994]}
+                position={[244.287, -2000.546-250, 1295.994]}
                 rotation={[Math.PI / 2, 0, 0]}
               >
  {(Material) => (
@@ -204,7 +204,7 @@ export default function Base(props) {
                 mixStrength={1} // Strength of reflection
                 depthScale={100} // Effect of depth on reflection
                 debug={0}
-                position={[273.128, 323.651, -202.065]}
+                position={[273.128, 323.651-300, -202.065]}
                 rotation={[Math.PI / 2, 0, 0]}
               >
  {(Material) => (
@@ -256,8 +256,8 @@ export default function Base(props) {
 
 >
       <MeshReflectorMaterial
-              roughness={0.2} 
-              metalness={0.001} 
+              roughness={0.6} 
+              metalness={0.007} 
               castShadow
               receiveShadow
         map={colorMap} // The texture for the reflective surface
@@ -284,7 +284,7 @@ export default function Base(props) {
           receiveShadow
           geometry={nodes.Rectangle_2.geometry}
           material={materials['Material.011']}
-          position={[-24.18, -916, -246.749]}
+          position={[-24.18, -916-155, -246.749]}
           rotation={[Math.PI / 2, 0, 0]}
         />
         <mesh
@@ -310,7 +310,7 @@ export default function Base(props) {
           receiveShadow
           geometry={nodes['stairs-sides'].geometry}
           material={nodes['stairs-sides'].material}
-          position={[-359.491, -1904.298, 881.16]}
+          position={[-359.491, -1904.298-235, 881.16]}
           rotation={[-2.988, 0, -Math.PI]}
           scale={[133.024, 218.967, 117.795]}>
           <mesh

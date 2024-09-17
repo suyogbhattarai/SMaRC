@@ -281,7 +281,6 @@ Mr.
 Murphy
 <meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
       </Text3D>
-
       <Plane scale={[80,38,1]}    position={[245, 125, -83]}>
 <Suspense fallback={<meshStandardMaterial wireframe={true} />}>
           <VideoPlane src={"./crab.mp4"} />

@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
-import { Sparkles, ScrollControls, Scroll, Float, Sky,Cloud, PresentationControls,Html,Text, useScroll, OrbitControls, Text3D, TransformControls, useGLTF, useCamera } from "@react-three/drei";
+import { Sparkles, ScrollControls, Scroll, Float, Sky,Cloud, PresentationControls,Html,Text, useScroll, OrbitControls, Text3D, TransformControls, useGLTF, useCamera, RoundedBox } from "@react-three/drei";
 import { Physics } from "@react-three/rapier";
 
 import "./home.css"
@@ -17,13 +17,16 @@ import Laptop from "../Laptop/Laptop";
 import Coffee from "../Coffee/Coffee";
 import Clock from "../Clock/Clock";
 import Calendar from "../Calendar/Calendar";
+import Projects from "../Projects/Projects";
+import Passage from "../Passage/Passage";
+import homeCamera from "./homeCamera.json"
 
 function Home() {
 
   const [sheet, setSheet] = useState(null);
 
   useEffect(() => {
-    const projectSheet = getProject("home camera").sheet("Scene");
+    const projectSheet = getProject("home camera",{state:homeCamera}).sheet("Scene");
     setSheet(projectSheet);
   }, []);
   return (
@@ -119,15 +122,43 @@ fontSize={1.8}
 
          font="./text/EVIL EMPIRE.OTF"
          letterSpacing={0.2}
+         
       color="#e6e5e3"
       position={[ 0.1, 30.131208354384356,  35.698553864381516]}
-fontSize={3.2}
+fontSize={2.5}
       castShadow
       >
  SMaRC
       </Text>
       {/* <OrbitControls makeDefault/>   */}
    </e.mesh>
+
+
+   <RoundedBox
+        args={[6, 3, 0.2]} // Width, Height, Depth
+        radius={0.15}      // Corner radius
+        smoothness={4}
+        position={[2.3,25 ,-28]}
+   >
+          <Text
+ref={smarcRef}
+
+  fontSize={1}
+       font="./text/Poppins-SemiBold.ttf"
+        color="#76767d"
+  
+        position={[0, 0, 0.2]}
+    
+      castShadow
+      >
+
+ SKILL MUSEUM & RESEARCH CENTER
+
+
+
+      </Text>
+    <meshStandardMaterial color={"white"}/>
+   </RoundedBox>
     
       <Text
 ref={smarcRef}
@@ -147,7 +178,7 @@ ref={smarcRef}
 
       </Text>
 {/* <OrbitControls makeDefault/> */}
-<gridHelper  position={[30,0,-50]} rotation={[Math.PI/2,0,0]} args={[100, 20,"red",]} />
+{/* <gridHelper  position={[30,0,-50]} rotation={[Math.PI/2,0,0]} args={[100, 20,"red",]} /> */}
 <Laptop scale={0.75} position={[0,23.3+9.2,7]} />
 <Calendar scale={[0.1,0.07,0.07]} position={[-5.9,23.3+9.6,1]} rotation={[0,0.7,0]}/>
 

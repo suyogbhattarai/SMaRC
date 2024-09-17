@@ -111,7 +111,7 @@ function Light() {
         height={25} // Height of the light
         intensity={2  } 
         color={'#f7f6eb'} // Light color
-        position={[-0.3883763353042937,  21.894199867805914,  -11.041510760513514]} // Position of the light
+        position={[-0.3883763353042937,  19.794199867805914,  -11.041510760513514]} // Position of the light
         rotation={[-Math.PI / 2, 0, 0]} // Rotate the light to point at objects
       />
       <rectAreaLight
@@ -121,7 +121,7 @@ function Light() {
         height={11.6} // Height of the light
         intensity={1} 
         color={'#f7f6eb'} // Light color
-        position={[-0.539028801387053,  20.209785786734784,  -13.659385663066413]} // Position of the light
+        position={[-0.539028801387053,  16.209785786734784,  -13.659385663066413]} // Position of the light
         rotation={[Math.PI / 2, 0, 0]} // Rotate the light to point at objects
       />
 
@@ -186,7 +186,7 @@ function Light() {
     
      color={'#fac05c'} // Light color
      
-     position={[ -7.721694114174413,  21.83635401117426,  -15.8285606162338]} // Position of the light
+     position={[ -7.721694114174413,  21.83635401117426-2.2,  -15.8285606162338]} // Position of the light
      rotation={[0, Math.PI/2, 0]} // Rotate the light to point at objects
    />
        <rectAreaLight
@@ -197,7 +197,7 @@ function Light() {
 
      color={'#fac05c'} // Light color
      
-     position={[  7.758222409248292,  21.85684599494477,  -15.793479457171205]} // Position of the light
+     position={[  7.758222409248292,  21.85684599494477-2.2,  -15.793479457171205]} // Position of the light
      rotation={[0, -Math.PI/2, 0]} // Rotate the light to point at objects
    />
          <rectAreaLight
@@ -208,7 +208,7 @@ function Light() {
  
      color={'#fac05c'} // Light color
 
-     position={[ -7.719523585738835,  15.612935715739715,  -15.793479457171205]} // Position of the light
+     position={[ -7.719523585738835,  15.612935715739715-3.2,  -15.793479457171205]} // Position of the light
      rotation={[0, Math.PI/2, 0]} // Rotate the light to point at objects
    />
 <rectAreaLight
@@ -218,7 +218,7 @@ function Light() {
      intensity={8} 
   
      color={'#fac05c'} // Light color
-     position={[-0.1160962247328472,  15.829029844936953,  -30.098621912913057]} // Position of the light
+     position={[-0.1160962247328472,  15.829029844936953-3.3,  -30.098621912913057]} // Position of the light
      rotation={[-Math.PI/2, 0, 0]} // Rotate the light to point at objects
    />
 
@@ -229,7 +229,7 @@ function Light() {
      intensity={3 } 
   
      color={'#fac05c'} // Light color
-     position={[  7.758222409248292,  15.612935715739715,  -15.793479457171205]} // Position of the light
+     position={[  7.758222409248292,  15.612935715739715-3.2,  -15.793479457171205]} // Position of the light
      rotation={[0, -Math.PI/2, 0]} // Rotate the light to point at objects
    />
   
@@ -240,7 +240,7 @@ function Light() {
      intensity={10} 
 
      color={'#fac05c'} // Light color
-     position={[ -0.1160962247328472,  21.994800549669538,  -30.075321227940034]} // Position of the light
+     position={[ -0.1160962247328472,  21.994800549669538-2.1,  -30.075321227940034]} // Position of the light
      rotation={[-Math.PI/2, 0, 0]} // Rotate the light to point at objects
    />
       <rectAreaLight

@@ -4,14 +4,14 @@
 
 .ui{
     position: fixed !important;
-    top: 80px;
-    left: 29%;
+    top: 70px;
+    left: 28%;
 
    
     background-color: #f0f0f0;
     border-radius: 25px;
 padding: 5px 30px;
-width: 65vh;
+width: 72vh;
     z-index: 100;
 }
 .flex

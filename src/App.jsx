@@ -16,6 +16,16 @@
 import Passage from './Passage/Passage';
 import SmallCanvas from './SmallCanvas/SmallCanvas';
 import CharacterModel from './CharacterModel/CharacterModel';
+import { editable as e } from '@theatre/r3f';
+import Home from './Home/Home';
+
+import Base from './Base/Base';
+import Building1 from './Building1/Building1';
+import Products from './Products/Products';
+
+
+
+
 
   const Experience = lazy(() => import('./Experience/Experience'));
 
@@ -26,7 +36,7 @@ import CharacterModel from './CharacterModel/CharacterModel';
     const interfaceref=useRef()
     const location=useLocation()
     const isVisionPath = location.pathname === '/vision';
-const {scene:crab}=useGLTF("/models/CrabFinal.glb")
+const {scene:crab}=useGLTF("./CrabFinal.glb")
 const [hovered, setHovered] = useState(false);
 const [clickedCrab, setClickedCrab] = useState(false);
 const [clickedKicks, setClickedKicks] = useState(false);
@@ -48,20 +58,20 @@ const [clickedVision, setClickedVision] = useState(false);
           <Html scale={20} transform  >
 
           </Html>
-
-          <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/>
-      
+          {/* <Sky distance={1400000} sunPosition={[0, 1000000, 1000]} inclination={0} azimuth={5}  /> */}
+          {/* <Sparkles count={2000} scale={2500} position={[0,1000,0]} size={120} speed={2}/> */}
+    
           </group>
         
     
         <Suspense fallback={<Loading/>}>
         {/* <Environment  background 
+          // files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]}
      files={"./newhdr.hdr"} 
-     /> */}
-     {/* files={["./cubeMap/px.png","./cubeMap/nx.png","./cubeMap/py.png","./cubeMap/ny.png","./cubeMap/pz.png","./cubeMap/nz.png"]} */}
+          /> */}
             <Float scale={1} floatIntensity={100} speed={2}>
-    <Drone scale={10} position={[150, 300, 80]}/>
-    <MovingSpot  color="white" position={[150, 300, 80]} />
+    {/* <Drone scale={10} position={[70, 260, 130]}/>
+    <MovingSpot  color="#0e701d" position={[70, 262, 130]} /> */}
 
 
   </Float>
@@ -74,18 +84,17 @@ const [clickedVision, setClickedVision] = useState(false);
 </Float> */}
   
 
-  <group position={[-2.9,-19,7.8]} >
-      {/* Background Plane */}
+  {/* <group position={[-21,-19,7]} >
+    
       <mesh        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> {/* Position the plane slightly behind the text */}
+        onPointerOut={() => setHovered(false)} position={[250, 127, -30.1]}> 
     <planeGeometry  onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)} args={[13, 5]} /> {/* Adjust the size to cover the text */}
-    <meshStandardMaterial  color={hovered ? 'black' : '#6141a3'} /> {/* White background */}
+        onPointerOut={() => setHovered(false)} args={[13, 5]} /> 
+    <meshStandardMaterial  color={hovered ? 'black' : '#6141a3'} /> 
   </mesh>
 
-      {/* Button Text */}
       <mesh
-        position={[0, 0, 0.01]}  // Slightly offset the text in front of the background
+        position={[0, 0, 0.01]}  
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
         onClick={() => {
@@ -94,7 +103,8 @@ const [clickedVision, setClickedVision] = useState(false);
         }}
         onPointerUp={() => setClickedCrab(false)}
       >
-            <Text3D
+
+        <Text3D
              onPointerOver={() => setHovered(true)}
              onPointerOut={() => setHovered(false)}
              onClick={() => {
@@ -110,21 +120,24 @@ const [clickedVision, setClickedVision] = useState(false);
 View More
 <meshStandardMaterial metalness={0.001} roughness={0}   color={hovered ? 'yellow' : '#ffffff'} />
       </Text3D>
+  
+       
       </mesh>
-    </group>
+    </group> */}
 
 
 {/* <MovingSpot2 color="yellow" position={[10, 200, -200]}/> */}
-  <fog attach="fog" args={['#000000', 600, 1170]} />
+  {/* <fog attach="fog" args={['#000000', 600, 1170]} /> */}
   
-        <Routes>
+  <Routes>
 
-  <Route path='/' element={<Experience />} />
+  <Route path='/' element={<Home/>} />
 
   <Route path="/vision" element={<AssistedVision />} />
 
   <Route path="/AI" element={<AI />} />
   <Route path="/IOT" element={<IOT/>} />
+  <Route path='/products' element={<Products />}/>
   <Route path="/robotics" element={<Robotics/>} />
   <Route path="/projects" element={<Passage clickedCrab={clickedCrab} setClickedCrab={setClickedCrab} clickedKicks={clickedKicks} setHovered={setHovered} hovered={hovered}/>}/>
   </Routes>
@@ -136,18 +149,29 @@ View More
         {!isVisionPath && (<>
         <div className="container">
         <div className="ui">
-  <div className="logo">
-    <a style={{textDecoration:"none"}} href="./"><img src="./butterfly.png" alt="" /></a>
+          <div className="flex">
+          <div className="logo">
+    <a style={{textDecoration:"none"}} href="./"><img src="./museum.png" alt="" /></a>
   </div>
-  <div className="navbar">
-    <ul>
-    <a style={{textDecoration:"none"}}  href="/"><li>Home</li></a>
-    <a style={{textDecoration:"none"}}  href="/?redirect=navbar&scrollPosition=3.013384556516312"><li>Assisted Vision</li></a>
-      <a  style={{textDecoration:"none"}} href="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Robotics</li></a>
 
-      <a style={{textDecoration:"none"}}  href="/projects"><li>Projects</li></a>
+ 
+    <ul>
+    <Link style={{textDecoration:"none"}}  to="/"><li>Home</li></Link>
+
+      {/* <Link  style={{textDecoration:"none"}} to="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Products</li></Link> */}
+      <Link  style={{textDecoration:"none"}} to="/products"><li>Products</li></Link>
+
+      <Link style={{textDecoration:"none"}}  to="/projects"><li>Projects</li></Link>
+      
+      <Link style={{textDecoration:"none"}}  to="/projects"><li>About Us</li></Link>
     </ul>
-  </div>
+
+    <div className="vr">
+      VR MODE
+    </div>
+          </div>
+ 
+
 
   </div>
   <div className="scrollalert">
@@ -171,9 +195,9 @@ View More
         </div>
       </div>
       <div className="model">
-      <Canvas style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
-{/* <OrbitControls/> */}
+      <Canvas   style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
         <ambientLight intensity={0.5} />
+        <fog attach="fog" args={["#041830", 5, 10]} />
         <Suspense fallback={null}>
           <group>
             <PresentationControls
@@ -194,7 +218,7 @@ View More
           </group>
         </Suspense>
         <PresentationControls />
-        <Sky/>
+    
       </Canvas>
     <h4 style={{textAlign:"center"}}> Drag To Explore The Model</h4>  
       </div>

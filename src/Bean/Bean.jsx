@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Bean(props) {
-  const { nodes, materials } = useGLTF('/models/BeanBag (2).glb')
+  const { nodes, materials } = useGLTF('/BeanBag (2).glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -31,4 +31,4 @@ export default function Bean(props) {
   )
 }
 
-useGLTF.preload('/models/BeanBag (2).glb')
+useGLTF.preload('/BeanBag (2).glb')

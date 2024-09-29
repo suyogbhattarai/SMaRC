@@ -16,7 +16,7 @@ import MiniTable from './MiniTable';
 import Statue from './Statue';
 import Book from './Book';
 import Carpet from './Carpet';
-import Butterfly from '../Butterfly/Butterfly';
+import Butterfly from '../Butterfly(1)/Butterfly';
 import poppinsFont from './Poppins-Bold.ttf'; 
 import Floor from '../Floor/Floor';
 import Vase from './Vase'
@@ -31,11 +31,11 @@ function Museum(props,{hovered}) {
   const location = useLocation();
   const [circulartable,setCircularTable]=useState(false)
 
-  const {scene}=useGLTF("/models/SkillRobotTest.glb")
-const { scene: crab } = useGLTF("/models/CrabFinal.glb");
-const { scene: SkillBlue } = useGLTF("/models/SKillKicksBlue.glb");
-const { scene: SkillRed } = useGLTF("/models/SKillKicksRed.glb");
-const {scene:murphyFrame}=useGLTF("/models/Mr.murphy.glb")
+  const {scene}=useGLTF("./SkillRobotTest.glb")
+const { scene: crab } = useGLTF("./CrabFinal.glb");
+const { scene: SkillBlue } = useGLTF("./SKillKicksBlue.glb");
+const { scene: SkillRed } = useGLTF("./SKillKicksRed.glb");
+const {scene:murphyFrame}=useGLTF("./Mr.murphy.glb")
   return (
     <>
 

@@ -7,7 +7,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Podium(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/AssistedVisionPodium.glb')
+  const { nodes, materials, animations } = useGLTF('/AssistedVisionPodium.glb')
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
@@ -122,4 +122,4 @@ export default function Podium(props) {
   )
 }
 
-useGLTF.preload('/models/AssistedVisionPodium.glb')
+useGLTF.preload('/AssistedVisionPodium.glb')

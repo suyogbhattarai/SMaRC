@@ -9,7 +9,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 
 export default function Building1(props) {
   const group = useRef()
-  const { nodes, materials, animations,scene } = useGLTF('/models/Room (19).glb')
+  const { nodes, materials, animations,scene } = useGLTF('/Room (19).glb')
   const { actions } = useAnimations(animations, group)
 
     
@@ -68,4 +68,4 @@ export default function Building1(props) {
   )
 }
 
-useGLTF.preload('/models/Room (17).glb')
+useGLTF.preload('/Room (17).glb')

@@ -3,6 +3,7 @@ import Projects from '../Projects/Projects';
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 
 import Light from '../Light/Light';
+import { editable as e } from '@theatre/r3f';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Html, OrbitControls, ScrollControls, TransformControls, useScroll,Text3D, useGLTF, Plane, useAnimations, Clone } from '@react-three/drei';
 import { PerspectiveCamera, SheetProvider, useCurrentSheet } from '@theatre/r3f';
@@ -36,12 +37,13 @@ function Passage({clickedCrab,setClickedCrab,clickedDesk,setClickedDesk}) {
         const projectSheet = getProject("Passage Camera",{state:passageCamera}).sheet("Scene");
         setSheet(projectSheet);
       }, []);
+
   return (
 
     <>  
     {/* <OrbitControls makeDefault/> */}
                 {sheet && (
-        <ScrollControls pages={10} damping={0.25} >
+        <ScrollControls pages={10} damping={0.25} > 
           <SheetProvider sheet={sheet}>
             <ScenePassage />
           </SheetProvider>
@@ -61,6 +63,7 @@ function MovingSpot({ vec = new Vector3(), ...props }) {
   })
   return <SpotLight scale={20} castShadow ref={light} penumbra={1} distance={30} angle={4} attenuation={10} anglePower={0.1} intensity={2} {...props} />
 }
+
 function ScenePassage() {
     const sheet = useCurrentSheet();
     const scroll = useScroll();
@@ -145,29 +148,29 @@ const [clickedVision, setClickedVision] = useState(false);
     const planeGeometry = new THREE.PlaneGeometry(5, 5);
 
 THREE.ColorManagement.enabled = true; 
-const {scene}=useGLTF("/models/SkillRobotTest.glb")
-const { scene: crab } = useGLTF("/models/CrabFinal.glb");
-const { scene: BeanBag } = useGLTF("/models/BeanBag (2).glb");
-const { scene: SkillBlue } = useGLTF("/models/SKillKicksBlue.glb");
-const { scene: SkillRed } = useGLTF("/models/SKillKicksRed.glb");
-const { scene: pot1 } = useGLTF("/models/indoorPlantPot.glb");
-const { scene: pot4 } = useGLTF("/models/indoorPlantPot(2).glb");
-const { scene: pot2 } = useGLTF("/models/potPlant.glb");
-const { scene: pot3 } = useGLTF("/models/potPlant2.glb");
-const {scene:arena}=useGLTF("/models/SKillKicks (1).glb")
-  const {scene:podium,animations}=useGLTF("/models/podium.glb")
-  const {scene:DeskComp}=useGLTF("/models/DeskComp.glb")
-    const {scene:selfTrack}=useGLTF("/models/selfDriving (3).glb")
-    const {scene:beanMan}=useGLTF("/models/selfDriving (3).glb")
-    const {scene:aiCar}=useGLTF("/models/selfDriving (1).glb")
-    const {scene:podiumAssisted}=useGLTF("/models/AssistedVisionPodium.glb")
+const {scene}=useGLTF("./SkillRobotTest.glb")
+const { scene: crab } = useGLTF("./CrabFinal.glb");
+const { scene: BeanBag } = useGLTF("./BeanBag (2).glb");
+const { scene: SkillBlue } = useGLTF("./SKillKicksBlue.glb");
+const { scene: SkillRed } = useGLTF("./SKillKicksRed.glb");
+const { scene: pot1 } = useGLTF("./indoorPlantPot.glb");
+const { scene: pot4 } = useGLTF("./indoorPlantPot(2).glb");
+const { scene: pot2 } = useGLTF("./potPlant.glb");
+const { scene: pot3 } = useGLTF("./potPlant2.glb");
+const {scene:arena}=useGLTF("./SKillKicks (1).glb")
+  const {scene:podium,animations}=useGLTF("./podium.glb")
+  const {scene:DeskComp}=useGLTF("./DeskComp.glb")
+    const {scene:selfTrack}=useGLTF("./selfDriving (3).glb")
+    const {scene:beanMan}=useGLTF("./selfDriving (3).glb")
+    const {scene:aiCar}=useGLTF("./selfDriving (1).glb")
+    const {scene:podiumAssisted}=useGLTF("./AssistedVisionPodium.glb")
 
-    const {scene:selfFrame}=useGLTF("/models/selfDrivingPhoto.glb")
-    const {scene:deskFrame}=useGLTF("/models/DeskCompPhoto.glb")
-    const {scene:murphyFrame}=useGLTF("/models/Mr.murphy.glb")
-    const {scene:safariFrame}=useGLTF("/models/AISafari.glb")
-    const {scene:mathsFrame}=useGLTF("/models/AIMaths.glb")
-    const {scene:kicksFrame}=useGLTF("/models/SkillKicksPhoto.glb")
+    const {scene:selfFrame}=useGLTF("./selfDrivingPhoto.glb")
+    const {scene:deskFrame}=useGLTF("./DeskCompPhoto.glb")
+    const {scene:murphyFrame}=useGLTF("./Mr.murphy.glb")
+    const {scene:safariFrame}=useGLTF("./AISafari.glb")
+    const {scene:mathsFrame}=useGLTF("./AIMaths.glb")
+    const {scene:kicksFrame}=useGLTF("./SkillKicksPhoto.glb")
 
 const occlude=useRef()
 
@@ -278,13 +281,15 @@ Mr.
 Murphy
 <meshStandardMaterial metalness={0.001} roughness={0} color="#584685"/>
       </Text3D>
-
       <Plane scale={[80,38,1]}    position={[245, 125, -83]}>
 <Suspense fallback={<meshStandardMaterial wireframe={true} />}>
           <VideoPlane src={"./crab.mp4"} />
   </Suspense>
 </Plane>
+<e.mesh theatreKey="podium">
 <primitive position={[0,-19,10]}  object={podium}  />
+</e.mesh>
+
 
 <primitive scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(-90),THREE.MathUtils.degToRad(0)]} position={[267,108,-89.5]} object={murphyFrame}/>
 <Clone scale={50} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} position={[225.5,108,12]} object={murphyFrame}/>
@@ -319,8 +324,10 @@ Murphy
 
 
 {/* <OrbitControls/> */}
-
+<e.mesh theatreKey="podium">
 <MovingSpot rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(90)]}  color="#62499f"       position={[247, 117, -26]} />
+
+</e.mesh>
 
       <Text3D
             position={[280, 127, -23]}    
@@ -376,7 +383,10 @@ Skill
 </Plane>
 {/* <OrbitControls/> */}
 <Sofa  scale={1.3} position={[693,-50,-60]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]}/>
+<e.mesh theatreKey="arena">
 <primitive scale={7} position={[370,105,-40]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(0)]} object={arena }/>
+
+</e.mesh>
 
       <Text3D
      position={[441, 134, -23]}
@@ -427,8 +437,10 @@ Companion
 Robot
 <meshStandardMaterial metalness={0.001} roughness={0} color="#019adb"/>
       </Text3D> */}
+<e.mesh theatreKey="deskcompanion">
+<primitive scale={0.6} position={[517, 119, -60]} object={DeskComp}/>
 
-      <primitive scale={0.6} position={[517, 119, -60]} object={DeskComp}/>
+</e.mesh>
       {/* robotics  */}
 
       {/* articial */}
@@ -590,9 +602,43 @@ Safari
           <VideoPlane src={"./safari3 .mp4"} />
   </Suspense>
 </Plane>
+
+      <Plane scale={[65,38,1]}  position={[1218.52, 125.1, -23]}>
+<Suspense fallback={<meshStandardMaterial wireframe={true} />}>
+          <VideoPlane src={"./Skill Museum.mp4"} />
+  </Suspense>
+</Plane>
+
+<Text3D  
+   position={[1260.52, 126.1, -23]}
+   size={8}
+   
+   bevelSize={0.001}
+   bevelOffset={0.001}
+   bevelThickness={0.4}
+   bevelEnabled={true} 
+   font="./fonts/Bebas Neue_Regular.json"
+>
+  Stay Tuned For Our 
+  <meshStandardMaterial metalness={0.001} roughness={0} color="#522150"/>
+</Text3D>
+<Text3D  
+   position={[1260.52, 115.1, -23]}
+   size={8}
+   
+   bevelSize={0.001}
+   bevelOffset={0.001}
+   bevelThickness={0.4}
+   bevelEnabled={true} 
+   font="./fonts/Bebas Neue_Regular.json"
+>
+Other Projects 
+  <meshStandardMaterial metalness={0.001} roughness={0} color="#522150"/>
+</Text3D>
+
       <Text3D
      position={[1074, 132, -23]}
-     size={5}
+     size={5}chrome
      bevelSize={0.001}
      bevelOffset={0.001}
      bevelThickness={0.4}
@@ -630,8 +676,10 @@ Goggles
 
 
       </Text3D>
-
-      <CharacterModel   position={[1160, 103, -25]} scale={12} />
+<e.mesh theatreKey="assistedVision">
+<CharacterModel   position={[1160, 103, -25]} scale={12} />
+</e.mesh>
+     
       <Clone scale={9.8}  position={[1143.5, 106, -25]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} object={pot2 }/>
       <Clone scale={9.8}  position={[1180.5, 106, -25]} rotation={[THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(90),THREE.MathUtils.degToRad(0)]} object={pot2 }/>
 

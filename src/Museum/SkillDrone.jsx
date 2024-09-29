@@ -3,7 +3,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function SkillDrone(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/DronePilot.glb')
+  const { nodes, materials, animations } = useGLTF('/DronePilot.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -963,4 +963,4 @@ export default function SkillDrone(props) {
   )
 }
 
-useGLTF.preload('/models/DronePilot.glb')
+useGLTF.preload('/DronePilot.glb')

@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function MiniTable(props) {
-  const { nodes, materials } = useGLTF('/models/miniTable.glb')
+  const { nodes, materials } = useGLTF('/miniTable.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -51,4 +51,4 @@ export default function MiniTable(props) {
   )
 }
 
-useGLTF.preload('/models/miniTable.glb')
+useGLTF.preload('/miniTable.glb')

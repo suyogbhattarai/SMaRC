@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Projects(props) {
-  const { nodes, materials } = useGLTF('/models/Passage (1) (1).glb')
+  const { nodes, materials } = useGLTF('/Passage (1) (1).glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -18,6 +18,7 @@ export default function Projects(props) {
         rotation={[Math.PI / 2, 0, 0]}
         scale={[50.335, 95.424, 19.993]}
       />
+       
       <mesh
         castShadow
         receiveShadow
@@ -27,6 +28,7 @@ export default function Projects(props) {
         rotation={[Math.PI / 2, 0, -Math.PI / 2]}
         scale={[46.95, 21.069, 22.374]}
       />
+
       <mesh
         castShadow
         receiveShadow
@@ -80,4 +82,4 @@ export default function Projects(props) {
   )
 }
 
-useGLTF.preload('/models/Passage (1) (1).glb')
+useGLTF.preload('/Passage (1) (1).glb')

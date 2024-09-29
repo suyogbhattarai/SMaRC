@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function SelfDriving(props) {
-  const { nodes, materials } = useGLTF('/models/selfDriving (1).glb')
+  const { nodes, materials } = useGLTF('/selfDriving (1).glb')
   return (
     <group {...props} dispose={null}>
       <group position={[2.909, 0.472, 1.293]} rotation={[-Math.PI / 2, 0, 0]} scale={24.884}>
@@ -341,4 +341,4 @@ export default function SelfDriving(props) {
   )
 }
 
-useGLTF.preload('/models/selfDriving (1).glb')
+useGLTF.preload('/selfDriving (1).glb')

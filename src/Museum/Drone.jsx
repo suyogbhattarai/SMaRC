@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Drone(props) {
-  const { nodes, materials } = useGLTF('/models/futuristic_surveillance_drone.glb')
+  const { nodes, materials } = useGLTF('/futuristic_surveillance_drone.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -19,4 +19,4 @@ export default function Drone(props) {
   )
 }
 
-useGLTF.preload('/models/futuristic_surveillance_drone.glb')
+useGLTF.preload('/futuristic_surveillance_drone.glb')

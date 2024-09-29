@@ -4,7 +4,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Book(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/book.glb')
+  const { nodes, materials, animations } = useGLTF('/book.glb')
   const { actions } = useAnimations(animations, group)
 
     useEffect(() => {
@@ -42,4 +42,4 @@ export default function Book(props) {
   )
 }
 
-useGLTF.preload('/models/book.glb')
+useGLTF.preload('/book.glb')

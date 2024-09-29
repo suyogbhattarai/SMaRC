@@ -10,7 +10,7 @@ import { TransformControls } from '@react-three/drei'
 
 export default function SmartDustbin(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/smartDustbinRemake (1).glb')
+  const { nodes, materials, animations } = useGLTF('/smartDustbinRemake (1).glb')
   const { actions } = useAnimations(animations, group)
   const dustbin=useRef()
   useEffect(()=>{
@@ -25,6 +25,10 @@ export default function SmartDustbin(props) {
     }
     
       },[props.enterProject1])
+  useFrame(()=>{
+console.log("dusbin",actions)
+
+  })
   return (
     <>
     {/* <TransformControls object={group} /> */}
@@ -116,4 +120,4 @@ export default function SmartDustbin(props) {
   )
 }
 
-useGLTF.preload('/models/smartDustbinRemake (1).glb')
+useGLTF.preload('/smartDustbinRemake (1).glb')

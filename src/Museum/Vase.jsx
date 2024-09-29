@@ -3,7 +3,7 @@ import React, {useRef} from 'react'
 
 
 const Vase = () => {
-    const scene=useGLTF('/models/vase1.glb')
+    const scene=useGLTF('./vase1.glb')
   return (
     <>
       <primitive

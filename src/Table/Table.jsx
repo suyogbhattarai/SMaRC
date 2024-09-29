@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Table(props) {
-  const { nodes, materials } = useGLTF('/models/newTable (1).glb')
+  const { nodes, materials } = useGLTF('/newTable (1).glb')
   return (
     <group position={[1.015, 0.01, -0.081]} {...props} dispose={null}>
       <group  scale={[2.058, 1, 1]}>
@@ -22,6 +22,7 @@ export default function Table(props) {
           geometry={nodes.Cube_2.geometry}
           material={materials.Material}
         />
+        
       </group>
       <mesh
         castShadow
@@ -35,4 +36,4 @@ export default function Table(props) {
   )
 }
 
-useGLTF.preload('/models/newTable (1).glb')
+useGLTF.preload('/newTable (1).glb')

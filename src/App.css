@@ -1,22 +1,52 @@
 
-.container{
-    width: 800px;
-    margin: auto;
-}
+
 
 
 .ui{
     position: fixed !important;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.36);
-    overflow: hidden;
-    width: 100vw;
-    padding: 0px 100px;
+    top: 70px;
+    left: 28%;
+
+   
+    background-color: #f0f0f0;
+    border-radius: 25px;
+padding: 5px 30px;
+width: 72vh;
+    z-index: 100;
 }
+.flex
+{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+
+.flex .vr{
+    font-weight: 600;
+    background-color: #eac617;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.ui .flex ul{
+    display: flex;
+    gap: 15px;
+    margin-right: 25px;
+}
+
+.ui .flex ul li{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+font-size: 15px;
+    font-weight: 600
+}
+
+.ui .flex ul li:hover{
+    color: #eac617;
+}
+
 
 .hologram{
     position: fixed !important;
@@ -36,7 +66,6 @@
     display: flex;
     justify-content: center;
     margin: auto;
-   
     overflow: hidden;
     width:100%;
    
@@ -49,30 +78,25 @@
     padding: 10px 10px;
     border-radius: 20px;
 }
-.ui .navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: White;
-    width: 1200px;
-}
+
 
 .ui .logo img{
 width: 100px;
+
 }
 
 
-.ui .navbar ul{
+/* .ui .navbar ul{
     display: flex;
-    gap: 110px;
-    text-decoration: none;
+    gap: 60px;
+    text-decoration: none;  
   
-}
+} */
 
 .ui .navbar ul li{
     list-style: none;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-decoration: none !important;
 

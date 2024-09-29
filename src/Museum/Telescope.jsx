@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Telescope(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/telescope.glb')
+  const { nodes, materials, animations } = useGLTF('/telescope.glb')
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
@@ -39,4 +39,4 @@ export default function Telescope(props) {
   )
 }
 
-useGLTF.preload('/models/telescope.glb')
+useGLTF.preload('/telescope.glb')

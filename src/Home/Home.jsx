@@ -194,7 +194,7 @@ ref={smarcRef}
 
       <PerspectiveCamera
         theatreKey="Camera"
-        makeDefault
+        makeDefault 
         position={[0, 0, 0]}
       />
 

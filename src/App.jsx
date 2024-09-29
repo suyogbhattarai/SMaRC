@@ -21,6 +21,7 @@ import Home from './Home/Home';
 
 import Base from './Base/Base';
 import Building1 from './Building1/Building1';
+import Products from './Products/Products';
 
 
 
@@ -136,6 +137,7 @@ View More
 
   <Route path="/AI" element={<AI />} />
   <Route path="/IOT" element={<IOT/>} />
+  <Route path='/products' element={<Products />}/>
   <Route path="/robotics" element={<Robotics/>} />
   <Route path="/projects" element={<Passage clickedCrab={clickedCrab} setClickedCrab={setClickedCrab} clickedKicks={clickedKicks} setHovered={setHovered} hovered={hovered}/>}/>
   </Routes>
@@ -156,7 +158,8 @@ View More
     <ul>
     <Link style={{textDecoration:"none"}}  to="/"><li>Home</li></Link>
 
-      <Link  style={{textDecoration:"none"}} to="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Products</li></Link>
+      {/* <Link  style={{textDecoration:"none"}} to="/?redirect=navbarRobotics&scrollPosition=6.113384556516312"><li>Products</li></Link> */}
+      <Link  style={{textDecoration:"none"}} to="/products"><li>Products</li></Link>
 
       <Link style={{textDecoration:"none"}}  to="/projects"><li>Projects</li></Link>
       
@@ -193,7 +196,6 @@ View More
       </div>
       <div className="model">
       <Canvas   style={{ width: '600px', height: '380px' }} camera={ {position: [0, 0, 0] }}>
-{/* <OrbitControls/> */}
         <ambientLight intensity={0.5} />
         <fog attach="fog" args={["#041830", 5, 10]} />
         <Suspense fallback={null}>

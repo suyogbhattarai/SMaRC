@@ -22,6 +22,7 @@ import Home from './Home/Home';
 import Base from './Base/Base';
 import Building1 from './Building1/Building1';
 import Products from './Products/Products';
+import ProductInspect from './Products/ProductInspect';
 
 
 
@@ -49,7 +50,7 @@ const [clickedVision, setClickedVision] = useState(false);
     return (
       <>
             
-        <Canvas shadows position={[0,-100,0]}gl={{ preserveDrawingBuffer: true }}>
+        <Canvas shadows position={[0,-100,0]} gl={{ preserveDrawingBuffer: true }}>
           {/* <OrbitControls/> */}
    
 
@@ -138,6 +139,7 @@ View More
   <Route path="/AI" element={<AI />} />
   <Route path="/IOT" element={<IOT/>} />
   <Route path='/products' element={<Products />}/>
+  <Route path='/inspect' element={<ProductInspect />} />
   <Route path="/robotics" element={<Robotics/>} />
   <Route path="/projects" element={<Passage clickedCrab={clickedCrab} setClickedCrab={setClickedCrab} clickedKicks={clickedKicks} setHovered={setHovered} hovered={hovered}/>}/>
   </Routes>

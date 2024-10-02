@@ -82,8 +82,30 @@
     /* Subtle inner shadow */
 }
 
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap:20px;
+}
 /* Button: Buy Now */
 .product-buy-button {
+    background-color: #ffcc00;
+    /* Yellow button */
+    color: #2c2c2c;
+    /* Dark text */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+    /* Center the button */
+    transition: background-color 0.3s ease;
+}
+.product-inspect-button {
     background-color: #ffcc00;
     /* Yellow button */
     color: #2c2c2c;
@@ -129,4 +151,19 @@
         font-size: 16px;
         padding: 10px 15px;
     }
+}
+
+.product-close-button {
+    position: absolute;
+    font-size: 20px; /* Slightly smaller size to blend better */
+    top: 15px; /* Adjusted spacing from the top */
+    right: 15px; /* Adjusted spacing from the right */
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect on Close Button */
+.product-close-button:hover {
+    color: #ffcc00;
 }

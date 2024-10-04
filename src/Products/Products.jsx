@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import React, { useState, useRef } from 'react'; 
 import './products.css';
 import Clock from '../Clock/Clock';
+import Coffee from '../Coffee/Coffee'
 import Light from '../Light/Light';
 import ProductDes from './Description/ProductDes';
 import Lamp from '../Lamp/Lamp';
@@ -33,6 +34,13 @@ const Products = () => {
       description: "This is a product you can use for convenience and emergencies.",
       price: 199.99
     },
+    {
+      component: <Coffee position={[0, -0.35, 3.5]} scale={[0.005, 0.005, 0.005]} />,
+      name: "Coffee",
+      type: "Food and Beverages",
+      description: "This is a product you can use for energy and enjoyment.",
+      price: 19.99
+    },
   ];
 
   const handleDeskNamePlateClick = () => {
@@ -60,7 +68,7 @@ const Products = () => {
     );
   };
 
-  return (
+  return (  
     <>  
       <Light />
       {models[currentModelIndex].component}

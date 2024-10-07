@@ -99,8 +99,9 @@ const Products = () => {
       </Html> 
       
       <DeskNamePlate 
-        position={[0, -0.42, 3.5]} 
-        scale={[0.5, 0.5, 0.5]} 
+        position={[0, -0.42, 3.3]} 
+        scale={[0.3, 0.3, 0.3]}
+        rotation={[0,3.15,0]}
         name={models[currentModelIndex].name} 
         onClick={handleDeskNamePlateClick}  
       />
